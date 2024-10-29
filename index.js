@@ -34,5 +34,5 @@ const mainProcess = async () => {
   }
 };
 
-// Run the main process
+
 mainProcess();
