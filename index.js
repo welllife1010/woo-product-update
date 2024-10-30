@@ -27,7 +27,7 @@ const mainProcess = async () => {
     logger.info(`Starting process for bucket: ${bucket}`);
 
     // Pass the generated filename to processBatch
-    await processCSVFilesInLatestFolder(bucket, 10, (batch, ...args) => processBatch(batch, ...args, updatedProductsFile));
+    await processCSVFilesInLatestFolder(bucket, 100, (batch, ...args) => processBatch(batch, ...args, updatedProductsFile));
     //await processCSVFilesInLatestFolder(bucket, 20, processBatch);
 
     // Record completion message and elapsed time
