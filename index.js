@@ -1,3 +1,4 @@
+const path = require("path");
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -9,6 +10,11 @@ const { performance } = require("perf_hooks"); // Import performance to track ti
 // Start time to track the whole process duration
 const startTime = performance.now();
 
+// Generate the unique filename with date and version
+const date = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
+const version = "v1"; // Change this if you need to track different versions
+const updatedProductsFile = path.join(__dirname, `updated-products-${date}-${version}.txt`);
+
 // Main process function, e.g., processCSVFiles()
 const mainProcess = async () => {
   try {
@@ -19,7 +25,10 @@ const mainProcess = async () => {
     }
     
     logger.info(`Starting process for bucket: ${bucket}`);
-    await processCSVFilesInLatestFolder(bucket, 100, processBatch);
+
+    // Pass the generated filename to processBatch
+    await processCSVFilesInLatestFolder(bucket, 10, (batch, ...args) => processBatch(batch, ...args, updatedProductsFile));
+    //await processCSVFilesInLatestFolder(bucket, 20, processBatch);
 
     // Record completion message and elapsed time
     const endTime = performance.now();

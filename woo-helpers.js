@@ -4,36 +4,39 @@ const { logger, logErrorToFile } = require("./logger");
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_DEV,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
+    url: process.env.WOO_API_BASE_URL_TEST,
+    consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
+    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
     version: "wc/v3",
   });
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 15, // Number of concurrent requests allowed
-    minTime: 400, // Minimum time between requests (in milliseconds)
+    maxConcurrent: 5, // Number of concurrent requests allowed
+    minTime: 500, // Minimum time between requests (in milliseconds)
 });
   
 // Configure retry options to handle 504 or 429 errors
 limiter.on("failed", async (error, jobInfo) => {
     const jobId = jobInfo.options.id || "<unknown>";
+    const { file = "unknown", function: functionName = "unknown", part = "N/A" } = jobInfo.options.context || {};
 
     logger.warn(
-      `Retrying job ${jobId} due to ${error.message}. File: ${
-        jobInfo.options.context?.file || "unknown"
-      }, Function: ${jobInfo.options.context?.function || "unknown"}. Retry count: ${jobInfo.retryCount}`
+        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${jobInfo.retryCount}`
     );
 
     logErrorToFile(
-        `Retrying job ${jobId} due to ${error.message}. File: ${
-        jobInfo.options.context?.file || "unknown"
-      }, Function: ${jobInfo.options.context?.function || "unknown"}. Retry count: ${jobInfo.retryCount}`
+        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${jobInfo.retryCount}`
     );
 
     if (jobInfo.retryCount < 5 && /(502|504|429)/.test(error.message)) {
         return 1000 * Math.pow(2, jobInfo.retryCount); // Exponential backoff
+        logger.warn(`Applying a delay of ${retryDelay / 1000}s before retrying job ${jobId}`);
+        return retryDelay;
+    }
+
+    if (jobInfo.retryCount >= 5) {
+        logErrorToFile(`Job ${jobId} failed for part ${part} after max retries due to ${error.message}.`);
     }
 });
 
@@ -43,7 +46,10 @@ const getProductById = async (productId, fileKey) => {
         // Schedule with a unique job ID and log details
         const jobId = `getProductById-${productId}-${fileKey}`;
         const response = await limiter.schedule( 
-            { id: jobId }, 
+            { 
+                id: jobId,
+                context: { file: "woo-helpers.js", function: "getProductById" }
+             }, 
             () => wooApi.get(`products/${productId}`)
         );
         logger.debug(`Fetched Product Data for ID ${productId}: ${JSON.stringify(response.data)} in file "${fileKey}"`);
@@ -64,7 +70,10 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
         // Schedule with a unique job ID and log details
         const jobId = `getProductByPartNumber-${partNumber}-${fileKey}-${currentIndex}`;
         const response = await limiter.schedule(
-            { id: jobId }, 
+            { 
+                id: jobId,
+                context: { file: "woo-helpers.js", function: "getProductByPartNumber", part: `${partNumber}`}
+            }, 
             () =>
             wooApi.get("products", {
                 search: partNumber,
