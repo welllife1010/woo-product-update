@@ -2,6 +2,10 @@
 old/
 csvFiles/
 
+#files
+error-log.txt
+update-products-*.txt
+
 # Logs
 logs
 *.log

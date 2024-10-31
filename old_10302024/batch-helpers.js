@@ -19,9 +19,10 @@ const normalizeText = (text) => {
 };
   
 // Function to check if product update is needed
-const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partNumber, fileName) => {
+const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partNumber) => {
     const updateNeeded = Object.keys(newData).some((key) => {
-        if (key === "id" || key === "part_number") return false;
+        if (key === "id") return false; // Skip 'id' field
+        if (key === "part_number") return false;
 
         let newValue = newData[key];
         let currentValue = currentData[key];
@@ -34,30 +35,27 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
             //logger.info(`DEBUG: Comparing meta_data values for update check for Part Number: ${partNumber}`);
 
             if (!Array.isArray(newValue) || !Array.isArray(currentValue)) {
-                logger.info(`DEBUG: meta_data is not an array in either current or new data for Part Number: ${partNumber} in ${fileName}.`);
+                logger.info(`DEBUG: meta_data is not an array in either current or new data for Part Number: ${partNumber}.`);
                 return true;
             }
 
             for (const newMeta of newValue) {
                 const currentMeta = currentValue.find(meta => meta.key === newMeta.key);
 
-                if (!currentMeta) {
-                    logger.info(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update.`);
-                    logErrorToFile(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update. \n`);
+                if (currentMeta && normalizeText(currentMeta.value) !== normalizeText(newMeta.value)) {
+                    logger.info(`DEBUG: Mismatch for key '${newMeta.key}'. Current: '${currentMeta.value}', New: '${newMeta.value}'`);
                     return true;
                 }
 
-                logErrorToFile(`\n Part Number: ${partNumber} \n Key: ${newMeta.key} \n normalizeText currentMeta: ${normalizeText(currentMeta.value)} \n normalizeText newMeta: ${normalizeText(newMeta.value)} \n File: ${fileName}`);
-
-                if (normalizeText(currentMeta.value) !== normalizeText(newMeta.value)) {
-                    logger.info(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}'`);
-                    logErrorToFile(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}' \n`);
-                    return true;
+                if (!currentMeta) {
+                    logger.info(`DEBUG: Key '${newMeta.key}' not found in current meta_data for Part Number: ${partNumber}. Marking for update.`);
+                    return true; // Trigger update if key is missing
                 }
         
                 //logger.info(`DEBUG: Found key '${newMeta.key}' in both new and current meta_data.`); 
             }
 
+            logger.info(`DEBUG: No changes needed for meta_data in Part Number: ${partNumber}.`);
             return false;
         }
 
@@ -69,16 +67,16 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
 
         // Check if values are different or if current value is undefined
         if (currentValue === undefined || currentValue !== newValue) {
-            logger.info(`DEBUG: Update needed for key '${key}' for Part Number: ${partNumber}. Current value: '${currentValue}', New value: '${newValue}' \n`);
-            logErrorToFile(`DEBUG: Update needed for key '${key}' for Part Number: ${partNumber} in ${fileName}. \nCurrent value: '${currentValue}', \nNew value: '${newValue}' \n`);
+            logger.info(`DEBUG: Update needed for key '${key}' in Part Number: ${partNumber}. Current value: '${currentValue}', New value: '${newValue}'`);
             return true;
         }
 
         return false; // No difference for this key
     });
 
-    logger.info(updateNeeded ? `Update required for Part Number: ${partNumber} in ${fileName}` : `No update required for Part Number: ${partNumber} in ${fileName}`);
-    logErrorToFile(updateNeeded ? `Update required for Part Number: ${partNumber} in ${fileName}` : `No update required for Part Number: ${partNumber} in ${fileName}`);
+    if (!updateNeeded) {
+        logger.info(`DEBUG: No update needed for Part Number: ${partNumber}.`);
+    }
 
     return updateNeeded;
 };
@@ -148,13 +146,8 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey, updatedPr
                             ),
                         };
 
-                        // logErrorToFile(`Processing Part Number: ${part_number} - Product ID: ${productId}`);
-                        // logErrorToFile(`New Data for Product ID ${productId}: ${JSON.stringify(newData, null, 2)}`);
-                        // logErrorToFile(`Current Data for Product ID ${productId}: ${JSON.stringify(currentData, null, 2)}`);
-
-
                         // Check if an update is needed
-                        if (isUpdateNeeded(currentData, newData, currentIndex, totalProducts, part_number, fileKey)) {
+                        if (isUpdateNeeded(currentData, newData, currentIndex, totalProducts, part_number)) {
                             return newData; // Include only if an update is needed
                         } else {
                             logger.info(`No update needed for Part Number ${part_number} (Product ID: ${productId})`);
@@ -170,9 +163,6 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey, updatedPr
             return null; // Skip products that don't need updating or encountered an error
         })
     );
-
-    //logger.warn(`Products to update before filtering: ${JSON.stringify(productsToUpdate, null, 2)}`);
-    //logErrorToFile(`Products to update before filtering: ${JSON.stringify(productsToUpdate, null, 2)}`);
 
     // Filter out any null entries (products that don't need updates)
     const filteredProducts = productsToUpdate.filter(Boolean);
@@ -199,7 +189,6 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey, updatedPr
                     `Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`
                 );
                 logger.info(`Product ID ${product.id} (${product.part_number}) updated successfully.`);
-                logErrorToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
             });
             // response.data.update.forEach((product) => {
             //     if (product.id) {

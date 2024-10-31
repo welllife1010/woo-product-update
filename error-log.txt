@@ -1,3 +1,0 @@
-[2024-10-30T21:47:32.914Z] ERROR: Retrying job processBatch-10-30-2024_product_updates/product-suntsu-sample-3.csv due to Request failed with status code 502. File: unknown, Function: unknown. Retry count: 0
-[2024-10-30T21:56:33.367Z] ERROR: Retrying job processBatch-10-30-2024_product_updates/product-suntsu-sample-3.csv due to Request failed with status code 502. File: unknown, Function: unknown. Retry count: 0
-[2024-10-30T22:20:34.602Z] ERROR: Retrying job processBatch-10-30-2024_product_updates/product-suntsu-sample-3.csv due to Request failed with status code 502. File: unknown, Function: unknown. Retry count: 0

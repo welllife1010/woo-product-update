@@ -12,7 +12,7 @@ const wooApi = new WooCommerceRestApi({
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 3, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    maxConcurrent: 5, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
     minTime: 500, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
   
@@ -81,12 +81,12 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
             })
         );
         if (response.data.length) {
-            logger.info(`2. ${currentIndex} / ${totalProducts} - Product ID ${response.data[0].id} found for Part Number ${partNumber} in file "${fileKey}"`);
-            logErrorToFile(`2. ${currentIndex} / ${totalProducts} - Product ID ${response.data[0].id} found for Part Number ${partNumber} in file "${fileKey}"`)
+            logger.info(
+                `2. ${currentIndex} / ${totalProducts} - Product ID ${response.data[0].id} found for Part Number ${partNumber} in file "${fileKey}"`
+            );
             return response.data[0].id;
         } else {
             logger.info(`2. ${currentIndex} / ${totalProducts} - No product found for Part Number ${partNumber} in file "${fileKey}"`);
-            logErrorToFile(`2. ${currentIndex} / ${totalProducts} - No product found for Part Number ${partNumber} in file "${fileKey}"`)
             return null;
         }
     } catch (error) {
@@ -95,9 +95,6 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
                 error.response ? JSON.stringify(error.response.data) : error.message
             }`
         );
-        logErrorToFile(`Error fetching product with Part Number ${partNumber} in file "${fileKey}": ${
-                error.response ? JSON.stringify(error.response.data) : error.message
-            }`);
         return null;
     }
 };
