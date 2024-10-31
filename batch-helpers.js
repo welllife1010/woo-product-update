@@ -1,5 +1,5 @@
 const fs = require("fs");
-const { logger, logErrorToFile } = require("./logger");
+const { logger, logErrorToFile, logUpdatesToFile } = require("./logger");
 const { wooApi, getProductById, getProductByPartNumber, limiter } = require("./woo-helpers");
 
 let stripHtml;
@@ -20,71 +20,69 @@ const normalizeText = (text) => {
   
 // Function to check if product update is needed
 const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partNumber, fileName) => {
-    const updateNeeded = Object.keys(newData).some((key) => {
-        if (key === "id" || key === "part_number") return false;
+    const fieldsToUpdate = [];
+
+    Object.keys(newData).forEach((key) => {
+        if (key === "id" || key === "part_number") return;
 
         let newValue = newData[key];
         let currentValue = currentData[key];
 
-        // logger.warn(`DEBUG: Complete current meta_data for Part Number ${partNumber}: ${JSON.stringify(currentValue, null, 2)}`);
-        // logger.warn(`DEBUG: Complete new meta_data for Part Number ${partNumber}: ${JSON.stringify(newValue, null, 2)}`);
-
         // Handle meta_data specifically, as it is an array of objects
         if (key === "meta_data") {
-            //logger.info(`DEBUG: Comparing meta_data values for update check for Part Number: ${partNumber}`);
-
             if (!Array.isArray(newValue) || !Array.isArray(currentValue)) {
                 logger.info(`DEBUG: meta_data is not an array in either current or new data for Part Number: ${partNumber} in ${fileName}.`);
+                fieldsToUpdate.push(key);
                 return true;
             }
 
-            for (const newMeta of newValue) {
+            newValue.forEach((newMeta) => {
                 const currentMeta = currentValue.find(meta => meta.key === newMeta.key);
 
                 if (!currentMeta) {
-                    logger.info(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update.`);
                     logErrorToFile(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update. \n`);
+                    fieldsToUpdate.push(`meta_data.${newMeta.key}`);
                     return true;
                 }
-
-                logErrorToFile(`\n Part Number: ${partNumber} \n Key: ${newMeta.key} \n normalizeText currentMeta: ${normalizeText(currentMeta.value)} \n normalizeText newMeta: ${normalizeText(newMeta.value)} \n File: ${fileName}`);
 
                 if (normalizeText(currentMeta.value) !== normalizeText(newMeta.value)) {
-                    logger.info(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}'`);
+                    fieldsToUpdate.push(`meta_data.${newMeta.key}`);
                     logErrorToFile(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}' \n`);
-                    return true;
                 }
-        
-                //logger.info(`DEBUG: Found key '${newMeta.key}' in both new and current meta_data.`); 
+
+                //logErrorToFile(`\n Part Number: ${partNumber} \n Key: ${newMeta.key} \n normalizeText currentMeta: ${normalizeText(currentMeta.value)} \n normalizeText newMeta: ${normalizeText(newMeta.value)} \n File: ${fileName}`);
+            })
+        } else {
+            // Normalize and compare general string fields
+            if (typeof newValue === "string") {
+                newValue = normalizeText(newValue);
+                currentValue = currentValue ? normalizeText(currentValue) : "";
             }
 
-            return false;
+            // Check if values are different or if current value is undefined
+            if (currentValue === undefined || currentValue !== newValue) {
+                fieldsToUpdate.push(key);
+                logUpdatesToFile(`Update needed for key '${key}' for Part Number: ${partNumber} in ${fileName}. \nCurrent value: '${currentValue}', \nNew value: '${newValue}' \n`);
+            }
         }
-
-        // Normalize text for general string fields
-        if (typeof newValue === "string") {
-            newValue = normalizeText(newValue);
-            currentValue = currentValue ? normalizeText(currentValue) : "";
-        }
-
-        // Check if values are different or if current value is undefined
-        if (currentValue === undefined || currentValue !== newValue) {
-            logger.info(`DEBUG: Update needed for key '${key}' for Part Number: ${partNumber}. Current value: '${currentValue}', New value: '${newValue}' \n`);
-            logErrorToFile(`DEBUG: Update needed for key '${key}' for Part Number: ${partNumber} in ${fileName}. \nCurrent value: '${currentValue}', \nNew value: '${newValue}' \n`);
-            return true;
-        }
-
-        return false; // No difference for this key
     });
 
-    logger.info(updateNeeded ? `Update required for Part Number: ${partNumber} in ${fileName}` : `No update required for Part Number: ${partNumber} in ${fileName}`);
-    logErrorToFile(updateNeeded ? `Update required for Part Number: ${partNumber} in ${fileName}` : `No update required for Part Number: ${partNumber} in ${fileName}`);
+    //logger.info(updateNeeded ? `Update required for Part Number: ${partNumber} in ${fileName}` : `No update required for Part Number: ${partNumber} in ${fileName}`);
 
-    return updateNeeded;
+    if (fieldsToUpdate.length > 0) {
+        fieldsToUpdate.forEach(field => {
+            logger.info(`DEBUG: Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentData[field]}', New value: '${newData[field]}'`);
+            logUpdatesToFile(`Update needed for field '${field}' in Part Number: ${partNumber} in ${fileName}. Current value: '${currentData[field]}', New value: '${newData[field]}'`);
+        });
+        return true;
+    } else {
+        logger.info(`No update required for Part Number: ${partNumber} in ${fileName}`);
+        return false;
+    }
 };
 
 // Function to process a batch of products using WooCommerce Bulk API
-const processBatch = async (batch, startIndex, totalProducts, fileKey, updatedProductsFile) => {
+const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
     // Array to collect products that need updating
     const productsToUpdate = await Promise.all(
         batch.map(async (item, index) => {
@@ -194,10 +192,11 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey, updatedPr
             
             // Log each updated product's details to the unique updatedProductsFile
             filteredProducts.forEach((product) => {
-                fs.appendFileSync(
-                    updatedProductsFile,
-                    `Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`
-                );
+                logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
+                // fs.appendFileSync(
+                //     updatedProductsFile,
+                //     `Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`
+                // );
                 logger.info(`Product ID ${product.id} (${product.part_number}) updated successfully.`);
                 logErrorToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
             });
