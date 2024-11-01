@@ -10,9 +10,9 @@ const { logger, logErrorToFile } = require("./logger");
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_TEST,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
+    url: process.env.WOO_API_BASE_URL_DEV,
+    consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
+    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
     version: "wc/v3",
   });
   

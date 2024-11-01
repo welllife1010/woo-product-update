@@ -18465,3 +18465,1035 @@ Current: '32MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±
 [2024-11-01T20:28:11.110Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
 Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 32.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 32.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
 
+[2024-11-01T20:29:23.698Z] ERROR: Retrying job batch-11-01-2024/product-suntsu-sample-2.csv due to Request failed with status code 502. File: unknown, Function: unknown. Retry count: 0
+[2024-11-01T20:31:23.792Z] ERROR: Retrying job batch-11-01-2024/product-suntsu-sample-2.csv due to Request failed with status code 502. File: unknown, Function: unknown. Retry count: 1
+[2024-11-01T20:32:18.499Z] ERROR: Updated: Product ID 243439 | Part Number: SAX3248EX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.499Z] ERROR: Updated: Product ID 242506 | Part Number: SAX3248EX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.499Z] ERROR: Updated: Product ID 242649 | Part Number: SAX3248EX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.499Z] ERROR: Updated: Product ID 243183 | Part Number: SAX3248EX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.499Z] ERROR: Updated: Product ID 242203 | Part Number: SAX3248EX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 242321 | Part Number: SAX3248EX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 242444 | Part Number: SAX3248EX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 242264 | Part Number: SAX3248EX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 242436 | Part Number: SAX3248EX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 243270 | Part Number: SAX3248EX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 242366 | Part Number: SAX3248EX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 243409 | Part Number: SAX3248EX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 243192 | Part Number: SAX3248EX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.500Z] ERROR: Updated: Product ID 243010 | Part Number: SAX3248EX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 242561 | Part Number: SAX3248EX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 241951 | Part Number: SAX3248EX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 242979 | Part Number: SAX3248EX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 242476 | Part Number: SAX3248EX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 242217 | Part Number: SAX3248EX4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 243506 | Part Number: SAX3248EX4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 242100 | Part Number: SAX3248EY4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 242132 | Part Number: SAX3248EY4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 242078 | Part Number: SAX3248EY4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.501Z] ERROR: Updated: Product ID 243287 | Part Number: SAX3248EY4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.502Z] ERROR: Updated: Product ID 243228 | Part Number: SAX3248EY4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.502Z] ERROR: Updated: Product ID 242613 | Part Number: SAX3248EY4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.502Z] ERROR: Updated: Product ID 243275 | Part Number: SAX3248EY4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.502Z] ERROR: Updated: Product ID 242389 | Part Number: SAX3248EY4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.502Z] ERROR: Updated: Product ID 242931 | Part Number: SAX3248EY4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:18.502Z] ERROR: Updated: Product ID 243333 | Part Number: SAX3248EY4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T20:32:19.717Z] ERROR: 2. 1111 / 1140 - Product ID 243343 found for Part Number SAX3248EY4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:20.727Z] ERROR: 2. 1112 / 1140 - Product ID 243163 found for Part Number SAX3248EY4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:21.327Z] ERROR: 2. 1113 / 1140 - Product ID 243315 found for Part Number SAX3248EY4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:22.146Z] ERROR: 2. 1114 / 1140 - Product ID 242202 found for Part Number SAX3248EY4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:22.883Z] ERROR: 2. 1115 / 1140 - Product ID 242752 found for Part Number SAX3248EY4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:23.638Z] ERROR: 2. 1116 / 1140 - Product ID 243437 found for Part Number SAX3248EY4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:24.478Z] ERROR: 2. 1117 / 1140 - Product ID 243054 found for Part Number SAX3248EY4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:25.274Z] ERROR: 2. 1118 / 1140 - Product ID 243267 found for Part Number SAX3248EY4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:26.070Z] ERROR: 2. 1119 / 1140 - Product ID 242913 found for Part Number SAX3248EY4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:26.885Z] ERROR: 2. 1120 / 1140 - Product ID 242461 found for Part Number SAX3248EY4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:28.461Z] ERROR: 2. 1121 / 1140 - Product ID 243447 found for Part Number SAX3248EY4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:28.687Z] ERROR: 2. 1122 / 1140 - Product ID 243062 found for Part Number SAX3248EY4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:29.524Z] ERROR: 2. 1123 / 1140 - Product ID 242605 found for Part Number SAX3248FA4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:30.650Z] ERROR: 2. 1124 / 1140 - Product ID 243396 found for Part Number SAX3248FA4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:31.274Z] ERROR: 2. 1125 / 1140 - Product ID 243398 found for Part Number SAX3248FA4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:32.011Z] ERROR: 2. 1126 / 1140 - Product ID 243467 found for Part Number SAX3248FA4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:32.741Z] ERROR: 2. 1127 / 1140 - Product ID 242595 found for Part Number SAX3248FA4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:33.565Z] ERROR: 2. 1128 / 1140 - Product ID 241938 found for Part Number SAX3248FA4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:34.409Z] ERROR: 2. 1129 / 1140 - Product ID 242365 found for Part Number SAX3248FA4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:35.223Z] ERROR: 2. 1130 / 1140 - Product ID 242128 found for Part Number SAX3248FA4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:35.951Z] ERROR: 2. 1131 / 1140 - Product ID 242944 found for Part Number SAX3248FA4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:36.738Z] ERROR: 2. 1132 / 1140 - Product ID 243445 found for Part Number SAX3248FA4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:37.615Z] ERROR: 2. 1133 / 1140 - Product ID 241937 found for Part Number SAX3248FA4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:38.313Z] ERROR: 2. 1134 / 1140 - Product ID 242284 found for Part Number SAX3248FA4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:39.523Z] ERROR: 2. 1135 / 1140 - Product ID 243277 found for Part Number SAX3248FA4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:39.994Z] ERROR: 2. 1136 / 1140 - Product ID 242458 found for Part Number SAX3248FA4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:41.008Z] ERROR: 2. 1137 / 1140 - Product ID 243237 found for Part Number SAX3248FA4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:41.758Z] ERROR: 2. 1138 / 1140 - Product ID 242328 found for Part Number SAX3248FA4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:42.355Z] ERROR: 2. 1139 / 1140 - Product ID 242469 found for Part Number SAX3248FA4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:43.134Z] ERROR: 2. 1140 / 1140 - Product ID 242835 found for Part Number SAX3248FA4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T20:32:43.288Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4A-40.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4A-40.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4A-40.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '40MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 40.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:43.290Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 40.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 40.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:44.082Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:44.084Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-10.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:44.084Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:44.084Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-10.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:44.084Z] ERROR: DEBUG: Mismatch for meta_data key 'quantity' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '1000', New: '990' 
+
+[2024-11-01T20:32:44.084Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:44.085Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:44.085Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-10.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:44.085Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:44.085Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '10MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 10.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:44.086Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 10.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 10.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:45.034Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-12.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-12.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-12.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:45.037Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '12MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 12.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:45.038Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 12.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 12.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:45.674Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:45.676Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-16.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:45.676Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:45.676Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-16.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:45.676Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:45.676Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:45.677Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-16.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:45.677Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:45.677Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '16MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 16.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:45.678Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 16.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 16.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:46.465Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:46.467Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-20.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:46.467Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:46.467Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-20.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:46.467Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:46.467Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:46.468Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-20.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:46.468Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:46.468Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '20MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 20.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:46.469Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 20.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 20.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:47.278Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:47.281Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-24.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:47.281Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:47.281Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-24.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:47.281Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:47.281Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:47.282Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-24.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:47.282Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:47.282Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '24MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 24.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:47.283Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 24.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 24.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:48.085Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-25.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-25.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-25.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:48.087Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '25MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 25.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:48.088Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 25.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 25.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:48.907Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-26.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-26.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-26.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:48.909Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '26MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 26.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:48.910Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 26.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 26.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:49.676Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-27.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-27.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-27.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:49.677Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '27MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 27.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:49.678Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 27.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 27.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:50.501Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:50.504Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-30.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:50.504Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:50.504Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-30.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:50.504Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:50.504Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:50.504Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-30.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:50.504Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:50.505Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '30MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 30.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:50.505Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 30.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 30.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:51.265Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:51.268Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-32.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:51.269Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:51.269Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-32.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:51.269Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:51.269Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:51.269Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-32.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:51.269Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:51.269Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '32MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 32.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:51.270Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 32.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 32.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:52.055Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:52.057Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248EY4B-40.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:52.057Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:52.058Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248EY4B-40.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:52.058Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:52.058Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:52.058Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248EY4B-40.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:52.058Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:52.058Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '40MHz ±15ppm/±100ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±15ppm/±100ppm 40.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:52.059Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248EY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±15ppm<br/><strong>Frequency Stability:</strong> ±100ppm<br/><strong>Frequency:</strong> 40.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±15ppm, <br>Frequency Stability: ±100ppm, <br>Frequency: 40.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:52.875Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:52.877Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-10.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-10.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Mismatch for meta_data key 'quantity' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '1000', New: '990' 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-10.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:52.878Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '10MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 10.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:52.879Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 10.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 10.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:53.674Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:53.676Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-12.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:53.676Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:53.676Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-12.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:53.677Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:53.677Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:53.677Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-12.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:53.677Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:53.677Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '12MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 12.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:53.678Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 12.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 12.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:54.487Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:54.489Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-16.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:54.489Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:54.489Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-16.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:54.489Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:54.489Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:54.489Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-16.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:54.489Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:54.490Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '16MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 16.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:54.490Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 16.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 16.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:55.280Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:55.281Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-20.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:55.282Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:55.282Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-20.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:55.282Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:55.282Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:55.282Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-20.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:55.282Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:55.282Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '20MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 20.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:55.283Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 20.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 20.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:56.103Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:56.105Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-24.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:56.105Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:56.106Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-24.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:56.106Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:56.106Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:56.106Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-24.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:56.106Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:56.106Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '24MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 24.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:56.107Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 24.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 24.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:56.861Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:56.863Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-25.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:56.863Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:56.863Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-25.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:56.863Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:56.864Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:56.864Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-25.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:56.864Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:56.864Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '25MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 25.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:56.864Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 25.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 25.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:57.647Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:57.649Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-26.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:57.649Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:57.649Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-26.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:57.649Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:57.649Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:57.649Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-26.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:57.649Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:57.650Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '26MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 26.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:57.651Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 26.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 26.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:58.490Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:58.492Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-27.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:58.492Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:58.492Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-27.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:58.492Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:58.492Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:58.492Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-27.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:58.493Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:58.493Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '27MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 27.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:58.493Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 27.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 27.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:32:59.290Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:32:59.291Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-30.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:32:59.291Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:32:59.292Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-30.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:59.292Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:32:59.292Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:32:59.292Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-30.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:32:59.292Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:59.292Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '30MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 30.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:32:59.293Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 30.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 30.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:00.150Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:00.152Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-32.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:00.152Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:00.152Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-32.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:00.152Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:00.152Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:00.152Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-32.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:00.153Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:00.153Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '32MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 32.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:00.153Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 32.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 32.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:01.114Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:01.117Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4A-40.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:01.117Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:01.118Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4A-40.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:01.118Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:01.118Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:01.118Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4A-40.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:01.118Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:01.118Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '40MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 40.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:01.119Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 40.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 40.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:01.665Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:01.668Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4B-10.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:01.668Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:01.668Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4B-10.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:01.668Z] ERROR: DEBUG: Mismatch for meta_data key 'quantity' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '1000', New: '990' 
+
+[2024-11-01T20:33:01.669Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:01.669Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:01.669Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4B-10.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:01.669Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:01.669Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '10MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 10.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:01.670Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 10.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 10.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:02.643Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:02.644Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4B-12.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:02.644Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:02.644Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4B-12.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:02.644Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:02.645Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:02.645Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4B-12.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:02.645Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:02.645Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '12MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 12.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:02.645Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 12.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 12.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:03.329Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:03.332Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4B-16.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:03.333Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:03.333Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4B-16.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:03.333Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:03.333Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:03.333Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4B-16.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:03.333Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:03.334Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '16MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 16.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:03.334Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 16.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 16.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:04.074Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:04.076Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4B-20.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:04.077Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:04.077Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4B-20.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:04.077Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:04.077Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:04.078Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4B-20.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:04.078Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:04.078Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '20MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 20.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:04.079Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 20.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 20.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:04.889Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:04.891Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4B-24.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:04.891Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:04.891Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4B-24.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:04.891Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:04.891Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:04.891Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4B-24.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:04.891Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:04.892Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '24MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 24.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:04.893Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 24.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 24.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:05.675Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:05.676Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4B-25.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:05.676Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:05.676Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4B-25.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:05.677Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:05.677Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:05.677Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4B-25.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:05.677Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:05.677Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '25MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 25.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:05.677Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 25.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 25.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:33:06.492Z] ERROR: DEBUG: Mismatch for meta_data key 'image_url' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/wp-content/uploads/2023/03/SAX324.png', New: 'https://suntsu.com/wp-content/uploads/2023/03/SAX324.png' 
+
+[2024-11-01T20:33:06.493Z] ERROR: DEBUG: Mismatch for meta_data key 'datasheet_url' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<div class="datasheet-download"> <a class="datasheet-download-link" rel="noopener noreferrer" href="https://suntsutest.wpenginepowered.com/wp-content/uploads/SAX324-Series.pdf" target="_blank" title="SAX3248FA4B-26.000M"> <svg height="35" width="30" viewBox="0 0 18 19" fill="none" data-svg-icon="icon-alt-pdf"> <path d="M16.8667 16.8667C16.8667 17.1672 16.7473 17.4555 16.5347 17.6681C16.3222 17.8806 16.0339 18 15.7333 18H2.13333C1.83275 18 1.54449 17.8806 1.33195 17.6681C1.1194 17.4555 1 17.1672 1 16.8667V2.13333C1 1.83275 1.1194 1.54449 1.33195 1.33195C1.54449 1.1194 1.83275 1 2.13333 1H13.4667C13.7622 1.00003 14.0461 1.11553 14.2577 1.32187L16.5244 3.50013C16.6327 3.60571 16.7188 3.7319 16.7776 3.87126C16.8364 4.01063 16.8667 4.16035 16.8667 4.3116V16.8667Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="m 7.06169,5.6655999 c -0.05387,-0.39074 -0.18457,-0.76694 -0.38458,-1.10689 -0.10186,-0.16897 -0.24427,-0.30984 -0.41434,-0.40984 -0.17006,-0.10001 -0.3624,-0.15599 -0.55957,-0.16287 -0.25111,0.02704 -0.48599,0.13718 -0.66736,0.31293 -0.18137,0.17576 -0.29883,0.40707 -0.33375,0.6572 -0.05626,0.50594 0.07463,1.01497 0.36796,1.43102 0.92435,1.0643 1.91779,2.06657 2.97386,3.00031 C 9.22649,10.34573 10.56456,11.09424 12,11.60048 c 0.39327,0.18366 0.82327,0.27514 1.25726,0.26747 0.2165,-0.0087 0.4249,-0.08469 0.5963,-0.21741 0.1713,-0.13272 0.2969,-0.31555 0.3595,-0.52303 0.0236,-0.17058 0.0023,-0.34437 -0.0618,-0.50419 -0.0642,-0.15981 -0.1689,-0.30011 -0.3039,-0.40701 -0.273,-0.21064 -0.5943,-0.3498401 -0.93465,-0.4049801 -1.35468,-0.19791 -2.7374,-0.05109 -4.02031,0.4268901 -1.22551,0.37777 -4.80684,1.56098 -4.64213,4.5719 0.00453,0.0755 -0.00529,0.5757 0.63995,0.5032 0.26546,-0.0518 0.51725,-0.1582 0.7394,-0.3125 0.22216,-0.1542 0.40982,-0.353 0.55109,-0.5836 0.82582,-1.1658 0.91196,-2.65202 1.02,-4.02789 C 7.36009,8.8154099 7.31335,7.2274199 7.06169,5.6655999 Z" stroke="#ff5722" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>', New: 'https://suntsu.com/wp-content/uploads/SAX324-Series.pdf' 
+
+[2024-11-01T20:33:06.494Z] ERROR: DEBUG: Mismatch for meta_data key 'series_url' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: 'https://suntsutest.wpenginepowered.com/products/suntsu/frequency-control/crystals/SAX324/', New: 'https://suntsu.com/products/suntsu/frequency-control/crystals/SAX324/' 
+
+[2024-11-01T20:33:06.494Z] ERROR: DEBUG: Key 'series' missing in currentData meta_data for Part Number: SAX3248FA4B-26.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:06.494Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T20:33:06.494Z] ERROR: DEBUG: Mismatch for meta_data key 'supplier_device_package' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD)', New: '' 
+
+[2024-11-01T20:33:06.494Z] ERROR: DEBUG: Key 'product_description' missing in currentData meta_data for Part Number: SAX3248FA4B-26.000M in file 11-01-2024/product-suntsu-sample-2.csv. Marking for update. 
+
+[2024-11-01T20:33:06.494Z] ERROR: DEBUG: Mismatch for meta_data key 'short_description' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '3.2X2.5 CERAMIC SMD (4PAD) AUTOMOTIVE CRYSTAL', New: '3.2mm x 2.5mm Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:06.494Z] ERROR: DEBUG: Mismatch for meta_data key 'detail_description' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '26MHz ±10ppm/±50ppm Crystal 8pF 4-SMD', New: 'SAX324 8pF ±10ppm/±50ppm 26.000MHz  Ceramic SMD 4 Pad Crystal' 
+
+[2024-11-01T20:33:06.495Z] ERROR: DEBUG: Mismatch for meta_data key 'additional_key_information' for Part Number: SAX3248FA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '<strong>Load Capacitance:</strong> 8pF<br/><strong>Frequency Tolerance:</strong> ±10ppm<br/><strong>Frequency Stability:</strong> ±50ppm<br/><strong>Frequency:</strong> 26.000M<br/><strong>Mounting Type:</strong> SMT<br/><strong>Packaging:</strong> 3k Reel', New: 'Load Capacitance: 8pF, <br>Frequency Tolerance: ±10ppm, <br>Frequency Stability: ±50ppm, <br>Frequency: 26.000M, <br>Mounting Type: SMT, <br>Packaging: 3k Reel' 
+
+[2024-11-01T20:34:23.905Z] ERROR: Retrying job batch-11-01-2024/product-suntsu-sample-2.csv due to Request failed with status code 502. File: unknown, Function: unknown. Retry count: 0
