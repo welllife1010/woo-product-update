@@ -10,6 +10,9 @@ const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
 const Bottleneck = require("bottleneck");
 const { logger, logErrorToFile } = require("./logger");
 
+const apiBaseUrl = process.env.WOO_API_BASE_URL_DEV;
+console.log('API Base URL:', apiBaseUrl);  // For debugging purposes
+
 logger.warn("WOO_API_BASE_URL_DEV:", process.env.WOO_API_BASE_URL_DEV);
 logger.warn("WOO_API_BASE_URL_TEST:", process.env.WOO_API_BASE_URL_TEST);
 
