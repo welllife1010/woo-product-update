@@ -1,3 +1,6 @@
+// TODO: 
+// 1. update the Date from (UTC) to human readable (PST) in the logger
+ 
 const fs = require("fs");
 const path = require("path");
 const pino = require("pino");
@@ -13,18 +16,22 @@ let updatedProductsFile;
 const generateFileName = () => {
     let fileName;
     do {
-        fileName = path.join(__dirname, `updated-products-${date}-v${version}.txt`);
+        fileName = `updated-products-${date}-v${version}.txt`;
         version += 1;
     } while (fs.existsSync(fileName));
     return fileName;
 };
 
+const logFile = generateFileName();
+const maxSize = 5 * 1024 * 1024; // Max 5 MB per log file
+
 // Set the updatedProductsFile to the unique file name
 updatedProductsFile = generateFileName();
 
-const logUpdatesToFile = (message) => {
-    const formattedMessage = `[${new Date().toISOString()}] ${message}\n`;
-    fs.appendFileSync(updatedProductsFile, formattedMessage);
+const rotateLogFile = () => {
+    if (fs.existsSync(logFile) && fs.statSync(logFile).size > maxSize) {
+        fs.renameSync(logFile, logFile.replace(".txt", `-${Date.now()}.txt`));
+    }
 };
 
 // Logger setup with pino-pretty
@@ -38,8 +45,15 @@ const logger = pino(
   
 // Function to log skipped items or errors directly to the file
 const logErrorToFile = (message) => {
+    rotateLogFile();
     const formattedMessage = `[${new Date().toISOString()}] ERROR: ${message}\n`;
     fs.appendFileSync("error-log.txt", formattedMessage);
+};
+
+const logUpdatesToFile = (message) => {
+    rotateLogFile();
+    const formattedMessage = `[${new Date().toISOString()}] ${message}\n`;
+    fs.appendFileSync(updatedProductsFile, formattedMessage);
 };
 
 module.exports = {

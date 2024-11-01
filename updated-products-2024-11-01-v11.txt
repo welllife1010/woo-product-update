@@ -1,0 +1,305 @@
+[2024-11-01T18:51:36.836Z] Update needed for field 'meta_data.package' in Part Number: SAW21212D4B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'T/R', New value: 'T/R-TEST22'
+[2024-11-01T18:51:36.836Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW21212D4B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -10302024', New value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -11012024: TEST22'
+[2024-11-01T18:51:37.802Z] Update needed for field 'meta_data.quantity' in Part Number: SAW21212D58-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '10', New value: '20'
+[2024-11-01T18:51:37.802Z] Update needed for field 'meta_data.package' in Part Number: SAW21212D58-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'T/R-10302024', New value: 'T/R-11012024'
+[2024-11-01T18:51:37.802Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW21212D58-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -10302024', New value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:38.448Z] Update needed for key 'description' for Part Number: SAW21212D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', 
+New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22' 
+
+[2024-11-01T18:51:38.451Z] Update needed for field 'description' in Part Number: SAW21212D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal</p>
+', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:38.451Z] Update needed for field 'meta_data.package' in Part Number: SAW21212D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'T/R', New value: 'T/R-TEST22'
+[2024-11-01T18:51:38.451Z] Update needed for field 'meta_data.product_description' in Part Number: SAW21212D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:38.452Z] Update needed for field 'meta_data.short_description' in Part Number: SAW21212D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:38.452Z] Update needed for field 'meta_data.detail_description' in Part Number: SAW21212D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'SAW212 12.5pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal -10302024 - Test2', New value: 'SAW212 12.5pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal -11012024 - TEST22'
+[2024-11-01T18:51:38.452Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW21212D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -10302024', New value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:39.237Z] Update needed for key 'description' for Part Number: SAW21212D5A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', 
+New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22' 
+
+[2024-11-01T18:51:39.241Z] Update needed for field 'description' in Part Number: SAW21212D5A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal</p>
+', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:39.241Z] Update needed for field 'meta_data.product_description' in Part Number: SAW21212D5A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:39.241Z] Update needed for field 'meta_data.short_description' in Part Number: SAW21212D5A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:39.241Z] Update needed for field 'meta_data.detail_description' in Part Number: SAW21212D5A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'SAW212 12.5pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-10302024-Test2', New value: 'SAW212 12.5pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:40.115Z] Update needed for field 'meta_data.mounting_type' in Part Number: SAW21212D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'SMT', New value: 'SMT-TEST22'
+[2024-11-01T18:51:40.115Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW21212D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -10302024', New value: 'Load Capacitance: 12.5pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -11012024: TEST22'
+[2024-11-01T18:51:40.791Z] Update needed for field 'meta_data.package' in Part Number: SAW2127D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'T/R-10302024', New value: 'T/R-11012024'
+[2024-11-01T18:51:40.791Z] Update needed for field 'meta_data.detail_description' in Part Number: SAW2127D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'SAW212 7pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-10302024-Test2', New value: 'SAW212 7pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:41.627Z] Update needed for field 'meta_data.quantity' in Part Number: SAW2127D4B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '10', New value: '20'
+[2024-11-01T18:51:41.627Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW2127D4B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 7pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -10302024', New value: 'Load Capacitance: 7pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br>  -11012024: TEST22'
+[2024-11-01T18:51:42.506Z] Update needed for field 'meta_data.package' in Part Number: SAW2127D58-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'T/R', New value: 'T/R-TEST22'
+[2024-11-01T18:51:43.212Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW2127D5A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 7pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel', New value: 'Load Capacitance: 7pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -11012024-TEST22: Test Content'
+[2024-11-01T18:51:44.041Z] Update needed for key 'description' for Part Number: SAW2127D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', 
+New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-TEST22' 
+
+[2024-11-01T18:51:44.046Z] Update needed for field 'description' in Part Number: SAW2127D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal</p>
+', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-TEST22'
+[2024-11-01T18:51:44.046Z] Update needed for field 'meta_data.quantity' in Part Number: SAW2127D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '3000', New value: '20'
+[2024-11-01T18:51:44.046Z] Update needed for field 'meta_data.package' in Part Number: SAW2127D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'T/R-10302024', New value: 'T/R-11012024'
+[2024-11-01T18:51:44.046Z] Update needed for field 'meta_data.product_description' in Part Number: SAW2127D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-TEST22'
+[2024-11-01T18:51:44.047Z] Update needed for field 'meta_data.short_description' in Part Number: SAW2127D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal', New value: '2.0mm x 1.2mm Ceramic SMD 2 Pad Watch Crystal-TEST22'
+[2024-11-01T18:51:44.047Z] Update needed for field 'meta_data.detail_description' in Part Number: SAW2127D5B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'SAW212 7pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-10302024-Test2', New value: 'SAW212 7pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:44.814Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW2129D4A-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 9pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -10302024', New value: 'Load Capacitance: 9pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br>  -11012024: TEST22'
+[2024-11-01T18:51:45.611Z] Update needed for field 'meta_data.quantity' in Part Number: SAW2129D4B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: '10', New value: '20'
+[2024-11-01T18:51:45.613Z] Update needed for field 'meta_data.detail_description' in Part Number: SAW2129D4B-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'SAW212 9pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal', New value: 'SAW212 9pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-TEST22'
+[2024-11-01T18:51:46.447Z] Update needed for field 'meta_data.detail_description' in Part Number: SAW2129D58-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'SAW212 9pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-10302024', New value: 'SAW212 9pF ±20ppm  32.768KHz  Ceramic SMD 2 Pad Watch Crystal-11012024-TEST22'
+[2024-11-01T18:51:46.448Z] Update needed for field 'meta_data.additional_key_information' in Part Number: SAW2129D58-32.768K in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'Load Capacitance: 9pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel', New value: 'Load Capacitance: 9pF, <br>Frequency Tolerance: ±20ppm, <br>Frequency: 32.768K, <br>Mounting Type: SMT, <br>Packaging: 3k Reel, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:48.012Z] Update needed for key 'sku' for Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'CY8C4149LDAS583XQLA1-I-Updated', 
+New value: 'CY8C4149LDAS583XQLA1' 
+
+[2024-11-01T18:51:48.012Z] Update needed for key 'description' for Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'PSOC4 - GENERAL', 
+New value: 'PSOC4 - GENERAL-TEST22' 
+
+[2024-11-01T18:51:48.023Z] Update needed for field 'sku' in Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'CY8C4149LDAS583XQLA1-I-Updated', New value: 'CY8C4149LDAS583XQLA1'
+[2024-11-01T18:51:48.023Z] Update needed for field 'description' in Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>PSOC4 - GENERAL</p>
+', New value: 'PSOC4 - GENERAL-TEST22'
+[2024-11-01T18:51:48.023Z] Update needed for field 'meta_data.supplier_device_package' in Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: '48-QFN (7x7)-10302024', New value: '48-QFN (7x7)-11012024'
+[2024-11-01T18:51:48.023Z] Update needed for field 'meta_data.product_description' in Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'PSOC4 - GENERAL', New value: 'PSOC4 - GENERAL-TEST22'
+[2024-11-01T18:51:48.024Z] Update needed for field 'meta_data.short_description' in Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'PSOC4 - GENERAL', New value: 'PSOC4 - GENERAL-TEST22'
+[2024-11-01T18:51:48.024Z] Update needed for field 'meta_data.detail_description' in Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'ARM&reg; Cortex&reg;-M0+ PSOC&reg; 4 CY8C4100S Microcontroller IC 32-Bit 48MHz 384KB (384K x 8) FLASH 48-QFN (7x7)-10292024', New value: 'ARM&reg; Cortex&reg;-M0+ PSOC&reg; 4 CY8C4100S Microcontroller IC 32-Bit 48MHz 384KB (384K x 8) FLASH 48-QFN (7x7)-11012024'
+[2024-11-01T18:51:48.024Z] Update needed for field 'meta_data.additional_key_information' in Part Number: CY8C4149LDAS583XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<strong>Core Processor-10292024:</strong> ARM¬Æ Cortex¬Æ-M0+<br /> <strong>Core Size:</strong> 32-Bit-10292024<br /> <strong>Speed:</strong> 48MHz<br /> <strong>Program Memory Size:</strong> 384KB (384K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, Wettable Flank', New value: '<strong>Core Processor-11012024:</strong> ARM¬Æ Cortex¬Æ-M0+<br /> <strong>Core Size:</strong> 32-Bit-11012024<br /> <strong>Speed:</strong> 48MHz<br /> <strong>Program Memory Size:</strong> 384KB (384K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, Wettable Flank, <br> -11012024-TEST22'
+[2024-11-01T18:51:48.898Z] Update needed for key 'sku' for Part Number: CY8C4149LDAS573XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'CY8C4149LDAS573XQLA1-I-Updated-102324', 
+New value: 'CY8C4149LDAS573XQLA1-11012024' 
+
+[2024-11-01T18:51:48.899Z] Update needed for key 'description' for Part Number: CY8C4149LDAS573XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'PSOC4 - GENERAL-10302024', 
+New value: 'PSOC4 - GENERAL-11012024' 
+
+[2024-11-01T18:51:48.908Z] Update needed for field 'sku' in Part Number: CY8C4149LDAS573XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'CY8C4149LDAS573XQLA1-I-Updated-102324', New value: 'CY8C4149LDAS573XQLA1-11012024'
+[2024-11-01T18:51:48.908Z] Update needed for field 'description' in Part Number: CY8C4149LDAS573XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>PSOC4 - GENERAL-10302024</p>
+', New value: 'PSOC4 - GENERAL-11012024'
+[2024-11-01T18:51:48.908Z] Update needed for field 'meta_data.product_description' in Part Number: CY8C4149LDAS573XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'PSOC4 - GENERAL-10302024', New value: 'PSOC4 - GENERAL-11012024'
+[2024-11-01T18:51:48.908Z] Update needed for field 'meta_data.short_description' in Part Number: CY8C4149LDAS573XQLA1 in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'PSOC4 - GENERAL-10302024', New value: 'PSOC4 - GENERAL-11012024'
+[2024-11-01T18:51:49.668Z] Update needed for field 'meta_data.additional_key_information' in Part Number: TM4C1231H6PGEI7R in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<strong>Core Processor:</strong> ARM¬Æ Cortex¬Æ-M4F<br /> <strong>Core Size:</strong> 32-Bit Single-Core<br /> <strong>Speed:</strong> 80MHz<br /> <strong>Program Memory Size:</strong> 256KB (256K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -10302024', New value: '<strong>Core Processor:</strong> ARM¬Æ Cortex¬Æ-M4F<br /> <strong>Core Size:</strong> 32-Bit Single-Core<br /> <strong>Speed:</strong> 80MHz<br /> <strong>Program Memory Size:</strong> 256KB (256K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:50.435Z] Update needed for key 'description' for Part Number: PIC16LC773-I/SO in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'IC MCU 8BIT 7KB OTP 28SOIC-102324', 
+New value: 'IC MCU 8BIT 7KB OTP 28SOIC-11012024' 
+
+[2024-11-01T18:51:50.448Z] Update needed for field 'description' in Part Number: PIC16LC773-I/SO in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>IC MCU 8BIT 7KB OTP 28SOIC-102324</p>
+', New value: 'IC MCU 8BIT 7KB OTP 28SOIC-11012024'
+[2024-11-01T18:51:50.448Z] Update needed for field 'meta_data.product_description' in Part Number: PIC16LC773-I/SO in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 8BIT 7KB OTP 28SOIC-102324', New value: 'IC MCU 8BIT 7KB OTP 28SOIC-11012024'
+[2024-11-01T18:51:50.449Z] Update needed for field 'meta_data.short_description' in Part Number: PIC16LC773-I/SO in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 8BIT 7KB OTP 28SOIC-102324', New value: 'IC MCU 8BIT 7KB OTP 28SOIC-11012024'
+[2024-11-01T18:51:50.449Z] Update needed for field 'meta_data.additional_key_information' in Part Number: PIC16LC773-I/SO in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<strong>Core Processor:</strong> PIC<br /> <strong>Core Size:</strong> 8-Bit<br /> <strong>Speed:</strong> 20MHz<br /> <strong>Program Memory Size:</strong> 7KB (4K x 14)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -10302024', New value: '<strong>Core Processor:</strong> PIC<br /> <strong>Core Size:</strong> 8-Bit<br /> <strong>Speed:</strong> 20MHz<br /> <strong>Program Memory Size:</strong> 7KB (4K x 14)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:52.152Z] Update needed for key 'description' for Part Number: PIC32MX440F256HT-80I/MR in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'IC MCU 32BIT 256KB FLASH 64VQFN', 
+New value: 'IC MCU 32BIT 256KB FLASH 64VQFN-TEST22' 
+
+[2024-11-01T18:51:52.157Z] Update needed for field 'description' in Part Number: PIC32MX440F256HT-80I/MR in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>IC MCU 32BIT 256KB FLASH 64VQFN</p>
+', New value: 'IC MCU 32BIT 256KB FLASH 64VQFN-TEST22'
+[2024-11-01T18:51:52.157Z] Update needed for field 'meta_data.product_description' in Part Number: PIC32MX440F256HT-80I/MR in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 256KB FLASH 64VQFN', New value: 'IC MCU 32BIT 256KB FLASH 64VQFN-TEST22'
+[2024-11-01T18:51:52.158Z] Update needed for field 'meta_data.short_description' in Part Number: PIC32MX440F256HT-80I/MR in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 256KB FLASH 64VQFN', New value: 'IC MCU 32BIT 256KB FLASH 64VQFN-TEST22'
+[2024-11-01T18:51:52.204Z] Update needed for field 'meta_data.supplier_device_package' in Part Number: PIC18F2523T-I/SO in 11-01-2024/product-suntsu-sample-1.csv. Current value: '28-SOIC-10302024', New value: '28-SOIC-11012024'
+[2024-11-01T18:51:52.205Z] Update needed for field 'meta_data.mounting_type' in Part Number: PIC18F2523T-I/SO in 11-01-2024/product-suntsu-sample-1.csv. Current value: '-10302024', New value: '-11012024'
+[2024-11-01T18:51:52.205Z] Update needed for field 'meta_data.detail_description' in Part Number: PIC18F2523T-I/SO in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'PIC PIC&reg; 18F Microcontroller IC 8-Bit 40MHz 32KB (16K x 16) FLASH 28-SOIC-10302024', New value: 'PIC PIC&reg; 18F Microcontroller IC 8-Bit 40MHz 32KB (16K x 16) FLASH 28-SOIC-11012024'
+[2024-11-01T18:51:53.023Z] Update needed for field 'meta_data.additional_key_information' in Part Number: DSPIC33FJ32GS608-E/PT in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<strong>Core Processor:</strong> dsPIC<br /> <strong>Core Size:</strong> 16-Bit<br /> <strong>Speed:</strong> 40 MIPs<br /> <strong>Program Memory Size:</strong> 32KB (32K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -10302024', New value: '<strong>Core Processor:</strong> dsPIC<br /> <strong>Core Size:</strong> 16-Bit<br /> <strong>Speed:</strong> 40 MIPs<br /> <strong>Program Memory Size:</strong> 32KB (32K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:53.653Z] Update needed for key 'description' for Part Number: PIC32MX664F128L-I/PF in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'IC MCU 32BIT 128KB FLASH 100TQFP-10302024', 
+New value: 'IC MCU 32BIT 128KB FLASH 100TQFP-11012024' 
+
+[2024-11-01T18:51:53.662Z] Update needed for field 'description' in Part Number: PIC32MX664F128L-I/PF in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>IC MCU 32BIT 128KB FLASH 100TQFP-10302024</p>
+', New value: 'IC MCU 32BIT 128KB FLASH 100TQFP-11012024'
+[2024-11-01T18:51:53.663Z] Update needed for field 'meta_data.product_description' in Part Number: PIC32MX664F128L-I/PF in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 128KB FLASH 100TQFP-10302024', New value: 'IC MCU 32BIT 128KB FLASH 100TQFP-11012024'
+[2024-11-01T18:51:53.663Z] Update needed for field 'meta_data.short_description' in Part Number: PIC32MX664F128L-I/PF in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 128KB FLASH 100TQFP-10302024', New value: 'IC MCU 32BIT 128KB FLASH 100TQFP-11012024'
+[2024-11-01T18:51:55.198Z] Update needed for field 'meta_data.additional_key_information' in Part Number: PIC32MX564F128L-V/PF in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<strong>Core Processor:</strong> MIPS32¬Æ M4K‚Ñ¢<br /> <strong>Core Size:</strong> 32-Bit Single-Core<br /> <strong>Speed:</strong> 80MHz<br /> <strong>Program Memory Size:</strong> 128KB (128K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -10302024', New value: '<strong>Core Processor:</strong> MIPS32¬Æ M4K‚Ñ¢<br /> <strong>Core Size:</strong> 32-Bit Single-Core<br /> <strong>Speed:</strong> 80MHz<br /> <strong>Program Memory Size:</strong> 128KB (128K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:56.017Z] Update needed for key 'description' for Part Number: PIC32MX664F064L-V/PF in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'IC MCU 32BIT 64KB FLASH 100TQFP', 
+New value: 'IC MCU 32BIT 64KB FLASH 100TQFP-TEST22' 
+
+[2024-11-01T18:51:56.023Z] Update needed for field 'description' in Part Number: PIC32MX664F064L-V/PF in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>IC MCU 32BIT 64KB FLASH 100TQFP</p>
+', New value: 'IC MCU 32BIT 64KB FLASH 100TQFP-TEST22'
+[2024-11-01T18:51:56.023Z] Update needed for field 'meta_data.product_description' in Part Number: PIC32MX664F064L-V/PF in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 64KB FLASH 100TQFP', New value: 'IC MCU 32BIT 64KB FLASH 100TQFP-TEST22'
+[2024-11-01T18:51:56.024Z] Update needed for field 'meta_data.short_description' in Part Number: PIC32MX664F064L-V/PF in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 64KB FLASH 100TQFP', New value: 'IC MCU 32BIT 64KB FLASH 100TQFP-TEST22'
+[2024-11-01T18:51:56.828Z] Update needed for field 'meta_data.detail_description' in Part Number: DSPIC33FJ256GP506AT-I/PT in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'dsPIC dsPIC&#8482; 33F Microcontroller IC 16-Bit 40 MIPs 256KB (256K x 8) FLASH 64-TQFP (10x10)-10302024', New value: 'dsPIC dsPIC&#8482; 33F Microcontroller IC 16-Bit 40 MIPs 256KB (256K x 8) FLASH 64-TQFP (10x10)-11012024'
+[2024-11-01T18:51:56.828Z] Update needed for field 'meta_data.additional_key_information' in Part Number: DSPIC33FJ256GP506AT-I/PT in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<strong>Core Processor:</strong> dsPIC<br /> <strong>Core Size:</strong> 16-Bit<br /> <strong>Speed:</strong> 40 MIPs<br /> <strong>Program Memory Size:</strong> 256KB (256K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -10302024', New value: '<strong>Core Processor:</strong> dsPIC<br /> <strong>Core Size:</strong> 16-Bit<br /> <strong>Speed:</strong> 40 MIPs<br /> <strong>Program Memory Size:</strong> 256KB (256K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -11012024'
+[2024-11-01T18:51:57.630Z] Update needed for key 'sku' for Part Number: ATUC64L3U-AUR in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'ATUC64L3U-AUR-I-Updated-10292024', 
+New value: 'ATUC64L3U-AUR-I-Updated-11012024' 
+
+[2024-11-01T18:51:57.631Z] Update needed for key 'description' for Part Number: ATUC64L3U-AUR in 11-01-2024/product-suntsu-sample-1.csv. 
+Current value: 'IC MCU 32BIT 64KB FLASH 64TQFP-10302024', 
+New value: 'IC MCU 32BIT 64KB FLASH 64TQFP-11012024' 
+
+[2024-11-01T18:51:57.633Z] Update needed for field 'sku' in Part Number: ATUC64L3U-AUR in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'ATUC64L3U-AUR-I-Updated-10292024', New value: 'ATUC64L3U-AUR-I-Updated-11012024'
+[2024-11-01T18:51:57.633Z] Update needed for field 'description' in Part Number: ATUC64L3U-AUR in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<p>IC MCU 32BIT 64KB FLASH 64TQFP-10302024</p>
+', New value: 'IC MCU 32BIT 64KB FLASH 64TQFP-11012024'
+[2024-11-01T18:51:57.633Z] Update needed for field 'meta_data.product_description' in Part Number: ATUC64L3U-AUR in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 64KB FLASH 64TQFP-10302024', New value: 'IC MCU 32BIT 64KB FLASH 64TQFP-11012024'
+[2024-11-01T18:51:57.633Z] Update needed for field 'meta_data.short_description' in Part Number: ATUC64L3U-AUR in 11-01-2024/product-suntsu-sample-1.csv. Current value: 'IC MCU 32BIT 64KB FLASH 64TQFP-10302024', New value: 'IC MCU 32BIT 64KB FLASH 64TQFP-11012024'
+[2024-11-01T18:51:58.412Z] Update needed for field 'meta_data.additional_key_information' in Part Number: ATUC64L3U-Z3UR in 11-01-2024/product-suntsu-sample-1.csv. Current value: '<strong>Core Processor:</strong> AVR<br /> <strong>Core Size:</strong> 32-Bit Single-Core<br /> <strong>Speed:</strong> 50MHz<br /> <strong>Program Memory Size:</strong> 64KB (64K x 8)<br /> <strong>Mounting Type:</strong> Surface Mount, <br> Testing: Test Content,   <br> -10302024', New value: 'Core Processor: AVR,<br>Core Size: 32-Bit Single-Core,<br>Speed: 50MHz,<br> Program Memory Size: 64KB (64K x 8), <br> Mounting Type: Surface Mount, <br>Testing: Test Content TEST22 '
+[2024-11-01T18:51:59.185Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:00.113Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:00.860Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:01.621Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:02.443Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:03.213Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:04.076Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:05.077Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:06.090Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:06.799Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:07.415Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:08.036Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:08.829Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:09.619Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:10.440Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:11.223Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:12.155Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:13.087Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:13.671Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:14.453Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:15.240Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:16.180Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AA4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:16.829Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:17.697Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:18.422Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:19.242Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:20.065Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:21.352Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:21.751Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:52:22.455Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:53:22.210Z] Updated: Product ID 243289 | Part Number: SAX32410AA4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.211Z] Updated: Product ID 242205 | Part Number: SAX32410AA4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.211Z] Updated: Product ID 242224 | Part Number: SAX32410AA4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.211Z] Updated: Product ID 243308 | Part Number: SAX32410AA4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.212Z] Updated: Product ID 242410 | Part Number: SAX32410AA4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.212Z] Updated: Product ID 242955 | Part Number: SAX32410AA4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.212Z] Updated: Product ID 243066 | Part Number: SAX32410AA4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.212Z] Updated: Product ID 243118 | Part Number: SAX32410AA4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.212Z] Updated: Product ID 243426 | Part Number: SAX32410AA4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.213Z] Updated: Product ID 243212 | Part Number: SAX32410AA4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.213Z] Updated: Product ID 243209 | Part Number: SAX32410AA4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.213Z] Updated: Product ID 243091 | Part Number: SAX32410AA4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.214Z] Updated: Product ID 242427 | Part Number: SAX32410AA4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.214Z] Updated: Product ID 243094 | Part Number: SAX32410AA4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.214Z] Updated: Product ID 241921 | Part Number: SAX32410AA4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.214Z] Updated: Product ID 242797 | Part Number: SAX32410AA4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.214Z] Updated: Product ID 242057 | Part Number: SAX32410AA4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.215Z] Updated: Product ID 242712 | Part Number: SAX32410AA4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.215Z] Updated: Product ID 242391 | Part Number: SAX32410AA4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.215Z] Updated: Product ID 242226 | Part Number: SAX32410AA4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.216Z] Updated: Product ID 242340 | Part Number: SAX32410AA4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.216Z] Updated: Product ID 242505 | Part Number: SAX32410AA4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.216Z] Updated: Product ID 243478 | Part Number: SAX32410AX4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.216Z] Updated: Product ID 241957 | Part Number: SAX32410AX4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.216Z] Updated: Product ID 242882 | Part Number: SAX32410AX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.217Z] Updated: Product ID 242233 | Part Number: SAX32410AX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.217Z] Updated: Product ID 243089 | Part Number: SAX32410AX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.217Z] Updated: Product ID 243036 | Part Number: SAX32410AX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.217Z] Updated: Product ID 243385 | Part Number: SAX32410AX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:53:22.217Z] Updated: Product ID 243063 | Part Number: SAX32410AX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:54:10.123Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:10.916Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:11.702Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:12.556Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:13.321Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:13.355Z] Updated: Product ID 237143 | Part Number: SAW21212D4A-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.355Z] Updated: Product ID 237158 | Part Number: SAW21212D4B-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237149 | Part Number: SAW21212D58-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237147 | Part Number: SAW21212D5A-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237156 | Part Number: SAW21212D5B-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237154 | Part Number: SAW2127D4A-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237138 | Part Number: SAW2127D4B-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237151 | Part Number: SAW2127D58-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237145 | Part Number: SAW2127D5A-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237136 | Part Number: SAW2127D5B-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237157 | Part Number: SAW2129D4A-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.356Z] Updated: Product ID 237140 | Part Number: SAW2129D4B-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.357Z] Updated: Product ID 237155 | Part Number: SAW2129D58-32.768K | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.357Z] Updated: Product ID 185442 | Part Number: CY8C4149LDAS583XQLA1 | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.357Z] Updated: Product ID 185443 | Part Number: CY8C4149LDAS573XQLA1 | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.358Z] Updated: Product ID 185444 | Part Number: TM4C1231H6PGEI7R | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.358Z] Updated: Product ID 185445 | Part Number: PIC16LC773-I/SO | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.358Z] Updated: Product ID 185446 | Part Number: PIC18F2523T-I/SO | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185447 | Part Number: PIC32MX440F256HT-80I/MR | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185448 | Part Number: DSPIC33FJ32GS608-E/PT | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185449 | Part Number: PIC32MX664F128L-I/PF | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185451 | Part Number: PIC32MX564F128L-V/PF | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185452 | Part Number: PIC32MX664F064L-V/PF | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185453 | Part Number: DSPIC33FJ256GP506AT-I/PT | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185454 | Part Number: ATUC64L3U-AUR | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:13.359Z] Updated: Product ID 185455 | Part Number: ATUC64L3U-Z3UR | Source File: 11-01-2024/product-suntsu-sample-1.csv
+
+[2024-11-01T18:54:14.131Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:14.940Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:15.751Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:16.561Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:17.371Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:18.111Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:18.943Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:19.712Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:20.695Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AX4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:21.355Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:22.106Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:22.911Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:23.717Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:24.552Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:25.390Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:26.239Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:26.959Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:27.789Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:28.557Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:29.333Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:30.145Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:31.120Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:31.721Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:32.534Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:54:33.904Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'

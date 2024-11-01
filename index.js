@@ -33,9 +33,11 @@ const mainProcess = async () => {
     console.log(durationMessage);
     logErrorToFile(durationMessage);
   } catch (error) {
-    logErrorToFile(`An error occurred during processing: ${error.message}`);
+    logErrorToFile(`Unhandled error in mainProcess: ${error.message}`);
   }
 };
 
 
-mainProcess();
+mainProcess().catch(error => {
+  logErrorToFile(`Critical error in main: ${error.message}`);
+});

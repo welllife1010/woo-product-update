@@ -1,43 +1,46 @@
+// TODO:
+// 1. Checkpoint system to resume processing from the last processed item - multiple files in a folder.
+// 2. Large batchSize handling - split into smaller batches.
+// 3. Ensure batches are cleared (batch = []) promptly after processing.
+// 4. Set Up a Watchdog Timer to monitor the process and restart if it fails.
+
 const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
 const Bottleneck = require("bottleneck");
 const { logger, logErrorToFile } = require("./logger");
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_DEV,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
+    url: process.env.WOO_API_BASE_URL_TEST,
+    consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
+    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
     version: "wc/v3",
   });
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 3, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
-    minTime: 500, // Minimum time between requests (in milliseconds) - 500ms between each request
+    maxConcurrent: 2, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    minTime: 800, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
   
 // Configure retry options to handle 504 or 429 errors
 limiter.on("failed", async (error, jobInfo) => {
     const jobId = jobInfo.options.id || "<unknown>";
     const { file = "unknown", function: functionName = "unknown", part = "N/A" } = jobInfo.options.context || {};
+    const retryCount = jobInfo.retryCount || 0;
+    const delay = 1000 * Math.pow(2, retryCount); // Exponential backoff
 
-    logger.warn(
-        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${jobInfo.retryCount}`
-    );
+    logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}. Delay: ${delay}ms`);
 
     logErrorToFile(
         `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${jobInfo.retryCount}`
     );
 
-    if (jobInfo.retryCount < 5 && /(502|504|429)/.test(error.message)) {
-        return 1000 * Math.pow(2, jobInfo.retryCount); // Exponential backoff
-        logger.warn(`Applying a delay of ${retryDelay / 1000}s before retrying job ${jobId}`);
-        return retryDelay;
+    if (retryCount < 5 && /(502|504|429)/.test(error.message)) {
+        return delay;
     }
 
-    if (jobInfo.retryCount >= 5) {
-        logErrorToFile(`Job ${jobId} failed for part ${part} after max retries due to ${error.message}.`);
-    }
+    logErrorToFile(`Job ${jobId} failed permanently after ${retryCount} retries: ${error.message}`);
+    return null;
 });
 
 // Function to get product details by product ID

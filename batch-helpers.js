@@ -90,6 +90,43 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
     }
 };
 
+const createNewData = (item, productId, part_number) => {
+    return {
+        id: productId, // Required for Bulk API
+        part_number, // Attach part number here for later reference
+        sku: item.sku,
+        description: item.product_description,
+        meta_data: [
+            { key: "spq", value: item.spq },
+            { key: "manufacturer", value: item.manufacturer },
+            { key: "image_url", value: item.image_url },
+            { key: "datasheet_url", value: item.datasheet_url },
+            { key: "series_url", value: item.series_url },
+            { key: "series", value: item.series },
+            { key: "quantity", value: item.quantity },
+            { key: "operating_temperature", value: item.operating_temp },
+            { key: "voltage", value: item.supply_voltage },
+            { key: "package", value: item.packaging_type },
+            { key: "supplier_device_package", value: item.supplier_device_package },
+            { key: "mounting_type", value: item.mounting_type },
+            { key: "product_description", value: item.product_description }, // CSV field
+            { key: "short_description", value: item.product_description }, // Mapped to WooCommerce's short_description
+            { key: "detail_description", value: item.long_description },
+            { key: "additional_key_information", value: item.additional_info },
+        ],
+    };
+}
+
+const filterCurrentData = (product) => {
+    return {
+        sku: product.sku,
+        description: product.description,
+        meta_data: product.meta_data.filter((meta) =>
+            ["manufacturer", "spq", "image_url", "datasheet_url", "series_url", "series", "quantity", "operating_temperature", "voltage", "package", "supplier_device_package", "mounting_type", "product_description", "short_description" ,"detail_description", "additional_key_information"].includes(meta.key)
+        ),
+    };
+};
+
 // Function to process a batch of products using WooCommerce Bulk API
 const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
     // Array to collect products that need updating
@@ -97,23 +134,16 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
         batch.map(async (item, index) => {
             const currentIndex = startIndex + index + 1;
 
-            // Log each key and its value
-            // Object.keys(item).forEach((key) => {
-            //     logger.debug(`Key: ${key}, Value: ${item[key]}`);
-            //     logger.info(`Key: ${key}, Value: ${item[key]}`);
-            // });
-
             // Check if 'part_number' exists in the item
             if (!item.hasOwnProperty('part_number') || !item.part_number) {
-                logger.error(`part_number key is missing in item at index ${currentIndex}`);
-                return null; // Skip this item
+                logger.error(`part_number key is missing in item at index ${currentIndex}, Skip this item.`);
+                return null;
             }
 
             const part_number = item.part_number;
             logger.info(`Processing ${currentIndex} / ${totalProducts} - Part Number: ${part_number}`);
 
             try {
-                // Fetch product ID by part number
                 const productId = await getProductByPartNumber(part_number, currentIndex, totalProducts, fileKey);
 
                 if (productId) {
@@ -122,57 +152,24 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                     //logger.info(`DEBUG: Current meta_data for Product ID ${productId}: ${JSON.stringify(product.meta_data, null, 2)}`);
                     if (product) {
                         // Prepare new data structure for comparison and potential update
-                        const newData = {
-                            id: productId, // Required for Bulk API
-                            part_number, // Attach part number here for later reference
-                            sku: item.sku,
-                            description: item.product_description,
-                            meta_data: [
-                                { key: "spq", value: item.spq },
-                                { key: "manufacturer", value: item.manufacturer },
-                                { key: "image_url", value: item.image_url },
-                                { key: "datasheet_url", value: item.datasheet_url },
-                                { key: "series_url", value: item.series_url },
-                                { key: "series", value: item.series },
-                                { key: "quantity", value: item.quantity },
-                                { key: "operating_temperature", value: item.operating_temp },
-                                { key: "voltage", value: item.supply_voltage },
-                                { key: "package", value: item.packaging_type },
-                                { key: "supplier_device_package", value: item.supplier_device_package },
-                                { key: "mounting_type", value: item.mounting_type },
-                                { key: "product_description", value: item.product_description }, // CSV field
-                                { key: "short_description", value: item.product_description }, // Mapped to WooCommerce's short_description
-                                { key: "detail_description", value: item.long_description },
-                                { key: "additional_key_information", value: item.additional_info },
-                            ],
-                        };
-
-                        const currentData = {
-                            sku: product.sku,
-                            description: product.description,
-                            meta_data: product.meta_data.filter((meta) =>
-                                ["manufacturer", "spq", "image_url", "datasheet_url", "series_url", "series", "quantity", "operating_temperature", "voltage", "package", "supplier_device_package", "mounting_type", "product_description", "short_description" ,"detail_description", "additional_key_information"].includes(meta.key)
-                            ),
-                        };
+                        const newData = createNewData(item, productId, part_number);
+                        const currentData = filterCurrentData(product);
 
                         // logErrorToFile(`Processing Part Number: ${part_number} - Product ID: ${productId}`);
                         // logErrorToFile(`New Data for Product ID ${productId}: ${JSON.stringify(newData, null, 2)}`);
                         // logErrorToFile(`Current Data for Product ID ${productId}: ${JSON.stringify(currentData, null, 2)}`);
 
-
                         // Check if an update is needed
                         if (isUpdateNeeded(currentData, newData, currentIndex, totalProducts, part_number, fileKey)) {
                             return newData; // Include only if an update is needed
-                        } else {
-                            logger.info(`No update needed for Part Number ${part_number} (Product ID: ${productId})`);
-                            return null;
-                        }
+                        } 
                     }
                 } else {
                     logger.info(`Product ID not found for Part Number: ${part_number} at index ${currentIndex}`);
                 }
             } catch (error) {
-                logger.error(`Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`);
+                logger.error(`Error processing Part Number ${part_number || '<unknown>'} at index ${currentIndex}: ${error.message}`);
+                logErrorToFile(`Error processing ${part_number || '<unknown>'} at index ${currentIndex}: ${error.message}`);
             }
             return null; // Skip products that don't need updating or encountered an error
         })
@@ -187,12 +184,8 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
     if (filteredProducts.length > 0) {
         try {
             // Use WooCommerce Bulk API to update products
-            const jobId = `processBatch-${fileKey}`;
             const response = await limiter.schedule(
-                { 
-                    id: jobId, 
-                    context: { file: "batch-helpers.js", function: "processBatch" } 
-                },
+                { id: `batch-${fileKey}`, context: { file: "batch-helpers.js", function: "processBatch" }},
                 () => wooApi.put("products/batch", { update: filteredProducts })
             );
 
@@ -202,26 +195,16 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
             // Log each updated product's details to the unique updatedProductsFile
             filteredProducts.forEach((product) => {
                 logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
-                // fs.appendFileSync(
-                //     updatedProductsFile,
-                //     `Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`
-                // );
                 logger.info(`Product ID ${product.id} (${product.part_number}) updated successfully.`);
                 logErrorToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
             });
-            // response.data.update.forEach((product) => {
-            //     if (product.id) {
-            //         logger.info(`Product ID ${product.id}, Part Number ${product.name} updated successfully.`);
-            //     }
-            // });
         } catch (error) {
             // Log all part numbers in the failed batch
-            //const failedPartNumbers = filteredProducts.map(p => p.part_number).join(", ");
             const failedPartNumbers = filteredProducts.map(p => `Part Number: ${p.part_number}, ID: ${p.id}`).join("; ");
             logErrorToFile(`Batch update failed for file "${fileKey}": ${error.message}. Products in batch: ${failedPartNumbers}`);
         }
     } else {
-        logger.info(`No valid products to update in the batch for file: "${fileKey}"`);
+        logger.info(`No valid products to update in the batch for file: "${fileKey}"; filteredProducts.length: ${filteredProducts.length}`);
     }
 };
 
