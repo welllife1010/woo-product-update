@@ -136,7 +136,9 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
 
             // Check if 'part_number' exists in the item
             if (!item.hasOwnProperty('part_number') || !item.part_number) {
-                logger.error(`part_number key is missing in item at index ${currentIndex}, Skip this item.`);
+                const msg = `part_number key is missing in item at index ${currentIndex}, Skip this item.`;
+                logger.error(msg);
+                logErrorToFile(`Skipped product at index ${currentIndex} in ${fileKey}: ${msg}`);
                 return null;
             }
 
@@ -168,8 +170,9 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                     logger.info(`Product ID not found for Part Number: ${part_number} at index ${currentIndex}`);
                 }
             } catch (error) {
-                logger.error(`Error processing Part Number ${part_number || '<unknown>'} at index ${currentIndex}: ${error.message}`);
-                logErrorToFile(`Error processing ${part_number || '<unknown>'} at index ${currentIndex}: ${error.message}`);
+                const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
+                logger.error(errorMsg);
+                logErrorToFile(errorMsg);
             }
             return null; // Skip products that don't need updating or encountered an error
         })

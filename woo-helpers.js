@@ -25,22 +25,24 @@ const limiter = new Bottleneck({
 // Configure retry options to handle 504 or 429 errors
 limiter.on("failed", async (error, jobInfo) => {
     const jobId = jobInfo.options.id || "<unknown>";
-    const { file = "unknown", function: functionName = "unknown", part = "N/A" } = jobInfo.options.context || {};
+    const { file = "<unknown file>", function: functionName = "<unknown function>", part = "<unknown part>" } = jobInfo.options.context || {};
     const retryCount = jobInfo.retryCount || 0;
-    const delay = 1000 * Math.pow(2, retryCount); // Exponential backoff
+    const retryDelay = 1000 * Math.pow(2, retryCount); // Exponential backoff
 
-    logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}. Delay: ${delay}ms`);
+    logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}. Delay: ${retryDelay}ms`);
 
     logErrorToFile(
         `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${jobInfo.retryCount}`
     );
 
     if (retryCount < 5 && /(502|504|429)/.test(error.message)) {
-        return delay;
+        return retryDelay;
     }
 
-    logErrorToFile(`Job ${jobId} failed permanently after ${retryCount} retries: ${error.message}`);
-    return null;
+    if (retryCount >= 5) {
+        logErrorToFile(`Job ${jobId} failed permanently for part ${part} after maximum retries due to ${error.message}.`);
+    }
+
 });
 
 // Function to get product details by product ID
