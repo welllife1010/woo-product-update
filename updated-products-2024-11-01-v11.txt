@@ -303,3 +303,603 @@ New value: 'IC MCU 32BIT 64KB FLASH 64TQFP-11012024'
 [2024-11-01T18:54:31.721Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
 [2024-11-01T18:54:32.534Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
 [2024-11-01T18:54:33.904Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:17.505Z] Updated: Product ID 242675 | Part Number: SAX32410AX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.506Z] Updated: Product ID 243484 | Part Number: SAX32410AX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.506Z] Updated: Product ID 242949 | Part Number: SAX32410AX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.506Z] Updated: Product ID 242353 | Part Number: SAX32410AX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] Updated: Product ID 242303 | Part Number: SAX32410AX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] Updated: Product ID 242500 | Part Number: SAX32410AX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] Updated: Product ID 243390 | Part Number: SAX32410AX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] Updated: Product ID 243358 | Part Number: SAX32410AX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] Updated: Product ID 242185 | Part Number: SAX32410AX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] Updated: Product ID 242371 | Part Number: SAX32410AX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] Updated: Product ID 243425 | Part Number: SAX32410AX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] Updated: Product ID 242820 | Part Number: SAX32410AX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] Updated: Product ID 243362 | Part Number: SAX32410AX4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] Updated: Product ID 242886 | Part Number: SAX32410AX4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] Updated: Product ID 242089 | Part Number: SAX32410AY4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] Updated: Product ID 243480 | Part Number: SAX32410AY4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] Updated: Product ID 242162 | Part Number: SAX32410AY4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] Updated: Product ID 243151 | Part Number: SAX32410AY4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] Updated: Product ID 242183 | Part Number: SAX32410AY4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] Updated: Product ID 243104 | Part Number: SAX32410AY4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] Updated: Product ID 242823 | Part Number: SAX32410AY4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] Updated: Product ID 242917 | Part Number: SAX32410AY4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 242950 | Part Number: SAX32410AY4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 243444 | Part Number: SAX32410AY4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 242807 | Part Number: SAX32410AY4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 242522 | Part Number: SAX32410AY4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 242464 | Part Number: SAX32410AY4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 242909 | Part Number: SAX32410AY4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 243176 | Part Number: SAX32410AY4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] Updated: Product ID 243295 | Part Number: SAX32410AY4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:42.577Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:43.469Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:44.097Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:44.891Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:45.675Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:46.487Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410AY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:47.297Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:48.053Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:48.858Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:49.674Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:50.602Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:51.300Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:52.082Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:52.886Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:53.702Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:54.461Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:55.277Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:56.059Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:56.856Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:57.864Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:58.452Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:55:59.236Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:00.240Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:00.899Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:01.686Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:02.434Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:03.258Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:04.131Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BA4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:04.882Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:05.694Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:56:51.463Z] Updated: Product ID 243111 | Part Number: SAX32410AY4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.464Z] Updated: Product ID 242124 | Part Number: SAX32410AY4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.464Z] Updated: Product ID 243133 | Part Number: SAX32410AY4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] Updated: Product ID 242213 | Part Number: SAX32410AY4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] Updated: Product ID 243463 | Part Number: SAX32410AY4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] Updated: Product ID 243205 | Part Number: SAX32410AY4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] Updated: Product ID 243318 | Part Number: SAX32410BA4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] Updated: Product ID 243324 | Part Number: SAX32410BA4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] Updated: Product ID 243432 | Part Number: SAX32410BA4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] Updated: Product ID 242299 | Part Number: SAX32410BA4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] Updated: Product ID 243349 | Part Number: SAX32410BA4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] Updated: Product ID 242007 | Part Number: SAX32410BA4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] Updated: Product ID 242925 | Part Number: SAX32410BA4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] Updated: Product ID 242798 | Part Number: SAX32410BA4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] Updated: Product ID 242036 | Part Number: SAX32410BA4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] Updated: Product ID 243246 | Part Number: SAX32410BA4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] Updated: Product ID 242636 | Part Number: SAX32410BA4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] Updated: Product ID 243149 | Part Number: SAX32410BA4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] Updated: Product ID 243489 | Part Number: SAX32410BA4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] Updated: Product ID 242697 | Part Number: SAX32410BA4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] Updated: Product ID 243168 | Part Number: SAX32410BA4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] Updated: Product ID 243221 | Part Number: SAX32410BA4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] Updated: Product ID 242465 | Part Number: SAX32410BA4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] Updated: Product ID 243200 | Part Number: SAX32410BA4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] Updated: Product ID 243223 | Part Number: SAX32410BA4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] Updated: Product ID 242604 | Part Number: SAX32410BA4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] Updated: Product ID 242230 | Part Number: SAX32410BA4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.469Z] Updated: Product ID 243428 | Part Number: SAX32410BA4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.469Z] Updated: Product ID 242148 | Part Number: SAX32410BX4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.469Z] Updated: Product ID 243166 | Part Number: SAX32410BX4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:57:16.622Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:17.403Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:18.219Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:19.037Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:19.845Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:20.635Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:21.586Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:22.259Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:23.188Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:23.790Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:24.622Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:25.368Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:26.208Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:27.026Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:27.815Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:28.557Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:29.406Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:30.238Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:30.993Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:31.777Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BX4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:32.613Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:33.445Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:34.241Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:35.058Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:35.833Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:36.610Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:37.379Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:38.355Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:39.012Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:57:39.797Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:21.850Z] Updated: Product ID 242601 | Part Number: SAX32410BX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.850Z] Updated: Product ID 241893 | Part Number: SAX32410BX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.851Z] Updated: Product ID 243050 | Part Number: SAX32410BX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.851Z] Updated: Product ID 243381 | Part Number: SAX32410BX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.851Z] Updated: Product ID 243072 | Part Number: SAX32410BX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.851Z] Updated: Product ID 242288 | Part Number: SAX32410BX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.852Z] Updated: Product ID 242249 | Part Number: SAX32410BX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.852Z] Updated: Product ID 243255 | Part Number: SAX32410BX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.852Z] Updated: Product ID 242531 | Part Number: SAX32410BX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] Updated: Product ID 241877 | Part Number: SAX32410BX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] Updated: Product ID 243291 | Part Number: SAX32410BX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] Updated: Product ID 242387 | Part Number: SAX32410BX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] Updated: Product ID 242489 | Part Number: SAX32410BX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] Updated: Product ID 243165 | Part Number: SAX32410BX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] Updated: Product ID 243320 | Part Number: SAX32410BX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] Updated: Product ID 242433 | Part Number: SAX32410BX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] Updated: Product ID 242599 | Part Number: SAX32410BX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] Updated: Product ID 242651 | Part Number: SAX32410BX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] Updated: Product ID 243448 | Part Number: SAX32410BX4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] Updated: Product ID 241989 | Part Number: SAX32410BX4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] Updated: Product ID 242929 | Part Number: SAX32410BY4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] Updated: Product ID 242532 | Part Number: SAX32410BY4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] Updated: Product ID 241880 | Part Number: SAX32410BY4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] Updated: Product ID 242090 | Part Number: SAX32410BY4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] Updated: Product ID 243509 | Part Number: SAX32410BY4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] Updated: Product ID 243364 | Part Number: SAX32410BY4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] Updated: Product ID 243285 | Part Number: SAX32410BY4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] Updated: Product ID 241939 | Part Number: SAX32410BY4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] Updated: Product ID 242836 | Part Number: SAX32410BY4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] Updated: Product ID 242770 | Part Number: SAX32410BY4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:47.776Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:48.486Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:49.350Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:50.301Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:50.984Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:51.748Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:52.510Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:53.323Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:54.158Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:54.896Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:55.730Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:56.553Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410BY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:57.333Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:58.174Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:58.913Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:58:59.738Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:00.640Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:01.304Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:02.137Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:02.945Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:03.744Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:04.564Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:05.357Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:06.110Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:06.928Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:07.735Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:08.559Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:09.327Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:10.149Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:10.935Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T18:59:51.120Z] Updated: Product ID 243160 | Part Number: SAX32410BY4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.121Z] Updated: Product ID 242735 | Part Number: SAX32410BY4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.122Z] Updated: Product ID 241936 | Part Number: SAX32410BY4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.122Z] Updated: Product ID 243006 | Part Number: SAX32410BY4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.122Z] Updated: Product ID 242753 | Part Number: SAX32410BY4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.122Z] Updated: Product ID 243219 | Part Number: SAX32410BY4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] Updated: Product ID 243088 | Part Number: SAX32410BY4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] Updated: Product ID 242534 | Part Number: SAX32410BY4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] Updated: Product ID 242017 | Part Number: SAX32410BY4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] Updated: Product ID 242082 | Part Number: SAX32410BY4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] Updated: Product ID 243322 | Part Number: SAX32410BY4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] Updated: Product ID 242419 | Part Number: SAX32410BY4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] Updated: Product ID 243116 | Part Number: SAX32410CA4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] Updated: Product ID 241993 | Part Number: SAX32410CA4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] Updated: Product ID 243128 | Part Number: SAX32410CA4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] Updated: Product ID 241912 | Part Number: SAX32410CA4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] Updated: Product ID 243282 | Part Number: SAX32410CA4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] Updated: Product ID 242488 | Part Number: SAX32410CA4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] Updated: Product ID 243388 | Part Number: SAX32410CA4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] Updated: Product ID 243162 | Part Number: SAX32410CA4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] Updated: Product ID 242966 | Part Number: SAX32410CA4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] Updated: Product ID 242643 | Part Number: SAX32410CA4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] Updated: Product ID 243196 | Part Number: SAX32410CA4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] Updated: Product ID 243373 | Part Number: SAX32410CA4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] Updated: Product ID 243245 | Part Number: SAX32410CA4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] Updated: Product ID 243159 | Part Number: SAX32410CA4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] Updated: Product ID 242040 | Part Number: SAX32410CA4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] Updated: Product ID 241911 | Part Number: SAX32410CA4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] Updated: Product ID 242769 | Part Number: SAX32410CA4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.127Z] Updated: Product ID 243034 | Part Number: SAX32410CA4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:00:18.191Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:18.994Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:20.779Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:21.592Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CA4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:23.372Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:24.082Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:25.392Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:26.289Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:27.974Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:28.093Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:29.298Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:30.308Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:31.211Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:31.302Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:32.030Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:32.666Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:33.309Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:34.119Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:35.017Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:35.806Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:36.985Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:37.528Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:38.042Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:39.089Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:39.873Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:40.506Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CX4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:41.684Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:42.896Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:44.387Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:00:44.618Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:23.765Z] Updated: Product ID 242627 | Part Number: SAX32410CA4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.765Z] Updated: Product ID 242149 | Part Number: SAX32410CA4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.766Z] Updated: Product ID 241990 | Part Number: SAX32410CA4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.766Z] Updated: Product ID 242805 | Part Number: SAX32410CA4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.766Z] Updated: Product ID 243033 | Part Number: SAX32410CX4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] Updated: Product ID 243262 | Part Number: SAX32410CX4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] Updated: Product ID 243097 | Part Number: SAX32410CX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] Updated: Product ID 242271 | Part Number: SAX32410CX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] Updated: Product ID 242557 | Part Number: SAX32410CX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] Updated: Product ID 242437 | Part Number: SAX32410CX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] Updated: Product ID 243495 | Part Number: SAX32410CX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] Updated: Product ID 242152 | Part Number: SAX32410CX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] Updated: Product ID 242948 | Part Number: SAX32410CX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] Updated: Product ID 241914 | Part Number: SAX32410CX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] Updated: Product ID 243492 | Part Number: SAX32410CX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] Updated: Product ID 243230 | Part Number: SAX32410CX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] Updated: Product ID 242497 | Part Number: SAX32410CX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] Updated: Product ID 242614 | Part Number: SAX32410CX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 242061 | Part Number: SAX32410CX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 242585 | Part Number: SAX32410CX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 241890 | Part Number: SAX32410CX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 243361 | Part Number: SAX32410CX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 242189 | Part Number: SAX32410CX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 242682 | Part Number: SAX32410CX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 242940 | Part Number: SAX32410CX4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] Updated: Product ID 243317 | Part Number: SAX32410CX4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] Updated: Product ID 243503 | Part Number: SAX32410CY4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] Updated: Product ID 242064 | Part Number: SAX32410CY4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] Updated: Product ID 243105 | Part Number: SAX32410CY4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] Updated: Product ID 243108 | Part Number: SAX32410CY4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:49.239Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:50.059Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:50.960Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:51.637Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:52.459Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:53.223Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:54.033Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:54.837Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:55.633Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:56.460Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:57.382Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:58.060Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:58.811Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:01:59.594Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:00.524Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:01.339Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:02.072Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:02.858Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410CY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:03.619Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:04.440Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:05.262Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:06.089Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:06.844Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:07.651Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:08.431Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:09.311Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:10.055Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:11.016Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:11.748Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:12.438Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:02:58.218Z] Updated: Product ID 243415 | Part Number: SAX32410CY4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.218Z] Updated: Product ID 242543 | Part Number: SAX32410CY4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] Updated: Product ID 242575 | Part Number: SAX32410CY4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] Updated: Product ID 243269 | Part Number: SAX32410CY4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] Updated: Product ID 242286 | Part Number: SAX32410CY4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] Updated: Product ID 243303 | Part Number: SAX32410CY4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] Updated: Product ID 243012 | Part Number: SAX32410CY4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] Updated: Product ID 243399 | Part Number: SAX32410CY4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] Updated: Product ID 243330 | Part Number: SAX32410CY4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] Updated: Product ID 243218 | Part Number: SAX32410CY4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] Updated: Product ID 242942 | Part Number: SAX32410CY4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] Updated: Product ID 243182 | Part Number: SAX32410CY4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] Updated: Product ID 242083 | Part Number: SAX32410CY4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] Updated: Product ID 242524 | Part Number: SAX32410CY4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] Updated: Product ID 243132 | Part Number: SAX32410CY4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] Updated: Product ID 242780 | Part Number: SAX32410CY4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] Updated: Product ID 243455 | Part Number: SAX32410CY4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] Updated: Product ID 243354 | Part Number: SAX32410CY4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] Updated: Product ID 243004 | Part Number: SAX32410DA4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] Updated: Product ID 243500 | Part Number: SAX32410DA4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] Updated: Product ID 243058 | Part Number: SAX32410DA4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] Updated: Product ID 242316 | Part Number: SAX32410DA4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] Updated: Product ID 243015 | Part Number: SAX32410DA4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] Updated: Product ID 243016 | Part Number: SAX32410DA4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] Updated: Product ID 242969 | Part Number: SAX32410DA4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] Updated: Product ID 242637 | Part Number: SAX32410DA4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] Updated: Product ID 242951 | Part Number: SAX32410DA4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] Updated: Product ID 241940 | Part Number: SAX32410DA4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] Updated: Product ID 243167 | Part Number: SAX32410DA4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.224Z] Updated: Product ID 243098 | Part Number: SAX32410DA4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:03:24.950Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:25.756Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:26.530Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:27.309Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:28.116Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:28.951Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:29.743Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:30.689Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:31.383Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:32.151Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DA4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:32.929Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:33.866Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:34.552Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:35.351Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:36.303Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:36.951Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:37.749Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:38.534Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:39.451Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:40.125Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:40.959Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:41.736Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:42.517Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:43.333Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:44.342Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:44.956Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:45.771Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:46.585Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:47.320Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:03:48.084Z] Update needed for field 'meta_data.voltage' in Part Number: SAX32410DX4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv. Current value: '', New value: '11012024-TEST02'
+[2024-11-01T19:04:31.418Z] Updated: Product ID 243022 | Part Number: SAX32410DA4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] Updated: Product ID 242745 | Part Number: SAX32410DA4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] Updated: Product ID 243153 | Part Number: SAX32410DA4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] Updated: Product ID 242246 | Part Number: SAX32410DA4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] Updated: Product ID 243491 | Part Number: SAX32410DA4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 243005 | Part Number: SAX32410DA4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 242402 | Part Number: SAX32410DA4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 243049 | Part Number: SAX32410DA4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 242632 | Part Number: SAX32410DA4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 242147 | Part Number: SAX32410DA4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 243068 | Part Number: SAX32410DX4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 243042 | Part Number: SAX32410DX4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] Updated: Product ID 243510 | Part Number: SAX32410DX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] Updated: Product ID 241875 | Part Number: SAX32410DX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] Updated: Product ID 243086 | Part Number: SAX32410DX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] Updated: Product ID 242155 | Part Number: SAX32410DX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] Updated: Product ID 243206 | Part Number: SAX32410DX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] Updated: Product ID 243413 | Part Number: SAX32410DX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] Updated: Product ID 243155 | Part Number: SAX32410DX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] Updated: Product ID 241943 | Part Number: SAX32410DX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] Updated: Product ID 242920 | Part Number: SAX32410DX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] Updated: Product ID 241955 | Part Number: SAX32410DX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] Updated: Product ID 242431 | Part Number: SAX32410DX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] Updated: Product ID 243271 | Part Number: SAX32410DX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] Updated: Product ID 243169 | Part Number: SAX32410DX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] Updated: Product ID 241991 | Part Number: SAX32410DX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] Updated: Product ID 242324 | Part Number: SAX32410DX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] Updated: Product ID 242610 | Part Number: SAX32410DX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] Updated: Product ID 243476 | Part Number: SAX32410DX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] Updated: Product ID 243021 | Part Number: SAX32410DX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+

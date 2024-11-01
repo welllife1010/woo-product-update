@@ -552,3 +552,1172 @@ Current: '', New: '11012024-TEST02'
 [2024-11-01T18:54:33.902Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410AY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
 Current: '', New: '11012024-TEST02' 
 
+[2024-11-01T18:55:17.506Z] ERROR: Updated: Product ID 242675 | Part Number: SAX32410AX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.506Z] ERROR: Updated: Product ID 243484 | Part Number: SAX32410AX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.506Z] ERROR: Updated: Product ID 242949 | Part Number: SAX32410AX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] ERROR: Updated: Product ID 242353 | Part Number: SAX32410AX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] ERROR: Updated: Product ID 242303 | Part Number: SAX32410AX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] ERROR: Updated: Product ID 242500 | Part Number: SAX32410AX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] ERROR: Updated: Product ID 243390 | Part Number: SAX32410AX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] ERROR: Updated: Product ID 243358 | Part Number: SAX32410AX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.507Z] ERROR: Updated: Product ID 242185 | Part Number: SAX32410AX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] ERROR: Updated: Product ID 242371 | Part Number: SAX32410AX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] ERROR: Updated: Product ID 243425 | Part Number: SAX32410AX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] ERROR: Updated: Product ID 242820 | Part Number: SAX32410AX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] ERROR: Updated: Product ID 243362 | Part Number: SAX32410AX4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] ERROR: Updated: Product ID 242886 | Part Number: SAX32410AX4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.508Z] ERROR: Updated: Product ID 242089 | Part Number: SAX32410AY4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] ERROR: Updated: Product ID 243480 | Part Number: SAX32410AY4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] ERROR: Updated: Product ID 242162 | Part Number: SAX32410AY4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] ERROR: Updated: Product ID 243151 | Part Number: SAX32410AY4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] ERROR: Updated: Product ID 242183 | Part Number: SAX32410AY4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] ERROR: Updated: Product ID 243104 | Part Number: SAX32410AY4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] ERROR: Updated: Product ID 242823 | Part Number: SAX32410AY4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.509Z] ERROR: Updated: Product ID 242917 | Part Number: SAX32410AY4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 242950 | Part Number: SAX32410AY4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 243444 | Part Number: SAX32410AY4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 242807 | Part Number: SAX32410AY4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 242522 | Part Number: SAX32410AY4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 242464 | Part Number: SAX32410AY4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 242909 | Part Number: SAX32410AY4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 243176 | Part Number: SAX32410AY4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:17.510Z] ERROR: Updated: Product ID 243295 | Part Number: SAX32410AY4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:55:19.115Z] ERROR: 2. 61 / 90 - Product ID 243111 found for Part Number SAX32410AY4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:19.818Z] ERROR: 2. 62 / 90 - Product ID 242124 found for Part Number SAX32410AY4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:20.423Z] ERROR: 2. 63 / 90 - Product ID 243133 found for Part Number SAX32410AY4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:22.013Z] ERROR: 2. 64 / 90 - Product ID 242213 found for Part Number SAX32410AY4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:22.534Z] ERROR: 2. 65 / 90 - Product ID 243463 found for Part Number SAX32410AY4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:23.245Z] ERROR: 2. 66 / 90 - Product ID 243205 found for Part Number SAX32410AY4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:24.117Z] ERROR: 2. 67 / 90 - Product ID 243318 found for Part Number SAX32410BA4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:24.861Z] ERROR: 2. 68 / 90 - Product ID 243324 found for Part Number SAX32410BA4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:25.576Z] ERROR: 2. 69 / 90 - Product ID 243432 found for Part Number SAX32410BA4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:26.601Z] ERROR: 2. 70 / 90 - Product ID 242299 found for Part Number SAX32410BA4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:27.416Z] ERROR: 2. 71 / 90 - Product ID 243349 found for Part Number SAX32410BA4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:28.021Z] ERROR: 2. 72 / 90 - Product ID 242007 found for Part Number SAX32410BA4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:28.707Z] ERROR: 2. 73 / 90 - Product ID 242925 found for Part Number SAX32410BA4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:29.821Z] ERROR: 2. 74 / 90 - Product ID 242798 found for Part Number SAX32410BA4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:30.535Z] ERROR: 2. 75 / 90 - Product ID 242036 found for Part Number SAX32410BA4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:31.231Z] ERROR: 2. 76 / 90 - Product ID 243246 found for Part Number SAX32410BA4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:31.922Z] ERROR: 2. 77 / 90 - Product ID 242636 found for Part Number SAX32410BA4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:32.676Z] ERROR: 2. 78 / 90 - Product ID 243149 found for Part Number SAX32410BA4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:33.584Z] ERROR: 2. 79 / 90 - Product ID 243489 found for Part Number SAX32410BA4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:34.511Z] ERROR: 2. 80 / 90 - Product ID 242697 found for Part Number SAX32410BA4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:35.214Z] ERROR: 2. 81 / 90 - Product ID 243168 found for Part Number SAX32410BA4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:36.077Z] ERROR: 2. 82 / 90 - Product ID 243221 found for Part Number SAX32410BA4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:36.803Z] ERROR: 2. 83 / 90 - Product ID 242465 found for Part Number SAX32410BA4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:37.786Z] ERROR: 2. 84 / 90 - Product ID 243200 found for Part Number SAX32410BA4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:38.409Z] ERROR: 2. 85 / 90 - Product ID 243223 found for Part Number SAX32410BA4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:39.302Z] ERROR: 2. 86 / 90 - Product ID 242604 found for Part Number SAX32410BA4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:40.345Z] ERROR: 2. 87 / 90 - Product ID 242230 found for Part Number SAX32410BA4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:40.894Z] ERROR: 2. 88 / 90 - Product ID 243428 found for Part Number SAX32410BA4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:41.619Z] ERROR: 2. 89 / 90 - Product ID 242148 found for Part Number SAX32410BX4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:42.416Z] ERROR: 2. 90 / 90 - Product ID 243166 found for Part Number SAX32410BX4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:55:42.574Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410AY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:43.466Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410AY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:44.095Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410AY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:44.889Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410AY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:45.673Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410AY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:46.485Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410AY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:47.296Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:48.051Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:48.855Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:49.672Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:50.600Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:51.298Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:52.080Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:52.884Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:53.701Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:54.459Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:55.274Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:56.058Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:56.853Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:57.862Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:58.450Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:55:59.234Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:00.238Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:00.898Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:01.684Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:02.432Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:03.255Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:04.130Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BA4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:04.880Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:05.691Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:56:51.464Z] ERROR: Updated: Product ID 243111 | Part Number: SAX32410AY4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.464Z] ERROR: Updated: Product ID 242124 | Part Number: SAX32410AY4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.464Z] ERROR: Updated: Product ID 243133 | Part Number: SAX32410AY4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] ERROR: Updated: Product ID 242213 | Part Number: SAX32410AY4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] ERROR: Updated: Product ID 243463 | Part Number: SAX32410AY4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] ERROR: Updated: Product ID 243205 | Part Number: SAX32410AY4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.465Z] ERROR: Updated: Product ID 243318 | Part Number: SAX32410BA4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] ERROR: Updated: Product ID 243324 | Part Number: SAX32410BA4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] ERROR: Updated: Product ID 243432 | Part Number: SAX32410BA4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] ERROR: Updated: Product ID 242299 | Part Number: SAX32410BA4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] ERROR: Updated: Product ID 243349 | Part Number: SAX32410BA4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] ERROR: Updated: Product ID 242007 | Part Number: SAX32410BA4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.466Z] ERROR: Updated: Product ID 242925 | Part Number: SAX32410BA4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] ERROR: Updated: Product ID 242798 | Part Number: SAX32410BA4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] ERROR: Updated: Product ID 242036 | Part Number: SAX32410BA4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] ERROR: Updated: Product ID 243246 | Part Number: SAX32410BA4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] ERROR: Updated: Product ID 242636 | Part Number: SAX32410BA4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] ERROR: Updated: Product ID 243149 | Part Number: SAX32410BA4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] ERROR: Updated: Product ID 243489 | Part Number: SAX32410BA4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.467Z] ERROR: Updated: Product ID 242697 | Part Number: SAX32410BA4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] ERROR: Updated: Product ID 243168 | Part Number: SAX32410BA4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] ERROR: Updated: Product ID 243221 | Part Number: SAX32410BA4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] ERROR: Updated: Product ID 242465 | Part Number: SAX32410BA4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] ERROR: Updated: Product ID 243200 | Part Number: SAX32410BA4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] ERROR: Updated: Product ID 243223 | Part Number: SAX32410BA4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.468Z] ERROR: Updated: Product ID 242604 | Part Number: SAX32410BA4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.469Z] ERROR: Updated: Product ID 242230 | Part Number: SAX32410BA4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.469Z] ERROR: Updated: Product ID 243428 | Part Number: SAX32410BA4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.469Z] ERROR: Updated: Product ID 242148 | Part Number: SAX32410BX4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:51.470Z] ERROR: Updated: Product ID 243166 | Part Number: SAX32410BX4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:56:53.763Z] ERROR: 2. 91 / 120 - Product ID 242601 found for Part Number SAX32410BX4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:54.235Z] ERROR: 2. 92 / 120 - Product ID 241893 found for Part Number SAX32410BX4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:54.981Z] ERROR: 2. 93 / 120 - Product ID 243050 found for Part Number SAX32410BX4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:55.950Z] ERROR: 2. 94 / 120 - Product ID 243381 found for Part Number SAX32410BX4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:56.649Z] ERROR: 2. 95 / 120 - Product ID 243072 found for Part Number SAX32410BX4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:57.435Z] ERROR: 2. 96 / 120 - Product ID 242288 found for Part Number SAX32410BX4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:58.372Z] ERROR: 2. 97 / 120 - Product ID 242249 found for Part Number SAX32410BX4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:59.025Z] ERROR: 2. 98 / 120 - Product ID 243255 found for Part Number SAX32410BX4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:56:59.869Z] ERROR: 2. 99 / 120 - Product ID 242531 found for Part Number SAX32410BX4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:00.866Z] ERROR: 2. 100 / 120 - Product ID 241877 found for Part Number SAX32410BX4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:01.481Z] ERROR: 2. 101 / 120 - Product ID 243291 found for Part Number SAX32410BX4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:02.488Z] ERROR: 2. 102 / 120 - Product ID 242387 found for Part Number SAX32410BX4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:03.230Z] ERROR: 2. 103 / 120 - Product ID 242489 found for Part Number SAX32410BX4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:03.838Z] ERROR: 2. 104 / 120 - Product ID 243165 found for Part Number SAX32410BX4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:04.648Z] ERROR: 2. 105 / 120 - Product ID 243320 found for Part Number SAX32410BX4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:05.674Z] ERROR: 2. 106 / 120 - Product ID 242433 found for Part Number SAX32410BX4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:06.224Z] ERROR: 2. 107 / 120 - Product ID 242599 found for Part Number SAX32410BX4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:07.078Z] ERROR: 2. 108 / 120 - Product ID 242651 found for Part Number SAX32410BX4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:07.747Z] ERROR: 2. 109 / 120 - Product ID 243448 found for Part Number SAX32410BX4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:08.412Z] ERROR: 2. 110 / 120 - Product ID 241989 found for Part Number SAX32410BX4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:09.568Z] ERROR: 2. 111 / 120 - Product ID 242929 found for Part Number SAX32410BY4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:10.217Z] ERROR: 2. 112 / 120 - Product ID 242532 found for Part Number SAX32410BY4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:11.178Z] ERROR: 2. 113 / 120 - Product ID 241880 found for Part Number SAX32410BY4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:11.915Z] ERROR: 2. 114 / 120 - Product ID 242090 found for Part Number SAX32410BY4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:12.626Z] ERROR: 2. 115 / 120 - Product ID 243509 found for Part Number SAX32410BY4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:13.379Z] ERROR: 2. 116 / 120 - Product ID 243364 found for Part Number SAX32410BY4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:14.226Z] ERROR: 2. 117 / 120 - Product ID 243285 found for Part Number SAX32410BY4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:15.001Z] ERROR: 2. 118 / 120 - Product ID 241939 found for Part Number SAX32410BY4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:15.813Z] ERROR: 2. 119 / 120 - Product ID 242836 found for Part Number SAX32410BY4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:16.621Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:16.622Z] ERROR: 2. 120 / 120 - Product ID 242770 found for Part Number SAX32410BY4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:57:17.401Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:18.218Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:19.034Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:19.843Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:20.633Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:21.584Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:22.257Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:23.187Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:23.789Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:24.620Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:25.367Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:26.206Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:27.024Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:27.813Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:28.556Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:29.404Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:30.236Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:30.992Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:31.775Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BX4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:32.612Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:33.443Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:34.238Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:35.057Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:35.832Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:36.609Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:37.378Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:38.354Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:39.011Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:57:39.795Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:21.850Z] ERROR: Updated: Product ID 242601 | Part Number: SAX32410BX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.850Z] ERROR: Updated: Product ID 241893 | Part Number: SAX32410BX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.851Z] ERROR: Updated: Product ID 243050 | Part Number: SAX32410BX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.851Z] ERROR: Updated: Product ID 243381 | Part Number: SAX32410BX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.851Z] ERROR: Updated: Product ID 243072 | Part Number: SAX32410BX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.852Z] ERROR: Updated: Product ID 242288 | Part Number: SAX32410BX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.852Z] ERROR: Updated: Product ID 242249 | Part Number: SAX32410BX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.852Z] ERROR: Updated: Product ID 243255 | Part Number: SAX32410BX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] ERROR: Updated: Product ID 242531 | Part Number: SAX32410BX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] ERROR: Updated: Product ID 241877 | Part Number: SAX32410BX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] ERROR: Updated: Product ID 243291 | Part Number: SAX32410BX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] ERROR: Updated: Product ID 242387 | Part Number: SAX32410BX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] ERROR: Updated: Product ID 242489 | Part Number: SAX32410BX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] ERROR: Updated: Product ID 243165 | Part Number: SAX32410BX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.853Z] ERROR: Updated: Product ID 243320 | Part Number: SAX32410BX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] ERROR: Updated: Product ID 242433 | Part Number: SAX32410BX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] ERROR: Updated: Product ID 242599 | Part Number: SAX32410BX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] ERROR: Updated: Product ID 242651 | Part Number: SAX32410BX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] ERROR: Updated: Product ID 243448 | Part Number: SAX32410BX4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] ERROR: Updated: Product ID 241989 | Part Number: SAX32410BX4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] ERROR: Updated: Product ID 242929 | Part Number: SAX32410BY4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.854Z] ERROR: Updated: Product ID 242532 | Part Number: SAX32410BY4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] ERROR: Updated: Product ID 241880 | Part Number: SAX32410BY4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] ERROR: Updated: Product ID 242090 | Part Number: SAX32410BY4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] ERROR: Updated: Product ID 243509 | Part Number: SAX32410BY4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] ERROR: Updated: Product ID 243364 | Part Number: SAX32410BY4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] ERROR: Updated: Product ID 243285 | Part Number: SAX32410BY4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] ERROR: Updated: Product ID 241939 | Part Number: SAX32410BY4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.855Z] ERROR: Updated: Product ID 242836 | Part Number: SAX32410BY4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:21.856Z] ERROR: Updated: Product ID 242770 | Part Number: SAX32410BY4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:58:24.438Z] ERROR: 2. 122 / 150 - Product ID 242735 found for Part Number SAX32410BY4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:25.680Z] ERROR: 2. 121 / 150 - Product ID 243160 found for Part Number SAX32410BY4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:25.770Z] ERROR: 2. 123 / 150 - Product ID 241936 found for Part Number SAX32410BY4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:26.876Z] ERROR: 2. 124 / 150 - Product ID 243006 found for Part Number SAX32410BY4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:27.805Z] ERROR: 2. 125 / 150 - Product ID 242753 found for Part Number SAX32410BY4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:28.516Z] ERROR: 2. 126 / 150 - Product ID 243219 found for Part Number SAX32410BY4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:29.377Z] ERROR: 2. 127 / 150 - Product ID 243088 found for Part Number SAX32410BY4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:30.154Z] ERROR: 2. 128 / 150 - Product ID 242534 found for Part Number SAX32410BY4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:30.998Z] ERROR: 2. 129 / 150 - Product ID 242017 found for Part Number SAX32410BY4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:31.663Z] ERROR: 2. 130 / 150 - Product ID 242082 found for Part Number SAX32410BY4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:32.374Z] ERROR: 2. 131 / 150 - Product ID 243322 found for Part Number SAX32410BY4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:33.353Z] ERROR: 2. 132 / 150 - Product ID 242419 found for Part Number SAX32410BY4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:34.132Z] ERROR: 2. 133 / 150 - Product ID 243116 found for Part Number SAX32410CA4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:35.010Z] ERROR: 2. 134 / 150 - Product ID 241993 found for Part Number SAX32410CA4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:35.698Z] ERROR: 2. 135 / 150 - Product ID 243128 found for Part Number SAX32410CA4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:36.351Z] ERROR: 2. 136 / 150 - Product ID 241912 found for Part Number SAX32410CA4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:37.318Z] ERROR: 2. 137 / 150 - Product ID 243282 found for Part Number SAX32410CA4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:38.183Z] ERROR: 2. 138 / 150 - Product ID 242488 found for Part Number SAX32410CA4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:39.042Z] ERROR: 2. 139 / 150 - Product ID 243388 found for Part Number SAX32410CA4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:39.935Z] ERROR: 2. 140 / 150 - Product ID 243162 found for Part Number SAX32410CA4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:40.819Z] ERROR: 2. 141 / 150 - Product ID 242966 found for Part Number SAX32410CA4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:41.557Z] ERROR: 2. 142 / 150 - Product ID 242643 found for Part Number SAX32410CA4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:42.254Z] ERROR: 2. 143 / 150 - Product ID 243196 found for Part Number SAX32410CA4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:42.904Z] ERROR: 2. 144 / 150 - Product ID 243373 found for Part Number SAX32410CA4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:43.981Z] ERROR: 2. 145 / 150 - Product ID 243245 found for Part Number SAX32410CA4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:44.716Z] ERROR: 2. 146 / 150 - Product ID 243159 found for Part Number SAX32410CA4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:45.284Z] ERROR: 2. 147 / 150 - Product ID 242040 found for Part Number SAX32410CA4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:46.103Z] ERROR: 2. 148 / 150 - Product ID 241911 found for Part Number SAX32410CA4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:46.852Z] ERROR: 2. 149 / 150 - Product ID 242769 found for Part Number SAX32410CA4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:47.649Z] ERROR: 2. 150 / 150 - Product ID 243034 found for Part Number SAX32410CA4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:58:47.774Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:48.484Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:49.349Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:50.298Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:50.982Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:51.746Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:52.508Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:53.322Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:54.156Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:54.894Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:55.727Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:56.551Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410BY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:57.331Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:58.172Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:58.911Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:58:59.736Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:00.637Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:01.302Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:02.135Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:02.944Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:03.742Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:04.562Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:05.355Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:06.108Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:06.926Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:07.733Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:08.556Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:09.325Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:10.147Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:10.932Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T18:59:51.121Z] ERROR: Updated: Product ID 243160 | Part Number: SAX32410BY4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.121Z] ERROR: Updated: Product ID 242735 | Part Number: SAX32410BY4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.122Z] ERROR: Updated: Product ID 241936 | Part Number: SAX32410BY4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.122Z] ERROR: Updated: Product ID 243006 | Part Number: SAX32410BY4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.122Z] ERROR: Updated: Product ID 242753 | Part Number: SAX32410BY4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] ERROR: Updated: Product ID 243219 | Part Number: SAX32410BY4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] ERROR: Updated: Product ID 243088 | Part Number: SAX32410BY4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] ERROR: Updated: Product ID 242534 | Part Number: SAX32410BY4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] ERROR: Updated: Product ID 242017 | Part Number: SAX32410BY4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] ERROR: Updated: Product ID 242082 | Part Number: SAX32410BY4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.123Z] ERROR: Updated: Product ID 243322 | Part Number: SAX32410BY4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] ERROR: Updated: Product ID 242419 | Part Number: SAX32410BY4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] ERROR: Updated: Product ID 243116 | Part Number: SAX32410CA4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] ERROR: Updated: Product ID 241993 | Part Number: SAX32410CA4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] ERROR: Updated: Product ID 243128 | Part Number: SAX32410CA4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] ERROR: Updated: Product ID 241912 | Part Number: SAX32410CA4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] ERROR: Updated: Product ID 243282 | Part Number: SAX32410CA4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.124Z] ERROR: Updated: Product ID 242488 | Part Number: SAX32410CA4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] ERROR: Updated: Product ID 243388 | Part Number: SAX32410CA4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] ERROR: Updated: Product ID 243162 | Part Number: SAX32410CA4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] ERROR: Updated: Product ID 242966 | Part Number: SAX32410CA4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] ERROR: Updated: Product ID 242643 | Part Number: SAX32410CA4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] ERROR: Updated: Product ID 243196 | Part Number: SAX32410CA4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.125Z] ERROR: Updated: Product ID 243373 | Part Number: SAX32410CA4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] ERROR: Updated: Product ID 243245 | Part Number: SAX32410CA4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] ERROR: Updated: Product ID 243159 | Part Number: SAX32410CA4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] ERROR: Updated: Product ID 242040 | Part Number: SAX32410CA4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.126Z] ERROR: Updated: Product ID 241911 | Part Number: SAX32410CA4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.127Z] ERROR: Updated: Product ID 242769 | Part Number: SAX32410CA4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:51.127Z] ERROR: Updated: Product ID 243034 | Part Number: SAX32410CA4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T18:59:53.243Z] ERROR: 2. 151 / 180 - Product ID 242627 found for Part Number SAX32410CA4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:53.435Z] ERROR: 2. 152 / 180 - Product ID 242149 found for Part Number SAX32410CA4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:54.336Z] ERROR: 2. 153 / 180 - Product ID 241990 found for Part Number SAX32410CA4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:55.302Z] ERROR: 2. 154 / 180 - Product ID 242805 found for Part Number SAX32410CA4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:55.950Z] ERROR: 2. 155 / 180 - Product ID 243033 found for Part Number SAX32410CX4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:56.780Z] ERROR: 2. 156 / 180 - Product ID 243262 found for Part Number SAX32410CX4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:57.579Z] ERROR: 2. 157 / 180 - Product ID 243097 found for Part Number SAX32410CX4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:58.459Z] ERROR: 2. 158 / 180 - Product ID 242271 found for Part Number SAX32410CX4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:59.228Z] ERROR: 2. 159 / 180 - Product ID 242557 found for Part Number SAX32410CX4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T18:59:59.996Z] ERROR: 2. 160 / 180 - Product ID 242437 found for Part Number SAX32410CX4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:00.933Z] ERROR: 2. 161 / 180 - Product ID 243495 found for Part Number SAX32410CX4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:01.571Z] ERROR: 2. 162 / 180 - Product ID 242152 found for Part Number SAX32410CX4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:02.475Z] ERROR: 2. 163 / 180 - Product ID 242948 found for Part Number SAX32410CX4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:03.230Z] ERROR: 2. 164 / 180 - Product ID 241914 found for Part Number SAX32410CX4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:04.448Z] ERROR: 2. 165 / 180 - Product ID 243492 found for Part Number SAX32410CX4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:05.126Z] ERROR: 2. 166 / 180 - Product ID 243230 found for Part Number SAX32410CX4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:05.853Z] ERROR: 2. 167 / 180 - Product ID 242497 found for Part Number SAX32410CX4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:06.469Z] ERROR: 2. 168 / 180 - Product ID 242614 found for Part Number SAX32410CX4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:07.307Z] ERROR: 2. 169 / 180 - Product ID 242061 found for Part Number SAX32410CX4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:08.164Z] ERROR: 2. 170 / 180 - Product ID 242585 found for Part Number SAX32410CX4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:08.984Z] ERROR: 2. 171 / 180 - Product ID 241890 found for Part Number SAX32410CX4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:09.855Z] ERROR: 2. 172 / 180 - Product ID 243361 found for Part Number SAX32410CX4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:10.617Z] ERROR: 2. 173 / 180 - Product ID 242189 found for Part Number SAX32410CX4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:11.412Z] ERROR: 2. 174 / 180 - Product ID 242682 found for Part Number SAX32410CX4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:12.109Z] ERROR: 2. 175 / 180 - Product ID 242940 found for Part Number SAX32410CX4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:13.485Z] ERROR: 2. 176 / 180 - Product ID 243317 found for Part Number SAX32410CX4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:14.073Z] ERROR: 2. 177 / 180 - Product ID 243503 found for Part Number SAX32410CY4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:15.406Z] ERROR: 2. 178 / 180 - Product ID 242064 found for Part Number SAX32410CY4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:16.592Z] ERROR: 2. 179 / 180 - Product ID 243105 found for Part Number SAX32410CY4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:17.586Z] ERROR: 2. 180 / 180 - Product ID 243108 found for Part Number SAX32410CY4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:00:18.188Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:18.992Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:20.778Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:21.589Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CA4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:23.370Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:24.080Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:25.391Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:26.287Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:27.972Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:28.092Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:29.295Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:30.306Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:31.209Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:31.300Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:32.027Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:32.665Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:33.308Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:34.116Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:35.015Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:35.805Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:36.983Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:37.527Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:38.041Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:39.087Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:39.870Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:40.504Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CX4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:41.681Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:42.895Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:44.385Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:00:44.616Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:23.765Z] ERROR: Updated: Product ID 242627 | Part Number: SAX32410CA4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.766Z] ERROR: Updated: Product ID 242149 | Part Number: SAX32410CA4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.766Z] ERROR: Updated: Product ID 241990 | Part Number: SAX32410CA4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.766Z] ERROR: Updated: Product ID 242805 | Part Number: SAX32410CA4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.766Z] ERROR: Updated: Product ID 243033 | Part Number: SAX32410CX4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] ERROR: Updated: Product ID 243262 | Part Number: SAX32410CX4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] ERROR: Updated: Product ID 243097 | Part Number: SAX32410CX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] ERROR: Updated: Product ID 242271 | Part Number: SAX32410CX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] ERROR: Updated: Product ID 242557 | Part Number: SAX32410CX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] ERROR: Updated: Product ID 242437 | Part Number: SAX32410CX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.767Z] ERROR: Updated: Product ID 243495 | Part Number: SAX32410CX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] ERROR: Updated: Product ID 242152 | Part Number: SAX32410CX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] ERROR: Updated: Product ID 242948 | Part Number: SAX32410CX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] ERROR: Updated: Product ID 241914 | Part Number: SAX32410CX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] ERROR: Updated: Product ID 243492 | Part Number: SAX32410CX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] ERROR: Updated: Product ID 243230 | Part Number: SAX32410CX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.768Z] ERROR: Updated: Product ID 242497 | Part Number: SAX32410CX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 242614 | Part Number: SAX32410CX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 242061 | Part Number: SAX32410CX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 242585 | Part Number: SAX32410CX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 241890 | Part Number: SAX32410CX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 243361 | Part Number: SAX32410CX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 242189 | Part Number: SAX32410CX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 242682 | Part Number: SAX32410CX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.769Z] ERROR: Updated: Product ID 242940 | Part Number: SAX32410CX4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] ERROR: Updated: Product ID 243317 | Part Number: SAX32410CX4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] ERROR: Updated: Product ID 243503 | Part Number: SAX32410CY4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] ERROR: Updated: Product ID 242064 | Part Number: SAX32410CY4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] ERROR: Updated: Product ID 243105 | Part Number: SAX32410CY4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:23.770Z] ERROR: Updated: Product ID 243108 | Part Number: SAX32410CY4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:01:26.037Z] ERROR: 2. 182 / 210 - Product ID 242543 found for Part Number SAX32410CY4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:26.044Z] ERROR: 2. 181 / 210 - Product ID 243415 found for Part Number SAX32410CY4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:27.103Z] ERROR: 2. 183 / 210 - Product ID 242575 found for Part Number SAX32410CY4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:28.061Z] ERROR: 2. 184 / 210 - Product ID 243269 found for Part Number SAX32410CY4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:28.820Z] ERROR: 2. 185 / 210 - Product ID 242286 found for Part Number SAX32410CY4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:29.539Z] ERROR: 2. 186 / 210 - Product ID 243303 found for Part Number SAX32410CY4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:30.556Z] ERROR: 2. 187 / 210 - Product ID 243012 found for Part Number SAX32410CY4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:31.275Z] ERROR: 2. 188 / 210 - Product ID 243399 found for Part Number SAX32410CY4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:32.193Z] ERROR: 2. 189 / 210 - Product ID 243330 found for Part Number SAX32410CY4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:32.966Z] ERROR: 2. 190 / 210 - Product ID 243218 found for Part Number SAX32410CY4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:33.672Z] ERROR: 2. 191 / 210 - Product ID 242942 found for Part Number SAX32410CY4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:34.467Z] ERROR: 2. 192 / 210 - Product ID 243182 found for Part Number SAX32410CY4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:35.991Z] ERROR: 2. 193 / 210 - Product ID 242083 found for Part Number SAX32410CY4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:36.553Z] ERROR: 2. 194 / 210 - Product ID 242524 found for Part Number SAX32410CY4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:37.441Z] ERROR: 2. 195 / 210 - Product ID 243132 found for Part Number SAX32410CY4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:38.036Z] ERROR: 2. 196 / 210 - Product ID 242780 found for Part Number SAX32410CY4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:38.787Z] ERROR: 2. 197 / 210 - Product ID 243455 found for Part Number SAX32410CY4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:39.601Z] ERROR: 2. 198 / 210 - Product ID 243354 found for Part Number SAX32410CY4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:40.329Z] ERROR: 2. 199 / 210 - Product ID 243004 found for Part Number SAX32410DA4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:41.207Z] ERROR: 2. 200 / 210 - Product ID 243500 found for Part Number SAX32410DA4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:42.215Z] ERROR: 2. 201 / 210 - Product ID 243058 found for Part Number SAX32410DA4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:42.763Z] ERROR: 2. 202 / 210 - Product ID 242316 found for Part Number SAX32410DA4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:43.518Z] ERROR: 2. 203 / 210 - Product ID 243015 found for Part Number SAX32410DA4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:44.387Z] ERROR: 2. 204 / 210 - Product ID 243016 found for Part Number SAX32410DA4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:45.158Z] ERROR: 2. 205 / 210 - Product ID 242969 found for Part Number SAX32410DA4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:45.912Z] ERROR: 2. 206 / 210 - Product ID 242637 found for Part Number SAX32410DA4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:46.766Z] ERROR: 2. 207 / 210 - Product ID 242951 found for Part Number SAX32410DA4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:47.546Z] ERROR: 2. 208 / 210 - Product ID 241940 found for Part Number SAX32410DA4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:48.305Z] ERROR: 2. 209 / 210 - Product ID 243167 found for Part Number SAX32410DA4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:49.237Z] ERROR: 2. 210 / 210 - Product ID 243098 found for Part Number SAX32410DA4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:01:49.239Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:50.056Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:50.959Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:51.635Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:52.456Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:53.222Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:54.031Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:54.837Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:55.632Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:56.459Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:57.380Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:58.057Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:58.810Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:01:59.593Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:00.521Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:01.337Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:02.070Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:02.854Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410CY4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:03.617Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:04.439Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:05.261Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:06.087Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:06.842Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:07.649Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:08.429Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:09.310Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:10.054Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:11.014Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:11.747Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:12.436Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:02:58.218Z] ERROR: Updated: Product ID 243415 | Part Number: SAX32410CY4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] ERROR: Updated: Product ID 242543 | Part Number: SAX32410CY4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] ERROR: Updated: Product ID 242575 | Part Number: SAX32410CY4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] ERROR: Updated: Product ID 243269 | Part Number: SAX32410CY4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] ERROR: Updated: Product ID 242286 | Part Number: SAX32410CY4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] ERROR: Updated: Product ID 243303 | Part Number: SAX32410CY4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.219Z] ERROR: Updated: Product ID 243012 | Part Number: SAX32410CY4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] ERROR: Updated: Product ID 243399 | Part Number: SAX32410CY4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] ERROR: Updated: Product ID 243330 | Part Number: SAX32410CY4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] ERROR: Updated: Product ID 243218 | Part Number: SAX32410CY4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] ERROR: Updated: Product ID 242942 | Part Number: SAX32410CY4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.220Z] ERROR: Updated: Product ID 243182 | Part Number: SAX32410CY4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] ERROR: Updated: Product ID 242083 | Part Number: SAX32410CY4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] ERROR: Updated: Product ID 242524 | Part Number: SAX32410CY4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] ERROR: Updated: Product ID 243132 | Part Number: SAX32410CY4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.221Z] ERROR: Updated: Product ID 242780 | Part Number: SAX32410CY4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] ERROR: Updated: Product ID 243455 | Part Number: SAX32410CY4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] ERROR: Updated: Product ID 243354 | Part Number: SAX32410CY4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] ERROR: Updated: Product ID 243004 | Part Number: SAX32410DA4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] ERROR: Updated: Product ID 243500 | Part Number: SAX32410DA4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] ERROR: Updated: Product ID 243058 | Part Number: SAX32410DA4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] ERROR: Updated: Product ID 242316 | Part Number: SAX32410DA4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.222Z] ERROR: Updated: Product ID 243015 | Part Number: SAX32410DA4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] ERROR: Updated: Product ID 243016 | Part Number: SAX32410DA4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] ERROR: Updated: Product ID 242969 | Part Number: SAX32410DA4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] ERROR: Updated: Product ID 242637 | Part Number: SAX32410DA4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] ERROR: Updated: Product ID 242951 | Part Number: SAX32410DA4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.223Z] ERROR: Updated: Product ID 241940 | Part Number: SAX32410DA4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.224Z] ERROR: Updated: Product ID 243167 | Part Number: SAX32410DA4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:02:58.224Z] ERROR: Updated: Product ID 243098 | Part Number: SAX32410DA4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:03:00.973Z] ERROR: 2. 212 / 240 - Product ID 242745 found for Part Number SAX32410DA4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:02.285Z] ERROR: 2. 213 / 240 - Product ID 243153 found for Part Number SAX32410DA4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:03.690Z] ERROR: 2. 214 / 240 - Product ID 242246 found for Part Number SAX32410DA4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:03.735Z] ERROR: 2. 211 / 240 - Product ID 243022 found for Part Number SAX32410DA4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:04.876Z] ERROR: 2. 215 / 240 - Product ID 243491 found for Part Number SAX32410DA4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:05.658Z] ERROR: 2. 216 / 240 - Product ID 243005 found for Part Number SAX32410DA4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:06.652Z] ERROR: 2. 217 / 240 - Product ID 242402 found for Part Number SAX32410DA4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:07.477Z] ERROR: 2. 218 / 240 - Product ID 243049 found for Part Number SAX32410DA4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:08.073Z] ERROR: 2. 219 / 240 - Product ID 242632 found for Part Number SAX32410DA4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:08.775Z] ERROR: 2. 220 / 240 - Product ID 242147 found for Part Number SAX32410DA4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:10.025Z] ERROR: 2. 221 / 240 - Product ID 243068 found for Part Number SAX32410DX4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:10.584Z] ERROR: 2. 222 / 240 - Product ID 243042 found for Part Number SAX32410DX4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:11.519Z] ERROR: 2. 223 / 240 - Product ID 243510 found for Part Number SAX32410DX4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:12.290Z] ERROR: 2. 224 / 240 - Product ID 241875 found for Part Number SAX32410DX4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:13.051Z] ERROR: 2. 225 / 240 - Product ID 243086 found for Part Number SAX32410DX4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:13.618Z] ERROR: 2. 226 / 240 - Product ID 242155 found for Part Number SAX32410DX4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:14.502Z] ERROR: 2. 227 / 240 - Product ID 243206 found for Part Number SAX32410DX4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:15.261Z] ERROR: 2. 228 / 240 - Product ID 243413 found for Part Number SAX32410DX4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:16.357Z] ERROR: 2. 229 / 240 - Product ID 243155 found for Part Number SAX32410DX4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:16.854Z] ERROR: 2. 230 / 240 - Product ID 241943 found for Part Number SAX32410DX4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:17.651Z] ERROR: 2. 231 / 240 - Product ID 242920 found for Part Number SAX32410DX4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:18.458Z] ERROR: 2. 232 / 240 - Product ID 241955 found for Part Number SAX32410DX4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:19.142Z] ERROR: 2. 233 / 240 - Product ID 242431 found for Part Number SAX32410DX4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:20.156Z] ERROR: 2. 234 / 240 - Product ID 243271 found for Part Number SAX32410DX4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:20.991Z] ERROR: 2. 235 / 240 - Product ID 243169 found for Part Number SAX32410DX4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:21.961Z] ERROR: 2. 236 / 240 - Product ID 241991 found for Part Number SAX32410DX4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:22.620Z] ERROR: 2. 237 / 240 - Product ID 242324 found for Part Number SAX32410DX4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:23.381Z] ERROR: 2. 238 / 240 - Product ID 242610 found for Part Number SAX32410DX4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:24.120Z] ERROR: 2. 239 / 240 - Product ID 243476 found for Part Number SAX32410DX4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:24.932Z] ERROR: 2. 240 / 240 - Product ID 243021 found for Part Number SAX32410DX4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:03:24.948Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:25.754Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:26.529Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:27.308Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:28.114Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:28.948Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:29.740Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:30.686Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:31.382Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:32.150Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DA4B-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:32.927Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:33.864Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:34.550Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:35.350Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:36.300Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:36.949Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:37.747Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:38.531Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:39.449Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:40.123Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-32.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:40.956Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4A-40.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:41.733Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-10.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:42.514Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-12.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:43.331Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-16.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:44.342Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-20.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:44.953Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-24.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:45.769Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-25.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:46.583Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-26.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:47.319Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-27.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:03:48.083Z] ERROR: DEBUG: Mismatch for meta_data key 'voltage' for Part Number: SAX32410DX4B-30.000M in 11-01-2024/product-suntsu-sample-2.csv.
+Current: '', New: '11012024-TEST02' 
+
+[2024-11-01T19:04:31.418Z] ERROR: Updated: Product ID 243022 | Part Number: SAX32410DA4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] ERROR: Updated: Product ID 242745 | Part Number: SAX32410DA4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] ERROR: Updated: Product ID 243153 | Part Number: SAX32410DA4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] ERROR: Updated: Product ID 242246 | Part Number: SAX32410DA4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.419Z] ERROR: Updated: Product ID 243491 | Part Number: SAX32410DA4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] ERROR: Updated: Product ID 243005 | Part Number: SAX32410DA4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] ERROR: Updated: Product ID 242402 | Part Number: SAX32410DA4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] ERROR: Updated: Product ID 243049 | Part Number: SAX32410DA4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] ERROR: Updated: Product ID 242632 | Part Number: SAX32410DA4B-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] ERROR: Updated: Product ID 242147 | Part Number: SAX32410DA4B-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] ERROR: Updated: Product ID 243068 | Part Number: SAX32410DX4A-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.420Z] ERROR: Updated: Product ID 243042 | Part Number: SAX32410DX4A-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] ERROR: Updated: Product ID 243510 | Part Number: SAX32410DX4A-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] ERROR: Updated: Product ID 241875 | Part Number: SAX32410DX4A-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] ERROR: Updated: Product ID 243086 | Part Number: SAX32410DX4A-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] ERROR: Updated: Product ID 242155 | Part Number: SAX32410DX4A-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] ERROR: Updated: Product ID 243206 | Part Number: SAX32410DX4A-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.421Z] ERROR: Updated: Product ID 243413 | Part Number: SAX32410DX4A-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] ERROR: Updated: Product ID 243155 | Part Number: SAX32410DX4A-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] ERROR: Updated: Product ID 241943 | Part Number: SAX32410DX4A-32.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] ERROR: Updated: Product ID 242920 | Part Number: SAX32410DX4A-40.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] ERROR: Updated: Product ID 241955 | Part Number: SAX32410DX4B-10.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] ERROR: Updated: Product ID 242431 | Part Number: SAX32410DX4B-12.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] ERROR: Updated: Product ID 243271 | Part Number: SAX32410DX4B-16.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.422Z] ERROR: Updated: Product ID 243169 | Part Number: SAX32410DX4B-20.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] ERROR: Updated: Product ID 241991 | Part Number: SAX32410DX4B-24.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] ERROR: Updated: Product ID 242324 | Part Number: SAX32410DX4B-25.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] ERROR: Updated: Product ID 242610 | Part Number: SAX32410DX4B-26.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] ERROR: Updated: Product ID 243476 | Part Number: SAX32410DX4B-27.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:31.423Z] ERROR: Updated: Product ID 243021 | Part Number: SAX32410DX4B-30.000M | Source File: 11-01-2024/product-suntsu-sample-2.csv
+
+[2024-11-01T19:04:33.491Z] ERROR: 2. 241 / 270 - Product ID 243493 found for Part Number SAX32410DX4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:33.886Z] ERROR: 2. 242 / 270 - Product ID 243080 found for Part Number SAX32410DX4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:34.806Z] ERROR: 2. 243 / 270 - Product ID 242160 found for Part Number SAX32410DY4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:35.550Z] ERROR: 2. 244 / 270 - Product ID 243239 found for Part Number SAX32410DY4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:36.234Z] ERROR: 2. 245 / 270 - Product ID 242417 found for Part Number SAX32410DY4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:37.084Z] ERROR: 2. 246 / 270 - Product ID 243479 found for Part Number SAX32410DY4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:37.874Z] ERROR: 2. 247 / 270 - Product ID 242106 found for Part Number SAX32410DY4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:38.789Z] ERROR: 2. 248 / 270 - Product ID 241918 found for Part Number SAX32410DY4A-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:39.573Z] ERROR: 2. 249 / 270 - Product ID 242063 found for Part Number SAX32410DY4A-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:40.285Z] ERROR: 2. 250 / 270 - Product ID 243423 found for Part Number SAX32410DY4A-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:41.060Z] ERROR: 2. 251 / 270 - Product ID 242871 found for Part Number SAX32410DY4A-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:41.959Z] ERROR: 2. 252 / 270 - Product ID 242397 found for Part Number SAX32410DY4A-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:42.622Z] ERROR: 2. 253 / 270 - Product ID 242708 found for Part Number SAX32410DY4A-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:43.455Z] ERROR: 2. 254 / 270 - Product ID 243482 found for Part Number SAX32410DY4B-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:44.339Z] ERROR: 2. 255 / 270 - Product ID 242563 found for Part Number SAX32410DY4B-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:45.194Z] ERROR: 2. 256 / 270 - Product ID 242164 found for Part Number SAX32410DY4B-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:45.892Z] ERROR: 2. 257 / 270 - Product ID 242906 found for Part Number SAX32410DY4B-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:46.630Z] ERROR: 2. 258 / 270 - Product ID 242129 found for Part Number SAX32410DY4B-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:47.531Z] ERROR: 2. 259 / 270 - Product ID 242899 found for Part Number SAX32410DY4B-25.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:48.292Z] ERROR: 2. 260 / 270 - Product ID 242933 found for Part Number SAX32410DY4B-26.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:49.165Z] ERROR: 2. 261 / 270 - Product ID 242305 found for Part Number SAX32410DY4B-27.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:50.202Z] ERROR: 2. 262 / 270 - Product ID 241920 found for Part Number SAX32410DY4B-30.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:50.662Z] ERROR: 2. 263 / 270 - Product ID 241870 found for Part Number SAX32410DY4B-32.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:51.497Z] ERROR: 2. 264 / 270 - Product ID 242110 found for Part Number SAX32410DY4B-40.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:52.079Z] ERROR: 2. 265 / 270 - Product ID 242369 found for Part Number SAX32410EA4A-10.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:53.065Z] ERROR: 2. 266 / 270 - Product ID 242739 found for Part Number SAX32410EA4A-12.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:54.085Z] ERROR: 2. 267 / 270 - Product ID 242060 found for Part Number SAX32410EA4A-16.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:55.054Z] ERROR: 2. 268 / 270 - Product ID 242771 found for Part Number SAX32410EA4A-20.000M in file "11-01-2024/product-suntsu-sample-2.csv"
+[2024-11-01T19:04:55.545Z] ERROR: 2. 269 / 270 - Product ID 242181 found for Part Number SAX32410EA4A-24.000M in file "11-01-2024/product-suntsu-sample-2.csv"

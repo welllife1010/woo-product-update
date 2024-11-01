@@ -46,7 +46,7 @@ const logger = pino(
 // Function to log skipped items or errors directly to the file
 const logErrorToFile = (message) => {
     rotateLogFile();
-    const formattedMessage = `[${new Date().toISOString()}] ERROR: ${message}\n`;
+    const formattedMessage = `[${new Date().toISOString()}] ${message}\n`;
     fs.appendFileSync("error-log.txt", formattedMessage);
 };
 

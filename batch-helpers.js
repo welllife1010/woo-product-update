@@ -81,7 +81,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
                 : newData[field];
             
             logger.info(`DEBUG: Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
-            logUpdatesToFile(`Update needed for field '${field}' in Part Number: ${partNumber} in ${fileName}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
+            logUpdatesToFile(`Update needed for field '${field}' in Part Number: ${partNumber} in ${fileName}. \nCurrent value: '${currentFieldValue}' \nNew value: '${newFieldValue}'`);
         });
         return true;
     } else {
@@ -196,7 +196,6 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
             filteredProducts.forEach((product) => {
                 logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
                 logger.info(`Product ID ${product.id} (${product.part_number}) updated successfully.`);
-                logErrorToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
             });
         } catch (error) {
             // Log all part numbers in the failed batch
