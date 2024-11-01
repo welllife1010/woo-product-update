@@ -21,21 +21,28 @@ const limiter = new Bottleneck({
     maxConcurrent: 2, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
     minTime: 800, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
-  
+
+// Define a set to keep track of products that were retried
+const retriedProducts = new Set();
+
 // Configure retry options to handle 504 or 429 errors
 limiter.on("failed", async (error, jobInfo) => {
     const jobId = jobInfo.options.id || "<unknown>";
     const { file = "<unknown file>", function: functionName = "<unknown function>", part = "<unknown part>" } = jobInfo.options.context || {};
     const retryCount = jobInfo.retryCount || 0;
-    const retryDelay = 1000 * Math.pow(2, retryCount); // Exponential backoff
 
-    logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}. Delay: ${retryDelay}ms`);
+    logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}.`);
 
     logErrorToFile(
         `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${jobInfo.retryCount}`
     );
 
+    // Add part number to retriedProducts if a retry occurs
+    if (partNumber) retriedProducts.add(partNumber);
+
     if (retryCount < 5 && /(502|504|429)/.test(error.message)) {
+        const retryDelay = 1000 * Math.pow(2, jobInfo.retryCount); // Exponential backoff
+        logger.warn(`Applying delay of ${retryDelay / 1000}s before retrying job ${jobId}`);
         return retryDelay;
     }
 
@@ -112,5 +119,6 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
     wooApi,
     getProductByPartNumber,
     getProductById,
-    limiter
+    limiter,
+    retriedProducts
   };

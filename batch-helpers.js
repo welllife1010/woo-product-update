@@ -1,6 +1,6 @@
 const fs = require("fs");
 const { logger, logErrorToFile, logUpdatesToFile } = require("./logger");
-const { wooApi, getProductById, getProductByPartNumber, limiter } = require("./woo-helpers");
+const { wooApi, getProductById, getProductByPartNumber, limiter, retriedProducts } = require("./woo-helpers");
 
 let stripHtml;
 (async () => {
@@ -197,8 +197,13 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
             
             // Log each updated product's details to the unique updatedProductsFile
             filteredProducts.forEach((product) => {
-                logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
-                logger.info(`Product ID ${product.id} (${product.part_number}) updated successfully.`);
+                if (retriedProducts.has(product.part_number)) {
+                    logUpdatesToFile(`Recovered after retry: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
+                    logger.info(`Product ID ${product.id} (${product.part_number}) successfully updated after retry.`);
+                } else {
+                    logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
+                    logger.info(`Product ID ${product.id} (${product.part_number}) updated successfully.`);
+                }
             });
         } catch (error) {
             // Log all part numbers in the failed batch
