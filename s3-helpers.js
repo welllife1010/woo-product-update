@@ -10,6 +10,7 @@ const s3Client = new S3Client({
     region: process.env.AWS_REGION_NAME,
     endpoint: "https://s3.us-west-1.amazonaws.com", // Use your specific bucket's region
     forcePathStyle: true, // This helps when using custom endpoints
+    requestTimeout: 600000 // Set timeout to 10 minutes
 });
 
  // Function to get the latest folder key by sorting folders by date
@@ -21,7 +22,7 @@ const s3Client = new S3Client({
       // Filter for folders and sort by date
       const folders = listData.CommonPrefixes
         .map(prefix => prefix.Prefix)
-        .filter(prefix => /^\d{2}-\d{2}-\d{4}_product_updates\/$/.test(prefix)) // Match pattern like "10-29-2024_product_updates/"
+        .filter(prefix => /^\d{2}-\d{2}-\d{4}\/$/.test(prefix)) // Match pattern like "10-31-2024/"
         .sort((a, b) => new Date(b.slice(0, 10)) - new Date(a.slice(0, 10))); // Sort by date descending
   
       if (folders.length === 0) {

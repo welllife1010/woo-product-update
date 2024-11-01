@@ -69,10 +69,19 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
 
     //logger.info(updateNeeded ? `Update required for Part Number: ${partNumber} in ${fileName}` : `No update required for Part Number: ${partNumber} in ${fileName}`);
 
+    // Log updates for each field in fieldsToUpdate
     if (fieldsToUpdate.length > 0) {
         fieldsToUpdate.forEach(field => {
-            logger.info(`DEBUG: Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentData[field]}', New value: '${newData[field]}'`);
-            logUpdatesToFile(`Update needed for field '${field}' in Part Number: ${partNumber} in ${fileName}. Current value: '${currentData[field]}', New value: '${newData[field]}'`);
+            const currentFieldValue = field.startsWith("meta_data.") 
+                ? currentData.meta_data?.find(meta => meta.key === field.split(".")[1])?.value 
+                : currentData[field];
+                
+            const newFieldValue = field.startsWith("meta_data.") 
+                ? newData.meta_data?.find(meta => meta.key === field.split(".")[1])?.value 
+                : newData[field];
+            
+            logger.info(`DEBUG: Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
+            logUpdatesToFile(`Update needed for field '${field}' in Part Number: ${partNumber} in ${fileName}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
         });
         return true;
     } else {
