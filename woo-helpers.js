@@ -3,13 +3,15 @@
 // 2. Large batchSize handling - split into smaller batches.
 // 3. Ensure batches are cleared (batch = []) promptly after processing.
 // 4. Set Up a Watchdog Timer to monitor the process and restart if it fails.
+const dotenv = require("dotenv");
+dotenv.config();
 
 const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
 const Bottleneck = require("bottleneck");
 const { logger, logErrorToFile } = require("./logger");
 
-console.log("WOO_API_BASE_URL_DEV:", process.env.WOO_API_BASE_URL_DEV);
-console.log("WOO_API_BASE_URL_TEST:", process.env.WOO_API_BASE_URL_TEST);
+logger.warn("WOO_API_BASE_URL_DEV:", process.env.WOO_API_BASE_URL_DEV);
+logger.warn("WOO_API_BASE_URL_TEST:", process.env.WOO_API_BASE_URL_TEST);
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
