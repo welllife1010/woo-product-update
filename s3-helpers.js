@@ -85,17 +85,31 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
         logErrorToFile(`No CSV files found in folder: ${latestFolder} of bucket: ${bucket}`);
         return;
       }
+
+      // Array to hold the completion status of each file
+      const fileProcessingTasks = csvFiles.map(async (file) => {
+        try {
+          logger.info(`Processing file: ${file.Key}`);
+          await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
+        } catch (error) {
+          logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
+        }
+      });
+
+
+      // Wait for all files to process, ensuring no unhandled rejections stop the Promise.all
+      await Promise.all(fileProcessingTasks);
   
-       await Promise.all(
-        csvFiles.slice(0, 3).map(async (file) => {
-          try {
-            logger.info(`Processing file: ${file.Key}`);
-            await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
-          } catch (error) {
-            logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
-          }
-        })
-      );
+      // await Promise.all(
+      //   csvFiles.slice(0, 3).map(async (file) => {
+      //     try {
+      //       logger.info(`Processing file: ${file.Key}`);
+      //       await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
+      //     } catch (error) {
+      //       logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
+      //     }
+      //   })
+      // );
 
       //Process files sequentially
       // for (const file of csvFiles.slice(0, 3)) {
@@ -119,15 +133,15 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
     const params = { Bucket: bucket, Key: key};
     const MAX_RETRIES = 3;
     let consecutiveErrors = 0;
+    let batch = [];
+    let totalProducts = 0;
+    const lastProcessedRow = getCheckpoint(key); // Retrieve the last processed row for this file from checkpoint
+
+    logger.info(`Starting file processing for "${key}" from row ${lastProcessedRow}`);
   
     try {
       const data = await s3Client.send(new GetObjectCommand(params)); // Fetch the CSV data from S3
       const readableStream = Readable.from(data.Body); // Create a readable stream from the S3 object
-      let batch = [];
-      let totalProducts = 0;
-      const lastProcessedRow = getCheckpoint(key); // Retrieve last processed row for this file (from checkpoint)
-
-      logger.warn(`Resuming from row ${lastProcessedRow} for file ${key}`);
   
       // Process CSV rows, starting from the last processed row
       await streamPipeline(
@@ -137,7 +151,6 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
           // Iterates over each row in the CSV asynchronously, allowing us to handle each chunk (row) as it arrives, without waiting for the entire file to load.
           for await (const chunk of source) {
             try {
-
               totalProducts++;
               if (totalProducts <= lastProcessedRow) continue; // Skip rows up to checkpoint
 
@@ -149,22 +162,12 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
               batch.push(normalizedData);
               logger.debug(`Added to batch: ${normalizedData.part_number} at row ${totalProducts}`);
     
-              // Process batch if it reaches batchSize
+              // Process the batch if it reaches batchSize
               if (batch.length >= batchSize) {
-                try {
-                  await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
-                  saveCheckpoint(key, totalProducts); // Update checkpoint after processing batch
-                  batch = []; // Clear batch after processing
-                  consecutiveErrors = 0; // Reset error count on success
-                } catch (error) {
-                  logErrorToFile(`Error processing batch at row ${totalProducts}: ${error.message}`);
-                  consecutiveErrors++;
-                  if (consecutiveErrors >= MAX_RETRIES) {
-                    throw new Error(`Processing aborted after ${MAX_RETRIES} consecutive errors.`);
-                  }
-                }
+                await processAndCheckpoint(batch, totalProducts, key, processBatchFunction);
+                batch = []; // Clear batch after processing
+                consecutiveErrors = 0; // Reset error count on success
               }
-
             } catch (error) {
               logErrorToFile(`Error processing row ${totalProducts} in file "${key}": ${error.message}`);
               consecutiveErrors++;
@@ -172,13 +175,11 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
                 throw new Error(`Processing aborted after ${MAX_RETRIES} consecutive row errors.`);
               }
             };
-            
           }
   
           // Process remaining rows if any
           if (batch.length > 0) {
-            await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
-            saveCheckpoint(key, totalProducts); // Update checkpoint
+            await processAndCheckpoint(batch, totalProducts, key, processBatchFunction);
           }
         }
       );
@@ -189,6 +190,18 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
       throw error; // Ensure any error bubbles up to be caught in Promise.all
     }
   };
+
+  // Helper function to process batch and save checkpoint
+const processAndCheckpoint = async (batch, totalProducts, key, processBatchFunction) => {
+  try {
+      await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
+      saveCheckpoint(key, totalProducts); // Update checkpoint after processing batch
+      logger.info(`Processed and saved checkpoint at row ${totalProducts} for file "${key}"`);
+  } catch (error) {
+      logErrorToFile(`Error processing batch at row ${totalProducts} in file "${key}": ${error.message}`);
+      throw new Error(`Batch processing error at row ${totalProducts} for file "${key}"`);
+  }
+};
 
 module.exports = {
   getLatestFolderKey,
