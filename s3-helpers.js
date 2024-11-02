@@ -94,6 +94,7 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
       );
   
       logger.info("All CSV files in the latest folder have been processed.");
+      logUpdatesToFile("All CSV files in the latest folder have been processed.");
     } catch (error) {
       logErrorToFile(`Error in processCSVFilesInLatestFolder for bucket "${bucket}": ${error.message}`);
     }

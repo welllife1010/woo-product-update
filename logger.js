@@ -8,7 +8,7 @@ const pinoPretty = require("pino-pretty");
 
 // Generate the unique filename with date and increment version dynamically if file exists
 const date = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-let version = "1"; 
+let version = 1; 
 let updatedProductsFile;
 
 
