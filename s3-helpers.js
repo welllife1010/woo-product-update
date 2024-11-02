@@ -5,7 +5,7 @@ const { promisify } = require("util");
 const { Readable, pipeline } = require("stream"); // Promisify the stream pipeline utility
 const streamPipeline = promisify(pipeline); // Use async pipeline with stream promises
 const csvParser = require("csv-parser");
-const { logger, logErrorToFile } = require("./logger");
+const { logger, logErrorToFile, logUpdatesToFile } = require("./logger");
 
 // Define the path to the checkpoint file
 const checkpointFilePath = path.join(__dirname, "process_checkpoint.json");
