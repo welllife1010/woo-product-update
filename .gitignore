@@ -6,6 +6,7 @@ csvFiles/
 #files
 error-log.txt
 updated-products-*
+
 process_checkpoint.json
 
 # Logs

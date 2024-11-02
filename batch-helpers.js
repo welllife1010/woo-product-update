@@ -48,6 +48,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
                 if (normalizeText(currentMeta.value) !== normalizeText(newMeta.value)) {
                     fieldsToUpdate.push(`meta_data.${newMeta.key}`);
                     logger.warn(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}' \n`);
+
                 }
 
                 //logErrorToFile(`\n Part Number: ${partNumber} \n Key: ${newMeta.key} \n normalizeText currentMeta: ${normalizeText(currentMeta.value)} \n normalizeText newMeta: ${normalizeText(newMeta.value)} \n File: ${fileName}`);
@@ -139,6 +140,7 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                 const msg = `part_number key is missing in item at index ${currentIndex}, Skip this item.`;
                 logger.error(msg);
                 logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProducts} in ${fileKey}: ${msg}`);
+
                 return null;
             }
 

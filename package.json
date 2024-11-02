@@ -15,7 +15,10 @@
     "bottleneck": "^2.19.5",
     "csv-parser": "^3.0.0",
     "dotenv": "^16.4.5",
+<<<<<<< HEAD
     "perf_hooks": "^0.0.1",
+=======
+>>>>>>> origin/main
     "pino": "^9.5.0",
     "pino-pretty": "^11.3.0",
     "stream": "^0.0.3",
