@@ -22,7 +22,6 @@ const mainProcess = async () => {
 
     // Pass the generated filename to processBatch
     await processCSVFilesInLatestFolder(bucket, 30, (batch, ...args) => processBatch(batch, ...args));
-    //await processCSVFilesInLatestFolder(bucket, 20, processBatch);
 
     // Record completion message and elapsed time
     const endTime = performance.now();

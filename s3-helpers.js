@@ -86,7 +86,7 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
         return;
       }
   
-      await Promise.all(
+       await Promise.all(
         csvFiles.slice(0, 3).map(async (file) => {
           try {
             logger.info(`Processing file: ${file.Key}`);
@@ -96,6 +96,16 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
           }
         })
       );
+
+      //Process files sequentially
+      // for (const file of csvFiles.slice(0, 3)) {
+      //   try {
+      //     logger.info(`Processing file: ${file.Key}`);
+      //     await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
+      //   } catch (error) {
+      //     logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
+      //   }
+      // }
   
       logger.info("All CSV files in the latest folder have been processed.");
       logUpdatesToFile("All CSV files in the latest folder have been processed.");
@@ -104,7 +114,7 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
     }
   };
 
-  // Function to read CSV from S3 and process in batches with checkpointing
+// Function to read CSV from S3 and process in batches with checkpointing
 const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) => {
     const params = { Bucket: bucket, Key: key};
     const MAX_RETRIES = 3;
@@ -137,13 +147,22 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
               }, {});
     
               batch.push(normalizedData);
+              logger.debug(`Added to batch: ${normalizedData.part_number} at row ${totalProducts}`);
     
               // Process batch if it reaches batchSize
               if (batch.length >= batchSize) {
+                try {
                   await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
                   saveCheckpoint(key, totalProducts); // Update checkpoint after processing batch
-                  batch = [];
-                  consecutiveErrors = 0; // Reset error count on successful processing
+                  batch = []; // Clear batch after processing
+                  consecutiveErrors = 0; // Reset error count on success
+                } catch (error) {
+                  logErrorToFile(`Error processing batch at row ${totalProducts}: ${error.message}`);
+                  consecutiveErrors++;
+                  if (consecutiveErrors >= MAX_RETRIES) {
+                    throw new Error(`Processing aborted after ${MAX_RETRIES} consecutive errors.`);
+                  }
+                }
               }
 
             } catch (error) {

@@ -130,11 +130,11 @@ const filterCurrentData = (product) => {
 
 // Function to process a batch of products using WooCommerce Bulk API
 const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
-    const MAX_RETRIES = 3;
-    let attempt = 0;
-    let successful = false;
+    // const MAX_RETRIES = 3;
+    // let attempt = 0;
+    // let successful = false;
 
-    while (attempt < MAX_RETRIES && !successful) {
+    //while (attempt < MAX_RETRIES && !successful) {
         // Array to collect products that need updating
         const productsToUpdate = await Promise.all(
             batch.map(async (item, index) => {
@@ -202,7 +202,7 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                         logger.info(`Product ID ${product.id} (${product.part_number}) successfully updated after retry.`);
                     } else {
                         logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
-                        logger.info(`Product ID ${product.id} (${product.part_number}) updated successfully.`);
+                        logger.info(`Updated: Product ID ${product.id} (${product.part_number}) updated successfully.`);
                     }
                 });
             } catch (error) {
@@ -213,7 +213,7 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
         } else {
             logger.info(`No valid products to update in the batch for file: "${fileKey}"; filteredProducts.length: ${filteredProducts.length}`);
         }
-    }
+    //}
 
     
 };

@@ -18,9 +18,9 @@ logger.warn("WOO_API_BASE_URL_TEST:", process.env.WOO_API_BASE_URL_TEST);
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_DEV,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
+    url: process.env.WOO_API_BASE_URL_TEST,
+    consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
+    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
     version: "wc/v3",
   });
   
