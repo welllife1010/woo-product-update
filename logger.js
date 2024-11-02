@@ -8,6 +8,17 @@ const pinoPretty = require("pino-pretty");
 
 // Generate the unique filename with date and increment version dynamically if file exists
 const date = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
+const pstDate = new Date().toLocaleString("en-US", {
+    timeZone: "America/Los_Angeles",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: true,  // Optional: change to false for 24-hour format
+});
+
 let version = 1; 
 let updatedProductsFile;
 
@@ -46,13 +57,13 @@ const logger = pino(
 // Function to log skipped items or errors directly to the file
 const logErrorToFile = (message) => {
     rotateLogFile();
-    const formattedMessage = `[${new Date().toISOString()}] ${message}\n`;
+    const formattedMessage = `[${pstDate}] ${message}\n`;
     fs.appendFileSync("error-log.txt", formattedMessage);
 };
 
 const logUpdatesToFile = (message) => {
     rotateLogFile();
-    const formattedMessage = `[${new Date().toISOString()}] ${message}\n`;
+    const formattedMessage = `[${pstDate}] ${message}\n`;
     fs.appendFileSync(updatedProductsFile, formattedMessage);
 };
 
