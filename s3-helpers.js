@@ -88,8 +88,12 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
   
       await Promise.all(
         csvFiles.slice(0, 3).map(async (file) => {
-          logger.info(`Processing file: ${file.Key}`);
-          await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
+          try {
+            logger.info(`Processing file: ${file.Key}`);
+            await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
+          } catch (error) {
+            logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
+          }
         })
       );
   
@@ -136,26 +140,18 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
     
               // Process batch if it reaches batchSize
               if (batch.length >= batchSize) {
-                try {
-
                   await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
                   saveCheckpoint(key, totalProducts); // Update checkpoint after processing batch
                   batch = [];
-                  consecutiveErrors = 0; // Reset on successful processing
-                } catch (error) {
-                  logErrorToFile(`Error processing batch at row ${totalProducts}: ${error.message}`);
-                  consecutiveErrors++;
-                  if (consecutiveErrors >= MAX_RETRIES) {
-                      throw new Error(`Processing aborted after ${MAX_RETRIES} consecutive errors.`);
-                  }
-                }
-                
+                  consecutiveErrors = 0; // Reset error count on successful processing
               }
 
             } catch (error) {
               logErrorToFile(`Error processing row ${totalProducts} in file "${key}": ${error.message}`);
-              readableStream.destroy(); // Stop the stream immediately on error
-              throw new Error("Processing aborted due to a critical error."); // Exit the loop and function
+              consecutiveErrors++;
+              if (consecutiveErrors >= MAX_RETRIES) {
+                throw new Error(`Processing aborted after ${MAX_RETRIES} consecutive row errors.`);
+              }
             };
             
           }
@@ -171,6 +167,7 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
       logger.warn(`Completed processing of file: "${key}", total products: ${totalProducts}`);
     } catch (error) {
       logErrorToFile(`Error in readCSVAndProcess for file "${key}" in bucket "${bucket}": ${error.message}`);
+      throw error; // Ensure any error bubbles up to be caught in Promise.all
     }
   };
 

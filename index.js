@@ -34,10 +34,26 @@ const mainProcess = async () => {
     logErrorToFile(durationMessage);
   } catch (error) {
     logErrorToFile(`Unhandled error in mainProcess: ${error.message}`);
+    handleUnexpectedEnd();
   }
 };
 
+function handleUnexpectedEnd() {
+  const duration = (Date.now() - startTime) / 1000;
+  logger.error(`Process ended unexpectedly after ${duration} seconds.`);
+  process.exit(1);
+}
 
 mainProcess().catch(error => {
   logErrorToFile(`Critical error in main: ${error.message}`);
+});
+
+process.on('uncaughtException', (error) => {
+  logger.error("Uncaught exception", error);
+  handleUnexpectedEnd();
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  logger.error("Unhandled rejection", reason);
+  handleUnexpectedEnd();
 });
