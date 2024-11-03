@@ -4,6 +4,7 @@ old/
 csvFiles/
 
 #files
+.DS_Store
 error-log.txt
 updated-products-*
 process_checkpoint.json
