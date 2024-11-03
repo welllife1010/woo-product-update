@@ -53,11 +53,28 @@ const logger = pino(
         translateTime: "SYS:standard",
     })
 );
+
+const logDetailedErrorToFile = (error, message = "") => {
+    rotateLogFile();
+    let formattedMessage = `[${pstDate}] ${message}\n`;
+    formattedMessage += `Error Name: ${error.name}\n`;
+    formattedMessage += `Error Code: ${error.code || "N/A"}\n`;
+    formattedMessage += `Error Message: ${error.message}\n`;
+    formattedMessage += `Error Stack Trace: ${error.stack}\n`;
+    fs.appendFileSync("error-log.txt", formattedMessage);
+};
+
   
 // Function to log skipped items or errors directly to the file
-const logErrorToFile = (message) => {
+const logErrorToFile = (message, error = null) => { // Add an optional error parameter
     rotateLogFile();
     const formattedMessage = `[${pstDate}] ${message}\n`;
+
+    if (error) { // Add the error details if provided
+        formattedMessage += `- Error Stack Trace: ${error.stack}\n`; 
+        // You can also add other details like error.code, error.name, etc.
+    }
+
     fs.appendFileSync("error-log.txt", formattedMessage);
 };
 
@@ -71,4 +88,5 @@ module.exports = {
     logger,
     logUpdatesToFile,
     logErrorToFile,
+    logDetailedErrorToFile
 };

@@ -5,7 +5,7 @@ const { promisify } = require("util");
 const { Readable, pipeline } = require("stream"); // Promisify the stream pipeline utility
 const streamPipeline = promisify(pipeline); // Use async pipeline with stream promises
 const csvParser = require("csv-parser");
-const { logger, logErrorToFile, logUpdatesToFile } = require("./logger");
+const { logger, logErrorToFile, logUpdatesToFile, logDetailedErrorToFile } = require("./logger");
 
 // Define the path to the checkpoint file
 const checkpointFilePath = path.join(__dirname, "process_checkpoint.json");
@@ -56,7 +56,7 @@ const s3Client = new S3Client({
   
       return folders[0]; // Return the latest folder
     } catch (error) {
-      logErrorToFile(`Error in getLatestFolderKey for bucket "${bucket}": ${error.message}`);
+      logErrorToFile(`Error in getLatestFolderKey for bucket "${bucket}": ${error.message}, error`);
       return null;
     }
   };
@@ -92,7 +92,7 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
           logger.info(`Processing file: ${file.Key}`);
           await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
         } catch (error) {
-          logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
+          logErrorToFile(`Error processing file ${file.Key}: ${error.message}, error`);
         }
       });
 
@@ -100,31 +100,10 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
       // Wait for all files to process, ensuring no unhandled rejections stop the Promise.all
       await Promise.all(fileProcessingTasks);
   
-      // await Promise.all(
-      //   csvFiles.slice(0, 3).map(async (file) => {
-      //     try {
-      //       logger.info(`Processing file: ${file.Key}`);
-      //       await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
-      //     } catch (error) {
-      //       logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
-      //     }
-      //   })
-      // );
-
-      //Process files sequentially
-      // for (const file of csvFiles.slice(0, 3)) {
-      //   try {
-      //     logger.info(`Processing file: ${file.Key}`);
-      //     await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
-      //   } catch (error) {
-      //     logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
-      //   }
-      // }
-  
       logger.info("All CSV files in the latest folder have been processed.");
       logUpdatesToFile("All CSV files in the latest folder have been processed.");
     } catch (error) {
-      logErrorToFile(`Error in processCSVFilesInLatestFolder for bucket "${bucket}": ${error.message}`);
+      logErrorToFile(`Error in processCSVFilesInLatestFolder for bucket "${bucket}": ${error.message}, error`);
     }
   };
 
@@ -169,10 +148,20 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
                 consecutiveErrors = 0; // Reset error count on success
               }
             } catch (error) {
-              logErrorToFile(`Error processing row ${totalProducts} in file "${key}": ${error.message}`);
+              // Detailed error logging
+              if (error.code === 'ENOTFOUND' || error.code === 'ECONNRESET') {
+                logErrorToFile(`Network error: ${error.message}, error`);
+              } else if (error.name === 'CSVError') {  // Assuming csv-parser throws errors with name 'CSVError'
+                  logErrorToFile(`CSV parsing error at row ${totalProducts} in file "${key}": ${error.message}, error`);
+              } else {
+                  logErrorToFile(`Unhandled exception processing row ${totalProducts} in file "${key}": ${error.message}, error`);
+                  logDetailedErrorToFile(error, `Error processing row ${totalProducts} in file "${key}"`);
+              }
+
+              // Increment error count and check if max retries are reached
               consecutiveErrors++;
               if (consecutiveErrors >= MAX_RETRIES) {
-                throw new Error(`Processing aborted after ${MAX_RETRIES} consecutive row errors.`);
+                  throw new Error(`Processing aborted after ${MAX_RETRIES} consecutive row errors.`);
               }
             };
           }
@@ -186,20 +175,36 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
   
       logger.warn(`Completed processing of file: "${key}", total products: ${totalProducts}`);
     } catch (error) {
-      logErrorToFile(`Error in readCSVAndProcess for file "${key}" in bucket "${bucket}": ${error.message}`);
+      logErrorToFile(`Error in readCSVAndProcess for file "${key}" in bucket "${bucket}": ${error.message}, error`);
       throw error; // Ensure any error bubbles up to be caught in Promise.all
     }
   };
 
-  // Helper function to process batch and save checkpoint
+// Helper function to process batch and save checkpoint
 const processAndCheckpoint = async (batch, totalProducts, key, processBatchFunction) => {
-  try {
-      await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
-      saveCheckpoint(key, totalProducts); // Update checkpoint after processing batch
-      logger.info(`Processed and saved checkpoint at row ${totalProducts} for file "${key}"`);
-  } catch (error) {
-      logErrorToFile(`Error processing batch at row ${totalProducts} in file "${key}": ${error.message}`);
-      throw new Error(`Batch processing error at row ${totalProducts} for file "${key}"`);
+  const MAX_BATCH_RETRIES = 3;
+  let attempts = 0;
+
+  while (attempts < MAX_BATCH_RETRIES) {
+    try {
+        await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
+        saveCheckpoint(key, totalProducts); // Update checkpoint after processing batch
+        logger.info(`Processed and saved checkpoint at row ${totalProducts} for file "${key}"`);
+        return;
+    } catch (error) {
+      attempts++;
+      const delay = Math.pow(2, attempts) * 1000; // Exponential backoff: 2, 4, 8 seconds, etc.
+      logErrorToFile(`Error processing batch at row ${totalProducts} in file "${key}" on attempt ${attempts}: ${error.message}, error`);
+      
+      // Specific check for 524 error to retry with backoff
+      if (error.response && error.response.status === 524) {
+          logger.warn(`524 Timeout detected. Retrying after ${delay / 1000} seconds...`);
+          logErrorToFile(`524 Timeout detected. Retrying after ${delay / 1000} seconds...`);
+          await new Promise(resolve => setTimeout(resolve, delay));
+      } else {
+          throw new Error(`Batch processing error at row ${totalProducts} for file "${key}"`);
+      }
+    }
   }
 };
 

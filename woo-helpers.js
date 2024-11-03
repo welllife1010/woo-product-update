@@ -26,7 +26,7 @@ const wooApi = new WooCommerceRestApi({
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 2, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    maxConcurrent: 3, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
     minTime: 800, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
 
@@ -116,7 +116,7 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
         );
         logErrorToFile(`Error fetching product with Part Number ${partNumber} in file "${fileKey}": ${
                 error.response ? JSON.stringify(error.response.data) : error.message
-            }`);
+            }, error`);
         return null;
     }
 };

@@ -1,4 +1,3 @@
-const fs = require("fs");
 const { logger, logErrorToFile, logUpdatesToFile } = require("./logger");
 const { wooApi, getProductById, getProductByPartNumber, limiter, retriedProducts } = require("./woo-helpers");
 
@@ -40,7 +39,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
                 const currentMeta = currentValue.find(meta => meta.key === newMeta.key);
 
                 if (!currentMeta) {
-                    logErrorToFile(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update. \n`);
+                    logger.warn(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update. \n`);
                     fieldsToUpdate.push(`meta_data.${newMeta.key}`);
                     return true;
                 }
@@ -50,8 +49,6 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
                     logger.warn(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}' \n`);
 
                 }
-
-                //logErrorToFile(`\n Part Number: ${partNumber} \n Key: ${newMeta.key} \n normalizeText currentMeta: ${normalizeText(currentMeta.value)} \n normalizeText newMeta: ${normalizeText(newMeta.value)} \n File: ${fileName}`);
             })
         } else {
             // Normalize and compare general string fields
@@ -68,8 +65,6 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
         }
     });
 
-    //logger.info(updateNeeded ? `Update required for Part Number: ${partNumber} in ${fileName}` : `No update required for Part Number: ${partNumber} in ${fileName}`);
-
     // Log updates for each field in fieldsToUpdate
     if (fieldsToUpdate.length > 0) {
         fieldsToUpdate.forEach(field => {
@@ -81,8 +76,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
                 ? newData.meta_data?.find(meta => meta.key === field.split(".")[1])?.value 
                 : newData[field];
             
-            logger.info(`DEBUG: Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
-            logUpdatesToFile(`Update needed for field '${field}' in Part Number: ${partNumber} in ${fileName}. \nCurrent value: '${currentFieldValue}' \nNew value: '${newFieldValue}'`);
+            //logger.info(`DEBUG: Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
         });
         return true;
     } else {
@@ -175,7 +169,7 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                 } catch (error) {
                     const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
                     logger.error(errorMsg);
-                    logErrorToFile(errorMsg);
+                    logErrorToFile(errorMsg, error);
                 }
                 return null; // Skip products that don't need updating or encountered an error
             })
@@ -207,8 +201,8 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                 });
             } catch (error) {
                 // Log all part numbers in the failed batch
-                const failedPartNumbers = filteredProducts.map(p => `Part Number: ${p.part_number}, ID: ${p.id}`).join("; ");
-                logErrorToFile(`Batch update failed for file "${fileKey}": ${error.message}. Products in batch: ${failedPartNumbers}`);
+                const failedPartNumbers = filteredProducts.map(p => `Part Number: [ ${p.part_number}, ID: ${p.id} ]`).join("; ");
+                logErrorToFile(`Batch update failed for file "${fileKey}": ${error.message}. Products in batch - ${failedPartNumbers}, error`);
             }
         } else {
             logger.info(`No valid products to update in the batch for file: "${fileKey}"; filteredProducts.length: ${filteredProducts.length}`);

@@ -18,7 +18,7 @@ const mainProcess = async () => {
       return;
     }
     
-    logger.info(`Starting process for bucket: ${bucket}`);
+    logger.info(`Starting process for S3 bucket: ${bucket}`);
 
     // Pass the generated filename to processBatch
     await processCSVFilesInLatestFolder(bucket, 30, (batch, ...args) => processBatch(batch, ...args));
@@ -32,7 +32,7 @@ const mainProcess = async () => {
     console.log(durationMessage);
     logErrorToFile(durationMessage);
   } catch (error) {
-    logErrorToFile(`Unhandled error in mainProcess: ${error.message}`);
+    logErrorToFile(`Unhandled error in mainProcess: ${error.message}, error`);
     handleUnexpectedEnd();
   }
 };
@@ -44,7 +44,7 @@ function handleUnexpectedEnd() {
 }
 
 mainProcess().catch(error => {
-  logErrorToFile(`Critical error in main: ${error.message}`);
+  logErrorToFile(`Critical error in main: ${error.message}, error`);
 });
 
 process.on('uncaughtException', (error) => {
