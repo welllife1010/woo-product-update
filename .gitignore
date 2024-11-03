@@ -8,6 +8,7 @@ csvFiles/
 error-log.txt
 updated-products-*
 process_checkpoint.json
+ecosystem.config.js
 
 # Logs
 logs
