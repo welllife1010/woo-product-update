@@ -17,6 +17,7 @@
     "bottleneck": "^2.19.5",
     "bull": "^4.16.4",
     "csv-parser": "^3.0.0",
+    "dayjs": "^1.11.13",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "perf_hooks": "^0.0.1",

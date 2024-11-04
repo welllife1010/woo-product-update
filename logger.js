@@ -1,7 +1,9 @@
 const fs = require("fs");
-const path = require("path");
 const pino = require("pino");
 const pinoPretty = require("pino-pretty");
+const dayjs = require('dayjs');
+const utc = require('dayjs/plugin/utc');
+const timezone = require('dayjs/plugin/timezone');
 
 // Generate the unique filename with date and increment version dynamically if file exists
 const date = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
@@ -45,14 +47,34 @@ const rotateLogFile = () => {
     }
 };
 
+// Extend dayjs with UTC and timezone plugins
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+// Define a custom timestamp function for Pacific Time
+const customTimestamp = () => `,"time":"${dayjs().tz('America/Los_Angeles').format('YYYY-MM-DD HH:mm:ss')}"`;
+
 // Logger setup with pino-pretty
 const logger = pino(
+    {
+        base: null, // Removes default 'pid' and 'hostname' fields
+        timestamp: customTimestamp, // Use the custom timestamp function
+    },
     pinoPretty({
         levelFirst: true,
         colorize: true,
-        translateTime: "SYS:standard",
+        translateTime: false, // Disable default time translation
     })
 );
+
+// Logger setup with pino-pretty
+// const logger = pino(
+//     pinoPretty({
+//         levelFirst: true,
+//         colorize: true,
+//         translateTime: "SYS:standard",
+//     })
+// );
 
 const logDetailedErrorToFile = (error, message = "") => {
     rotateLogFile();
