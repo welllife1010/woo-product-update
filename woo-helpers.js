@@ -5,24 +5,18 @@ const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
 const Bottleneck = require("bottleneck");
 const { logger, logErrorToFile } = require("./logger");
 
-const apiBaseUrl = process.env.WOO_API_BASE_URL_DEV;
-console.log('API Base URL:', apiBaseUrl);  // For debugging purposes
-
-logger.warn(`WOO_API_BASE_URL_DEV: ${process.env.WOO_API_BASE_URL_DEV}`);
-logger.warn(`WOO_API_BASE_URL_TEST: ${process.env.WOO_API_BASE_URL_TEST}`);
-
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
     url: process.env.WOO_API_BASE_URL_TEST,
     consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
     consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
     version: "wc/v3",
-  });
+});
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 3, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
-    minTime: 800, // Minimum time between requests (in milliseconds) - 500ms between each request
+    maxConcurrent: 4, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    minTime: 500, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
 
 // Define a set to keep track of products that were retried
@@ -37,7 +31,7 @@ limiter.on("failed", async (error, jobInfo) => {
     logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}.`);
 
     logErrorToFile(
-        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${jobInfo.retryCount}`
+        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${retryCount}`
     );
 
     // Add part number to retriedProducts if a retry occurs
