@@ -1,8 +1,3 @@
-// TODO:
-// 1. Checkpoint system to resume processing from the last processed item - multiple files in a folder.
-// 2. Large batchSize handling - split into smaller batches.
-// 3. Ensure batches are cleared (batch = []) promptly after processing.
-// 4. Set Up a Watchdog Timer to monitor the process and restart if it fails.
 const dotenv = require("dotenv");
 dotenv.config();
 
@@ -13,8 +8,8 @@ const { logger, logErrorToFile } = require("./logger");
 const apiBaseUrl = process.env.WOO_API_BASE_URL_DEV;
 console.log('API Base URL:', apiBaseUrl);  // For debugging purposes
 
-logger.warn("WOO_API_BASE_URL_DEV:", process.env.WOO_API_BASE_URL_DEV);
-logger.warn("WOO_API_BASE_URL_TEST:", process.env.WOO_API_BASE_URL_TEST);
+logger.warn(`WOO_API_BASE_URL_DEV: ${process.env.WOO_API_BASE_URL_DEV}`);
+logger.warn(`WOO_API_BASE_URL_TEST: ${process.env.WOO_API_BASE_URL_TEST}`);
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({

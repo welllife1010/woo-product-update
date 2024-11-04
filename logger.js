@@ -1,6 +1,3 @@
-// TODO: 
-// 1. update the Date from (UTC) to human readable (PST) in the logger
- 
 const fs = require("fs");
 const path = require("path");
 const pino = require("pino");
@@ -8,16 +5,19 @@ const pinoPretty = require("pino-pretty");
 
 // Generate the unique filename with date and increment version dynamically if file exists
 const date = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
-const pstDate = new Date().toLocaleString("en-US", {
-    timeZone: "America/Los_Angeles",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit",
-    hour12: true,  // Optional: change to false for 24-hour format
-});
+// Helper function to generate the current date and time in PST
+const getPSTDate = () => {
+    return new Date().toLocaleString("en-US", {
+        timeZone: "America/Los_Angeles",
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        second: "2-digit",
+        hour12: true, // Optional: change to false for 24-hour format
+    });
+};
 
 let version = 1; 
 let updatedProductsFile;
@@ -56,7 +56,7 @@ const logger = pino(
 
 const logDetailedErrorToFile = (error, message = "") => {
     rotateLogFile();
-    let formattedMessage = `[${pstDate}] ${message}\n`;
+    let formattedMessage = `[${getPSTDate()}] ${message}\n`;
     formattedMessage += `Error Name: ${error.name}\n`;
     formattedMessage += `Error Code: ${error.code || "N/A"}\n`;
     formattedMessage += `Error Message: ${error.message}\n`;
@@ -68,7 +68,7 @@ const logDetailedErrorToFile = (error, message = "") => {
 // Function to log skipped items or errors directly to the file
 const logErrorToFile = (message, error = null) => { // Add an optional error parameter
     rotateLogFile();
-    const formattedMessage = `[${pstDate}] ${message}\n`;
+    const formattedMessage = `[${getPSTDate()}] ${message}\n`;
 
     if (error) { // Add the error details if provided
         formattedMessage += `- Error Stack Trace: ${error.stack}\n`; 
@@ -80,7 +80,7 @@ const logErrorToFile = (message, error = null) => { // Add an optional error par
 
 const logUpdatesToFile = (message) => {
     rotateLogFile();
-    const formattedMessage = `[${pstDate}] ${message}\n`;
+    const formattedMessage = `[${getPSTDate()}] ${message}\n`;
     fs.appendFileSync(updatedProductsFile, formattedMessage);
 };
 

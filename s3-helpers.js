@@ -6,6 +6,15 @@ const { Readable, pipeline } = require("stream"); // Promisify the stream pipeli
 const streamPipeline = promisify(pipeline); // Use async pipeline with stream promises
 const csvParser = require("csv-parser");
 const { logger, logErrorToFile, logUpdatesToFile, logDetailedErrorToFile } = require("./logger");
+const batchQueue = require('./queue');
+
+// AWS S3 setup (using AWS SDK v3)
+const s3Client = new S3Client({ 
+  region: process.env.AWS_REGION_NAME,
+  endpoint: "https://s3.us-west-1.amazonaws.com", // Use your specific bucket's region
+  forcePathStyle: true, // This helps when using custom endpoints
+  requestTimeout: 600000 // Set timeout to 10 minutes
+});
 
 // Define the path to the checkpoint file
 const checkpointFilePath = path.join(__dirname, "process_checkpoint.json");
@@ -28,14 +37,6 @@ const getCheckpoint = (fileKey) => {
     const checkpoints = JSON.parse(fs.readFileSync(checkpointFilePath, "utf-8"));
     return checkpoints[fileKey]?.lastProcessedRow || 0;
 };
-
-// AWS S3 setup (using AWS SDK v3)
-const s3Client = new S3Client({ 
-    region: process.env.AWS_REGION_NAME,
-    endpoint: "https://s3.us-west-1.amazonaws.com", // Use your specific bucket's region
-    forcePathStyle: true, // This helps when using custom endpoints
-    requestTimeout: 600000 // Set timeout to 10 minutes
-});
 
  // Function to get the latest folder key by sorting folders by date
  const getLatestFolderKey = async (bucket) => {
@@ -71,7 +72,6 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
       }
   
       logger.info(`Processing files in the latest folder: ${latestFolder}`);
-  
       const listParams = { Bucket: bucket, Prefix: latestFolder };
       const listData = await s3Client.send(new ListObjectsV2Command(listParams));
   
@@ -81,31 +81,34 @@ const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunc
       }
   
       const csvFiles = listData.Contents.filter((file) => file.Key.toLowerCase().endsWith(".csv"));
+      logger.info(`Retrieved ${csvFiles.length} CSV files in folder: ${latestFolder}`);
+      csvFiles.forEach(file => logger.info(`Found file: ${file.Key}`));
+
       if (csvFiles.length === 0) {
         logErrorToFile(`No CSV files found in folder: ${latestFolder} of bucket: ${bucket}`);
         return;
       }
 
-      // Array to hold the completion status of each file
       const fileProcessingTasks = csvFiles.map(async (file) => {
         try {
-          logger.info(`Processing file: ${file.Key}`);
-          await readCSVAndProcess(bucket, file.Key, batchSize, processBatchFunction);
+            logger.info(`Processing file: ${file.Key}`);
+            await readCSVAndProcess(bucket, file.Key, batchSize, async (batch) => {
+                const job = await batchQueue.add({ batch, fileKey: file.Key, totalProducts: batch.length });
+                logger.info(`Enqueued batch job with ID: ${job.id} for file: ${file.Key}`);
+                logger.debug(`Job data: ${JSON.stringify({ batch, fileKey: file.Key, totalProducts: batch.length })}`);
+            });
         } catch (error) {
-          logErrorToFile(`Error processing file ${file.Key}: ${error.message}, error`);
-        }
+            logErrorToFile(`Error processing file ${file.Key}: ${error.message}`);
+        }        
       });
 
-
-      // Wait for all files to process, ensuring no unhandled rejections stop the Promise.all
-      await Promise.all(fileProcessingTasks);
-  
+      await Promise.all(fileProcessingTasks); // Wait for all files to process
       logger.info("All CSV files in the latest folder have been processed.");
       logUpdatesToFile("All CSV files in the latest folder have been processed.");
     } catch (error) {
       logErrorToFile(`Error in processCSVFilesInLatestFolder for bucket "${bucket}": ${error.message}, error`);
     }
-  };
+};
 
 // Function to read CSV from S3 and process in batches with checkpointing
 const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) => {
@@ -117,7 +120,6 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
     const lastProcessedRow = getCheckpoint(key); // Retrieve the last processed row for this file from checkpoint
 
     logger.info(`Starting file processing for "${key}" from row ${lastProcessedRow}`);
-  
     try {
       const data = await s3Client.send(new GetObjectCommand(params)); // Fetch the CSV data from S3
       const readableStream = Readable.from(data.Body); // Create a readable stream from the S3 object
@@ -126,11 +128,15 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
       await streamPipeline(
         readableStream,
         csvParser(),
+        // Iterates over each row in the CSV asynchronously, allowing us to handle each chunk (row) as it arrives, without waiting for the entire file to load.
         async function* (source) {
-          // Iterates over each row in the CSV asynchronously, allowing us to handle each chunk (row) as it arrives, without waiting for the entire file to load.
+          logger.info(`Starting to process CSV file: ${key}`);
           for await (const chunk of source) {
             try {
               totalProducts++;
+
+              logger.debug(`Processing row ${totalProducts}: ${JSON.stringify(chunk)}`);
+
               if (totalProducts <= lastProcessedRow) continue; // Skip rows up to checkpoint
 
               const normalizedData = Object.keys(chunk).reduce((acc, key) => {
@@ -143,10 +149,13 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
     
               // Process the batch if it reaches batchSize
               if (batch.length >= batchSize) {
-                await processAndCheckpoint(batch, totalProducts, key, processBatchFunction);
+                await processAndCheckpoint(batch, totalProducts, key, processBatchFunction); // Pass batch to enqueue job
                 batch = []; // Clear batch after processing
                 consecutiveErrors = 0; // Reset error count on success
               }
+
+              logger.info(`Completed processing file: ${key}, total rows processed: ${totalProducts}`);
+              
             } catch (error) {
               // Detailed error logging
               if (error.code === 'ENOTFOUND' || error.code === 'ECONNRESET') {
@@ -165,10 +174,9 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
               }
             };
           }
-  
-          // Process remaining rows if any
+
           if (batch.length > 0) {
-            await processAndCheckpoint(batch, totalProducts, key, processBatchFunction);
+            await processAndCheckpoint(batch, totalProducts, key, processBatchFunction); // Process any remaining data
           }
         }
       );
@@ -185,9 +193,12 @@ const processAndCheckpoint = async (batch, totalProducts, key, processBatchFunct
   const MAX_BATCH_RETRIES = 3;
   let attempts = 0;
 
+  console.log(`DEBUG: Entering processAndCheckpoint for batch of size ${batch.length} in file ${key}`);
+
   while (attempts < MAX_BATCH_RETRIES) {
     try {
-        await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
+        //await processBatchFunction(batch, totalProducts - batch.length, totalProducts, key);
+        await processBatchFunction(batch);
         saveCheckpoint(key, totalProducts); // Update checkpoint after processing batch
         logger.info(`Processed and saved checkpoint at row ${totalProducts} for file "${key}"`);
         return;
@@ -204,6 +215,9 @@ const processAndCheckpoint = async (batch, totalProducts, key, processBatchFunct
       } else {
           throw new Error(`Batch processing error at row ${totalProducts} for file "${key}"`);
       }
+
+      console.error(`Error in processAndCheckpoint: ${error.message}`);
+      throw error;
     }
   }
 };

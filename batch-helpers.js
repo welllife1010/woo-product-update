@@ -46,7 +46,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
 
                 if (normalizeText(currentMeta.value) !== normalizeText(newMeta.value)) {
                     fieldsToUpdate.push(`meta_data.${newMeta.key}`);
-                    logger.warn(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}' \n`);
+                    //logger.warn(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}' \n`);
 
                 }
             })
@@ -124,56 +124,69 @@ const filterCurrentData = (product) => {
 
 // Function to process a batch of products using WooCommerce Bulk API
 const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
-        // Array to collect products that need updating
-        const productsToUpdate = await Promise.all(
-            batch.map(async (item, index) => {
-                const currentIndex = startIndex + index + 1;
+    const MAX_RETRIES = 3;
+    let attempts = 0;
 
-                // Check if 'part_number' exists in the item
-                if (!item.hasOwnProperty('part_number') || !item.part_number) {
-                    const msg = `part_number key is missing in item at index ${currentIndex}, Skip this item.`;
-                    logger.error(msg);
-                    logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProducts} in ${fileKey}: ${msg}`);
+    logger.info(`Processing batch with startIndex: ${startIndex}, totalProducts: ${totalProducts}, fileKey: ${fileKey}`);
+    logger.debug(`Batch data: ${JSON.stringify(batch, null, 2)}`); // Log the full batch data for debugging
 
-                    return null;
-                }
+    if (!Array.isArray(batch)) {
+        throw new Error(`Expected batch to be an array, but got ${typeof batch}`);
+    }
 
-                const part_number = item.part_number;
-                logger.info(`Processing ${currentIndex} / ${totalProducts} - Part Number: ${part_number}`);
+    // Array to collect products that need updating
+    const productsToUpdate = await Promise.all(
+        batch.map(async (item, index) => {
+            const currentIndex = startIndex + index + 1;
 
-                try {
-                    const productId = await getProductByPartNumber(part_number, currentIndex, totalProducts, fileKey);
+            logger.info(`Processing batch for file: ${fileKey}, startIndex: ${startIndex}, totalProducts: ${totalProducts}`);
 
-                    if (productId) {
-                        // Fetch current product data
-                        const product = await getProductById(productId, fileKey);
-                        //logger.info(`DEBUG: Current meta_data for Product ID ${productId}: ${JSON.stringify(product.meta_data, null, 2)}`);
-                        if (product) {
-                            // Prepare new data structure for comparison and potential update
-                            const newData = createNewData(item, productId, part_number);
-                            const currentData = filterCurrentData(product);
+            // Check if 'part_number' exists in the item
+            if (!item.hasOwnProperty('part_number') || !item.part_number) {
+                const msg = `part_number key is missing in item at index ${currentIndex}, Skip this item.`;
+                logger.error(msg);
+                logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProducts} in ${fileKey}: ${msg}`);
 
-                            // Check if an update is needed
-                            if (isUpdateNeeded(currentData, newData, currentIndex, totalProducts, part_number, fileKey)) {
-                                return newData; // Include only if an update is needed
-                            } 
-                        }
-                    } else {
-                        logger.info(`Product ID not found for Part Number: ${part_number} at index ${currentIndex}`);
+                return null;
+            }
+
+            const part_number = item.part_number;
+            logger.info(`Processing ${currentIndex} / ${totalProducts} - Part Number: ${part_number}`);
+
+            try {
+                const productId = await getProductByPartNumber(part_number, currentIndex, totalProducts, fileKey);
+
+                if (productId) {
+                    // Fetch current product data
+                    const product = await getProductById(productId, fileKey);
+                    //logger.info(`DEBUG: Current meta_data for Product ID ${productId}: ${JSON.stringify(product.meta_data, null, 2)}`);
+                    if (product) {
+                        // Prepare new data structure for comparison and potential update
+                        const newData = createNewData(item, productId, part_number);
+                        const currentData = filterCurrentData(product);
+
+                        // Check if an update is needed
+                        if (isUpdateNeeded(currentData, newData, currentIndex, totalProducts, part_number, fileKey)) {
+                            return newData; // Include only if an update is needed
+                        } 
                     }
-                } catch (error) {
-                    const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
-                    logger.error(errorMsg);
-                    logErrorToFile(errorMsg, error);
+                } else {
+                    logger.info(`Product ID not found for Part Number: ${part_number} at index ${currentIndex}`);
                 }
-                return null; // Skip products that don't need updating or encountered an error
-            })
-        );
+            } catch (error) {
+                const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
+                logger.error(errorMsg);
+                logErrorToFile(errorMsg, error);
+            }
+            return null; // Skip products that don't need updating or encountered an error
+        })
+    );
 
-        // Filter out any null entries (products that don't need updates)
-        const filteredProducts = productsToUpdate.filter(Boolean);
+    // Filter out any null entries (products that don't need updates)
+    const filteredProducts = productsToUpdate.filter(Boolean);
 
-        if (filteredProducts.length > 0) {
+    if (filteredProducts.length > 0) {
+        while (attempts < MAX_RETRIES) {
             try {
                 // Use WooCommerce Bulk API to update products
                 const response = await limiter.schedule(
@@ -183,25 +196,33 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
 
                 // Log the response to verify successful updates
                 logger.info(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}"`);
-                
-                // Log each updated product's details to the unique updatedProductsFile
-                filteredProducts.forEach((product) => {
-                    if (retriedProducts.has(product.part_number)) {
-                        logUpdatesToFile(`Recovered after retry: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
-                        logger.info(`Product ID ${product.id} (${product.part_number}) successfully updated after retry.`);
-                    } else {
-                        logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`);
-                        logger.info(`Updated: Product ID ${product.id} (${product.part_number}) updated successfully.`);
-                    }
-                });
+
+                filteredProducts.forEach(product => logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`));
+                return;  // Exit the retry loop if successful
             } catch (error) {
+                attempts++;
+
                 // Log all part numbers in the failed batch
-                const failedPartNumbers = filteredProducts.map(p => `Part Number: [ ${p.part_number}, ID: ${p.id} ]`).join("; ");
-                logErrorToFile(`Batch update failed for file "${fileKey}": ${error.message}. Products in batch - ${failedPartNumbers}, error`);
+                const failedPartNumbers = filteredProducts.map(p => `[ Part Number: ${p.part_number}, ID: ${p.id} ]`).join("; ");
+
+                logErrorToFile(`Batch update attempt ${attempts} failed for file "${fileKey}" due to: ${error.message}, error`);
+                logErrorToFile(`Products in batch - ${failedPartNumbers}`);
+                
+                if (error.response && error.response.status === 524 && attempts < MAX_RETRIES) {
+                    const delay = Math.pow(2, attempts) * 1000; // Exponential backoff: 2, 4, 8 seconds, etc.
+                    logger.warn(`524 Timeout detected. Retrying after ${delay / 1000} seconds...`);
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                } else if (attempts >= MAX_RETRIES) {
+                    logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}"`);
+                    throw new Error(`Batch update permanently failed for file "${fileKey}"`);
+                } else {
+                    throw error; // Exit and propagate any other errors
+                }
             }
-        } else {
-            logger.info(`No valid products to update in the batch for file: "${fileKey}"; filteredProducts.length: ${filteredProducts.length}`);
-        }  
+        }
+    } else {
+        logger.info(`No valid products to update in the batch for file: "${fileKey}"; filteredProducts.length: ${filteredProducts.length}`);
+    }  
 };
 
 module.exports = {
