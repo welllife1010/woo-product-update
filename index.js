@@ -24,6 +24,11 @@ createBullBoard({
     serverAdapter: serverAdapter,
 });
 
+app.listen(3000, () => {
+  console.log('Server is running on http://localhost:3000');
+  console.log('Bull Dashboard is available at http://localhost:3000/admin/queues');
+});
+
 // Start time to track the whole process duration
 const startTime = performance.now();
 
