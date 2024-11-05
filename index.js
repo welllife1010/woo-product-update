@@ -24,11 +24,6 @@ createBullBoard({
     serverAdapter: serverAdapter,
 });
 
-app.listen(3000, () => {
-  console.log('Server is running on http://localhost:3000');
-  console.log('Bull Dashboard is available at http://localhost:3000/admin/queues');
-});
-
 // Start time to track the whole process duration
 const startTime = performance.now();
 
@@ -120,6 +115,7 @@ app.get('/api/job-status/:jobId', async (req, res) => {
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log('Bull Dashboard is available at http://localhost:3000/admin/queues');
 });
 
 process.on('uncaughtException', (error) => {
