@@ -167,7 +167,7 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
 
                         // Check if an update is needed
                         if (isUpdateNeeded(currentData, newData, currentIndex, totalProducts, part_number, fileKey)) {
-                            return newData; // Include only if an update is needed
+                            return { ...newData, currentIndex, totalProducts }; 
                         } 
                     }
                 } else {
