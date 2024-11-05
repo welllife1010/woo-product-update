@@ -124,7 +124,7 @@ const filterCurrentData = (product) => {
 
 // Function to process a batch of products using WooCommerce Bulk API
 const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
-    const MAX_RETRIES = 3;
+    const MAX_RETRIES = 5;
     let attempts = 0;
 
     logger.info(`Processing batch with startIndex: ${startIndex}, totalProducts: ${totalProducts}, fileKey: ${fileKey}`);

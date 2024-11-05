@@ -190,7 +190,7 @@ const readCSVAndProcess = async (bucket, key, batchSize, processBatchFunction) =
 
 // Helper function to process batch and save checkpoint
 const processAndCheckpoint = async (batch, totalProducts, key, processBatchFunction) => {
-  const MAX_BATCH_RETRIES = 3;
+  const MAX_BATCH_RETRIES = 5;
   let attempts = 0;
 
   console.log(`DEBUG: Entering processAndCheckpoint for batch of size ${batch.length} in file ${key}`);

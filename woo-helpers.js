@@ -15,8 +15,8 @@ const wooApi = new WooCommerceRestApi({
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 4, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
-    minTime: 500, // Minimum time between requests (in milliseconds) - 500ms between each request
+    maxConcurrent: 5, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    minTime: 300, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
 
 // Define a set to keep track of products that were retried

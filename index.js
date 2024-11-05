@@ -66,7 +66,7 @@ const mainProcess = async () => {
     logger.info(`Starting process for S3 bucket: ${bucket}`);
 
     // Process files in the latest folder, enqueuing each batch
-    await processCSVFilesInLatestFolder(bucket, 20, async (batch, fileKey) => {
+    await processCSVFilesInLatestFolder(bucket, 80, async (batch, fileKey) => {
       if (!Array.isArray(batch) || batch.length === 0) {
         logger.error("Invalid batch data. It should be a non-empty array.");
         return;
