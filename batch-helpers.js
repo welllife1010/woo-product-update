@@ -190,14 +190,14 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
             try {
                 // Use WooCommerce Bulk API to update products
                 const response = await limiter.schedule(
-                    { id: `batch-${fileKey}`, context: { file: "batch-helpers.js", function: "processBatch" }},
+                    { id: `batch-${fileKey}`, context: { file: "batch-helpers.js", function: "processBatch"}},
                     () => wooApi.put("products/batch", { update: filteredProducts })
                 );
 
                 // Log the response to verify successful updates
                 logger.info(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}"`);
 
-                filteredProducts.forEach(product => logUpdatesToFile(`Updated: Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`));
+                filteredProducts.forEach(product => logUpdatesToFile(`Updated: ${product.currentIndex} / ${product.totalProducts} | Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`));
                 return;  // Exit the retry loop if successful
             } catch (error) {
                 attempts++;

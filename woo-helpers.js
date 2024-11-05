@@ -25,7 +25,7 @@ const retriedProducts = new Set();
 // Configure retry options to handle 504 or 429 errors
 limiter.on("failed", async (error, jobInfo) => {
     const jobId = jobInfo.options.id || "<unknown>";
-    const { file = "<unknown file>", function: functionName = "<unknown function>", part = "<unknown part>" } = jobInfo.options.context || {};
+    const { file = "<unknown file>", functionName = "<unknown function>", part = "<unknown part>" } = jobInfo.options.context || {};
     const retryCount = jobInfo.retryCount || 0;
 
     logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}.`);

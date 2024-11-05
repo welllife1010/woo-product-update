@@ -63,7 +63,7 @@ const getCheckpoint = (fileKey) => {
   };
 
 // Function to process CSV files within the latest folder
-const processCSVFilesInLatestFolder = async (bucket, batchSize, processBatchFunction) => {
+const processCSVFilesInLatestFolder = async (bucket, batchSize) => {
     try {
       const latestFolder = await getLatestFolderKey(bucket);
       if (!latestFolder) {
