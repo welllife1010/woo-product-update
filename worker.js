@@ -1,82 +1,71 @@
 require("dotenv").config();
-const { logger, logErrorToFile } = require("./logger");
-
-//const Bull = require('bull');
-const batchQueue = require('./queue'); // Importing batchQueue directly
+const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile, logFileProgress } = require("./logger");
+const { batchQueue, redisClient } = require('./queue'); // Importing batchQueue directly
 const { processBatch } = require('./batch-helpers'); 
-//const batchQueue = new Bull('batchQueue', { redis: { port: 6379, host: '127.0.0.1' } });
 
-const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
-
-const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_DEV,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
-    version: "wc/v3",
-});
-
-async function testConnection() {
-    try {
-        const response = await wooApi.get("products", { per_page: 1 });
-        console.log("Connection successful:", response.data);
-    } catch (error) {
-        console.error("Failed to connect to WooCommerce API:", error.message);
-    }
-}
-
-//testConnection();
-
-const testJob = async () => {
-    try {
-        logger.info('Running test job');
-        // Mock a simple process to see if the worker runs without failure
-        await new Promise(resolve => setTimeout(resolve, 1000));  // Mock 1-second delay
-        logger.info('Test job completed successfully');
-    } catch (error) {
-        logger.error(`Test job error: ${error.message}`);
-    }
-};
-
-//testJob();
-
+logInfoToFile('Worker process is running and listening for jobs...');
 // Define the worker to process each batch
-batchQueue.process(async (job) => {
+batchQueue.process( 4, async (job) => { // This will allow up to 5 concurrent job processes
     logger.info(`Worker received job ID: ${job.id}`);
-    const { batch, fileKey, totalProducts } = job.data;
+    const { batch, fileKey, totalProductsInFile, lastProcessedRow, batchSize } = job.data;
 
-    if (!batch || !fileKey) {
-        logger.error(`Job data or batch is missing for job ID: ${job.id}. Data: ${JSON.stringify(job.data)}`);
+    if (!batch || !fileKey || !totalProductsInFile || !lastProcessedRow || !batchSize) {
+        logErrorToFile(`Job data or batch is missing for job ID: ${job.id}.}`);
+        //logErrorToFile(`Failed Data: ${JSON.stringify(job.data)}`);
         return;
     }
 
+    logInfoToFile(`Processing job ID: ${job.id} for file: ${job.data.fileKey}`);
+    logInfoToFile(`Total products in file: ${job.data.totalProductsInFile}`);
+    logInfoToFile(`Last processed row: ${job.data.lastProcessedRow}`);
+
+    let updatedLastProcessedRow;
+
     try {
-        logger.info(`Processing batch for job ID: ${job.id}, file: ${fileKey}`);
-        await processBatch(batch, 0, totalProducts, fileKey);
-        logger.info(`Successfully processed batch for job ID: ${job.id}`);
+        logger.info(`Processing batch for job ID: ${job.id} | File: ${fileKey}`);
+
+        // *** Process the batch ***
+        await processBatch(batch, job.data.lastProcessedRow, totalProductsInFile, fileKey);
+
+        // Update the last processed row after batch processing
+        updatedLastProcessedRow = job.data.lastProcessedRow + batch.length;
+        await redisClient.set(`lastProcessedRow:${fileKey}`, updatedLastProcessedRow);
+
+        // Log progress after processing the batch
+        await logFileProgress(fileKey);
+
+        logger.info(`Successfully processed batch for job ID: ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile}`);
     } catch (error) {
-        logger.error(`Error processing job ID ${job.id}: ${error.message}`);
-        logErrorToFile(`Job failed with error: ${error.message}`);
-        throw error; // This allows Bull to retry the job
+
+        // Check for timeout error and log details
+        if (error.message.includes('Promise timed out')) {
+            logErrorToFile(`Timeout error for job ID ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile} | Error: ${error.message}`);
+            // Optionally, you can throw the error to allow Bull to retry the job
+            throw error;
+        } else {
+            logErrorToFile(`Job failed with ID ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile} | Error: ${error.message}`, error.stack);
+            throw error; // Re-throw to trigger retry
+        }
     }
 });
 
 // Event listeners for job statuses
 batchQueue.on('active', (job) => {
-    logger.info(`Job is now active: ${job.id}`);
+    logUpdatesToFile(`Job is now active: ${job.id}`);
 });
 
 batchQueue.on('waiting', (jobId) => {
-    logger.info(`Job waiting to be processed: ${jobId}`);
+    logUpdatesToFile(`Job waiting to be processed: ${jobId}`);
 });
 
 batchQueue.on('completed', (job, result) => {
-    logger.info(`Job completed with ID ${job.id}`);
+    logUpdatesToFile(`Job completed with ID ${job.id}`);
 });
 
 batchQueue.on('failed', (job, err) => {
-    logger.error(`Job failed with ID ${job.id}: ${err.message}`);
+    logErrorToFile(`Job failed with ID ${job.id}: ${err.message}`, err.stack);
 });
 
 batchQueue.on('error', (error) => {
-    logger.error(`Redis connection error: ${error.message}`);
+    logErrorToFile(`Redis connection error: ${error.message}`, error.stack);
 });

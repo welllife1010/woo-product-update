@@ -1,9 +1,9 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const batchQueue = require('./queue');
-const { processCSVFilesInLatestFolder } = require("./s3-helpers");
-const { logger, logErrorToFile } = require("./logger");
+const { batchQueue, redisClient } = require('./queue');
+const { processCSVFilesInLatestFolder } = require('./s3-helpers');
+const { logger, logErrorToFile,logUpdatesToFile } = require("./logger");
 const { performance } = require("perf_hooks"); // Import performance to track time
 const { BullAdapter } = require('@bull-board/api/bullAdapter');
 const { createBullBoard } = require('@bull-board/api');
@@ -27,58 +27,26 @@ createBullBoard({
 // Start time to track the whole process duration
 const startTime = performance.now();
 
-// Enqueue a batch job
-async function enqueueBatchJob(batchData, fileKey) {
-  const jobData = {
-    batch: batchData,              // The actual batch array
-    totalProducts: batchData.length, // Total number of products in the batch
-    fileKey: fileKey                // File key for tracking purposes
-  };
-
-  console.log(`DEBUG: Attempting to enqueue batch with ${batchData.length} items for file: ${fileKey}`);
-  logErrorToFile(`DEBUG: Attempting to enqueue batch with ${batchData.length} items for file: ${fileKey}, error`);
-
-  if (!batchQueue) {
-    console.error("Error: batchQueue is undefined.");
-    return;
-  }
-
-  const job = await batchQueue.add(jobData);
-  console.log(`DEBUG: Successfully enqueued job with ID: ${job.id}`);
-  logger.info(`Enqueued batch job with ID: ${job.id}`);
-  return job.id; // Return job ID for tracking
-}
-
 // Main process function to process CSV files
 const mainProcess = async () => {
   try {
-    const bucket = process.env.S3_BUCKET_NAME;
-    if (!bucket) {
+    const s3BucketName = process.env.S3_BUCKET_NAME;
+    if (!s3BucketName) {
       logErrorToFile("Environment variable S3_BUCKET_NAME is not set.");
       return;
     }
 
-    logger.info(`Starting process for S3 bucket: ${bucket}`);
+    logger.info(`Starting process for S3 bucket: ${s3BucketName}`);
 
     // Process files in the latest folder, enqueuing each batch
-    await processCSVFilesInLatestFolder(bucket, 70, async (batch, fileKey) => {
-      logger.info(`Batch size: ${batch.length}, File key: ${fileKey}`);
-      if (!Array.isArray(batch) || batch.length === 0) {
-        logger.error("Invalid batch data. It should be a non-empty array.");
-        return;
-      }
-
-      const jobId = await enqueueBatchJob(batch, fileKey); // Queue each batch as a job
-      logger.info(`Queued batch job with ID: ${jobId}`);
-    });
+    await processCSVFilesInLatestFolder(s3BucketName, 25);
 
     // Record completion message and elapsed time
     const endTime = performance.now();
     const duration = ((endTime - startTime) / 1000).toFixed(2);
-    const durationMessage = `Process completed in ${duration} seconds.`;
+    const durationMessage = `"processCSVFilesInLatestFolder" function (read CSV files) evoked in mainProcess function completed in ${duration} seconds.`;
 
-    console.log(durationMessage);
-    logErrorToFile(durationMessage);
+    logUpdatesToFile(durationMessage);
   } catch (error) {
     logErrorToFile(`Unhandled error in mainProcess: ${error.message}`);
     handleUnexpectedEnd();
@@ -97,20 +65,12 @@ mainProcess().catch(error => {
   logErrorToFile(`Critical error in main: ${error.message}, error`);
 });
 
+// For Manual Job Triggering & Testing and Debugging 
 app.post('/api/start-batch', async (req, res) => {
   const batchData = req.body.batchData; // Assuming batch data is passed in the request body
   const job = await batchQueue.add({ batch: batchData });
   logger.info(`Enqueued batch job with ID: ${job.id}`);
   res.json({ jobId: job.id });
-});
-
-app.get('/api/job-status/:jobId', async (req, res) => {
-  const job = await batchQueue.getJob(req.params.jobId);
-  if (!job) return res.status(404).send('Job not found');
-
-  const state = await job.getState();
-  const progress = job.progress();
-  res.json({ state, progress });
 });
 
 const PORT = process.env.PORT || 3000;

@@ -1,5 +1,6 @@
-const { logger, logErrorToFile, logUpdatesToFile } = require("./logger");
-const { wooApi, getProductById, getProductByPartNumber, limiter, retriedProducts } = require("./woo-helpers");
+const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile } = require("./logger");
+const { wooApi, getProductById, getProductByPartNumber, limiter } = require("./woo-helpers");
+const { redisClient } = require('./queue');
 
 let stripHtml;
 (async () => {
@@ -18,7 +19,7 @@ const normalizeText = (text) => {
 };
   
 // Function to check if product update is needed
-const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partNumber, fileName) => {
+const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile, partNumber, fileName) => {
     const fieldsToUpdate = [];
 
     Object.keys(newData).forEach((key) => {
@@ -46,8 +47,6 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
 
                 if (normalizeText(currentMeta.value) !== normalizeText(newMeta.value)) {
                     fieldsToUpdate.push(`meta_data.${newMeta.key}`);
-                    //logger.warn(`DEBUG: Mismatch for meta_data key '${newMeta.key}' for Part Number: ${partNumber} in ${fileName}.\nCurrent: '${currentMeta.value}', New: '${newMeta.value}' \n`);
-
                 }
             })
         } else {
@@ -60,7 +59,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProducts, partN
             // Check if values are different or if current value is undefined
             if (currentValue === undefined || currentValue !== newValue) {
                 fieldsToUpdate.push(key);
-                logUpdatesToFile(`Update needed for key '${key}' for Part Number: ${partNumber} in ${fileName}. \nCurrent value: '${currentValue}', \nNew value: '${newValue}' \n`);
+                logInfoToFile(`Update needed for key '${key}' for Part Number: ${partNumber} in ${fileName}. \nCurrent value: '${currentValue}', \nNew value: '${newValue}' \n`);
             }
         }
     });
@@ -104,8 +103,7 @@ const createNewData = (item, productId, part_number) => {
             { key: "package", value: item.packaging_type },
             { key: "supplier_device_package", value: item.supplier_device_package },
             { key: "mounting_type", value: item.mounting_type },
-            { key: "product_description", value: item.product_description }, // CSV field
-            { key: "short_description", value: item.product_description }, // Mapped to WooCommerce's short_description
+            { key: "short_description", value: item.product_description }, // Mapped CSV's product_description field to WooCommerce's short_description custom field
             { key: "detail_description", value: item.long_description },
             { key: "additional_key_information", value: item.additional_info },
         ],
@@ -117,18 +115,18 @@ const filterCurrentData = (product) => {
         sku: product.sku,
         description: product.description,
         meta_data: product.meta_data.filter((meta) =>
-            ["manufacturer", "spq", "image_url", "datasheet_url", "series_url", "series", "quantity", "operating_temperature", "voltage", "package", "supplier_device_package", "mounting_type", "product_description", "short_description" ,"detail_description", "additional_key_information"].includes(meta.key)
+            ["spq", "manufacturer", "image_url", "datasheet_url", "series_url", "series", "quantity", "operating_temperature", "voltage", "package", "supplier_device_package", "mounting_type", "short_description", "detail_description", "additional_key_information"].includes(meta.key)
         ),
     };
 };
 
 // Function to process a batch of products using WooCommerce Bulk API
-const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
+const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => {
     const MAX_RETRIES = 5;
     let attempts = 0;
 
-    logger.info(`Processing batch with startIndex: ${startIndex}, totalProducts: ${totalProducts}, fileKey: ${fileKey}`);
-    logger.debug(`Batch data: ${JSON.stringify(batch, null, 2)}`); // Log the full batch data for debugging
+    logger.info(`Processing batch with startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}, fileKey: ${fileKey}`);
+    //logger.debug(`Batch data: ${JSON.stringify(batch, null, 2)}`); // Log the full batch data for debugging
 
     if (!Array.isArray(batch)) {
         throw new Error(`Expected batch to be an array, but got ${typeof batch}`);
@@ -139,35 +137,35 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
         batch.map(async (item, index) => {
             const currentIndex = startIndex + index + 1;
 
-            logger.info(`Processing batch for file: ${fileKey}, startIndex: ${startIndex}, totalProducts: ${totalProducts}`);
+            logger.info(`Processing batch for file: ${fileKey}, startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}`);
 
-            // Check if 'part_number' exists in the item
+            // Check if 'part_number' exists in the item (CSV row)
             if (!item.hasOwnProperty('part_number') || !item.part_number) {
                 const msg = `part_number key is missing in item at index ${currentIndex}, Skip this item.`;
-                logger.error(msg);
-                logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProducts} in ${fileKey}: ${msg}`);
+                logErrorToFile(msg);
+                logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProductsInFile} in ${fileKey}: ${msg}`);
 
                 return null;
             }
 
             const part_number = item.part_number;
-            logger.info(`Processing ${currentIndex} / ${totalProducts} - Part Number: ${part_number}`);
+            logger.info(`Processing ${currentIndex} / ${totalProductsInFile} - Part Number: ${part_number}`);
 
             try {
-                const productId = await getProductByPartNumber(part_number, currentIndex, totalProducts, fileKey);
+                const productId = await getProductByPartNumber(part_number, currentIndex, totalProductsInFile, fileKey);
 
                 if (productId) {
                     // Fetch current product data
                     const product = await getProductById(productId, fileKey);
-                    //logger.info(`DEBUG: Current meta_data for Product ID ${productId}: ${JSON.stringify(product.meta_data, null, 2)}`);
+
                     if (product) {
                         // Prepare new data structure for comparison and potential update
                         const newData = createNewData(item, productId, part_number);
                         const currentData = filterCurrentData(product);
 
                         // Check if an update is needed
-                        if (isUpdateNeeded(currentData, newData, currentIndex, totalProducts, part_number, fileKey)) {
-                            return { ...newData, currentIndex, totalProducts }; 
+                        if (isUpdateNeeded(currentData, newData, currentIndex, totalProductsInFile, part_number, fileKey)) {
+                            return { ...newData, currentIndex, totalProductsInFile }; 
                         } 
                     }
                 } else {
@@ -175,7 +173,6 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                 }
             } catch (error) {
                 const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
-                logger.error(errorMsg);
                 logErrorToFile(errorMsg, error);
             }
             return null; // Skip products that don't need updating or encountered an error
@@ -185,19 +182,24 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
     // Filter out any null entries (products that don't need updates)
     const filteredProducts = productsToUpdate.filter(Boolean);
 
+    //logUpdatesToFile(`Sending update request for batch:`, JSON.stringify(filteredProducts, null, 2));
+
     if (filteredProducts.length > 0) {
         while (attempts < MAX_RETRIES) {
             try {
                 // Use WooCommerce Bulk API to update products
                 const response = await limiter.schedule(
-                    { id: `batch-${fileKey}`, context: { file: "batch-helpers.js", function: "processBatch"}},
+                    { id: `batch-${fileKey}-processRow-${startIndex}`, context: { file: "batch-helpers.js", function: "processBatch"}},
                     () => wooApi.put("products/batch", { update: filteredProducts })
                 );
 
                 // Log the response to verify successful updates
                 logger.info(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}"`);
 
-                filteredProducts.forEach(product => logUpdatesToFile(`Updated: ${product.currentIndex} / ${product.totalProducts} | Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`));
+                // Increment the count of updated products in Redis
+                await redisClient.incrBy(`updated-products:${fileKey}`, filteredProducts.length);
+
+                filteredProducts.forEach(product => logUpdatesToFile(`Updated: ${product.currentIndex} / ${product.totalProductsInFile} | Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`));
                 return;  // Exit the retry loop if successful
             } catch (error) {
                 attempts++;
@@ -210,7 +212,7 @@ const processBatch = async (batch, startIndex, totalProducts, fileKey) => {
                 
                 if (error.response && error.response.status === 524 && attempts < MAX_RETRIES) {
                     const delay = Math.pow(2, attempts) * 1000; // Exponential backoff: 2, 4, 8 seconds, etc.
-                    logger.warn(`524 Timeout detected. Retrying after ${delay / 1000} seconds...`);
+                    logErrorToFile(`524 Timeout detected. Retrying after ${delay / 1000} seconds...`);
                     await new Promise(resolve => setTimeout(resolve, delay));
                 } else if (attempts >= MAX_RETRIES) {
                     logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}"`);

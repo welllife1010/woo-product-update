@@ -7,16 +7,17 @@ const { logger, logErrorToFile } = require("./logger");
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_DEV,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
+    url: process.env.WOO_API_BASE_URL_TEST,
+    consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
+    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
     version: "wc/v3",
+    timeout: 600000, // Set a longer timeout (in milliseconds)
 });
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 3, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
-    minTime: 300, // Minimum time between requests (in milliseconds) - 500ms between each request
+    maxConcurrent: 4, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    minTime: 500, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
 
 // Define a set to keep track of products that were retried
@@ -28,16 +29,14 @@ limiter.on("failed", async (error, jobInfo) => {
     const { file = "<unknown file>", functionName = "<unknown function>", part = "<unknown part>" } = jobInfo.options.context || {};
     const retryCount = jobInfo.retryCount || 0;
 
-    logger.warn(`Retrying job ${jobId} for ${functionName} in ${file}. Retry #${retryCount + 1}.`);
-
     logErrorToFile(
-        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${retryCount}`
+        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${retryCount + 1}`
     );
 
     // Add part number to retriedProducts if a retry occurs
     if (partNumber) retriedProducts.add(partNumber);
 
-    if (retryCount < 5 && /(502|504|429)/.test(error.message)) {
+    if (retryCount < 5 && /(ECONNRESET|502|504|429)/.test(error.message)) {
         const retryDelay = 1000 * Math.pow(2, jobInfo.retryCount); // Exponential backoff
         logger.warn(`Applying delay of ${retryDelay / 1000}s before retrying job ${jobId}`);
         return retryDelay;
@@ -61,12 +60,12 @@ const getProductById = async (productId, fileKey) => {
              }, 
             () => wooApi.get(`products/${productId}`)
         );
-        logger.debug(`Fetched Product Data for ID ${productId}: ${JSON.stringify(response.data)} in file "${fileKey}"`);
+        //logger.debug(`Fetched Product Data for ID ${productId}: ${JSON.stringify(response.data)} in file "${fileKey}"`);
         return response.data;
     } catch (error) {
         logger.error(
             `Error fetching product with ID ${productId} in file "${fileKey}": ${
-            error.response ? JSON.stringify(error.response.data) : error.message
+            error.response ?? error.message
             }`
         );
         return null;
@@ -93,19 +92,11 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
             logger.info(`${currentIndex} / ${totalProducts} - Product ID ${response.data[0].id} found for Part Number ${partNumber} in file "${fileKey}"`);
             return response.data[0].id;
         } else {
-            logger.info(`${currentIndex} / ${totalProducts} - No product found for Part Number ${partNumber} in file "${fileKey}"`);
             logErrorToFile(`${currentIndex} / ${totalProducts} - No product found for Part Number ${partNumber} in file "${fileKey}"`)
             return null;
         }
     } catch (error) {
-        logger.error(
-            `Error fetching product with Part Number ${partNumber} in file "${fileKey}": ${
-                error.response ? JSON.stringify(error.response.data) : error.message
-            }`
-        );
-        logErrorToFile(`Error fetching product with Part Number ${partNumber} in file "${fileKey}": ${
-                error.response ? JSON.stringify(error.response.data) : error.message
-            }, error`);
+        logErrorToFile(`Error fetching product with Part Number ${partNumber} in file "${fileKey}": ${error.message}`, error.stack);
         return null;
     }
 };
