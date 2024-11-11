@@ -6,6 +6,7 @@ csvFiles/
 #files
 .DS_Store
 error-log.txt
+log-info.txt
 updated-products-*
 process_checkpoint.json
 ecosystem.config.js
