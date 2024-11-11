@@ -137,7 +137,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
         batch.map(async (item, index) => {
             const currentIndex = startIndex + index + 1;
 
-            logger.info(`Processing batch for file: ${fileKey}, startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}`);
+            logger.info(`Processing batch for file: ${fileKey}, startIndex (lastProcessedRow): ${startIndex}, totalProductsInFile: ${totalProductsInFile}`);
 
             // Check if 'part_number' exists in the item (CSV row)
             if (!item.hasOwnProperty('part_number') || !item.part_number) {

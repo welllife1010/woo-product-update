@@ -4,14 +4,15 @@ const { batchQueue, redisClient } = require('./queue'); // Importing batchQueue 
 const { processBatch } = require('./batch-helpers'); 
 
 logInfoToFile('Worker process is running and listening for jobs...');
-// Define the worker to process each batch
-batchQueue.process( 4, async (job) => { // This will allow up to 5 concurrent job processes
+// Define the worker to process each job (batch)
+batchQueue.process( 5, async (job) => { // This will allow up to 5 concurrent job processes
     logger.info(`Worker received job ID: ${job.id}`);
     const { batch, fileKey, totalProductsInFile, lastProcessedRow, batchSize } = job.data;
 
     if (!batch || !fileKey || !totalProductsInFile || !lastProcessedRow || !batchSize) {
-        logErrorToFile(`Job data or batch is missing for job ID: ${job.id}.}`);
-        //logErrorToFile(`Failed Data: ${JSON.stringify(job.data)}`);
+        logErrorToFile(`Job data or batch is missing for job ID: ${job.id}.`);
+        logErrorToFile(`Job ID: ${job.id} | Total products in file: ${totalProductsInFile} | Last processed row: ${lastProcessedRow} | Batch size: ${batchSize}`);
+        logErrorToFile(`Failed Data: ${JSON.stringify(job.data)}`);
         return;
     }
 
@@ -25,10 +26,10 @@ batchQueue.process( 4, async (job) => { // This will allow up to 5 concurrent jo
         logger.info(`Processing batch for job ID: ${job.id} | File: ${fileKey}`);
 
         // *** Process the batch ***
-        await processBatch(batch, job.data.lastProcessedRow, totalProductsInFile, fileKey);
+        await processBatch(batch, lastProcessedRow, totalProductsInFile, fileKey);
 
         // Update the last processed row after batch processing
-        updatedLastProcessedRow = job.data.lastProcessedRow + batch.length;
+        updatedLastProcessedRow = lastProcessedRow + batch.length;
         await redisClient.set(`lastProcessedRow:${fileKey}`, updatedLastProcessedRow);
 
         // Log progress after processing the batch
@@ -51,7 +52,7 @@ batchQueue.process( 4, async (job) => { // This will allow up to 5 concurrent jo
 
 // Event listeners for job statuses
 batchQueue.on('active', (job) => {
-    logUpdatesToFile(`Job is now active: ${job.id}`);
+    logUpdatesToFile(`Job is now active: ${job.id} | File: ${job.data.fileKey} | Last processed row: ${job.data.lastProcessedRow}`);
 });
 
 batchQueue.on('waiting', (jobId) => {
@@ -59,11 +60,11 @@ batchQueue.on('waiting', (jobId) => {
 });
 
 batchQueue.on('completed', (job, result) => {
-    logUpdatesToFile(`Job completed with ID ${job.id}`);
+    logUpdatesToFile(`Job completed with ID ${job.id} | Result: ${result} | File: ${job.data.fileKey} | Last processed row: ${job.data.lastProcessedRow}`);
 });
 
 batchQueue.on('failed', (job, err) => {
-    logErrorToFile(`Job failed with ID ${job.id}: ${err.message}`, err.stack);
+    logErrorToFile(`Job failed with ID ${job.id} | File: ${job.data.fileKey}: ${err.message}`, err.stack);
 });
 
 batchQueue.on('error', (error) => {

@@ -7,17 +7,17 @@ const { logger, logErrorToFile } = require("./logger");
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_TEST,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
+    url: process.env.WOO_API_BASE_URL_DEV,
+    consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
+    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
     version: "wc/v3",
-    timeout: 600000, // Set a longer timeout (in milliseconds)
+    timeout: 100000, // Set a longer timeout (in milliseconds)
 });
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 4, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
-    minTime: 500, // Minimum time between requests (in milliseconds) - 500ms between each request
+    maxConcurrent: 5, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    minTime: 550, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
 
 // Define a set to keep track of products that were retried
@@ -36,9 +36,10 @@ limiter.on("failed", async (error, jobInfo) => {
     // Add part number to retriedProducts if a retry occurs
     if (partNumber) retriedProducts.add(partNumber);
 
-    if (retryCount < 5 && /(ECONNRESET|502|504|429)/.test(error.message)) {
+    if (retryCount < 5 && /(ECONNRESET|socket hang up|502|504|429)/.test(error.message)) {
         const retryDelay = 1000 * Math.pow(2, jobInfo.retryCount); // Exponential backoff
         logger.warn(`Applying delay of ${retryDelay / 1000}s before retrying job ${jobId}`);
+        logErrorToFile(`Retrying job due to ${error.message}. Retry count: ${retryCount + 1}`);
         return retryDelay;
     }
 

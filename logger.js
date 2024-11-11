@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require("path");
 const pino = require("pino");
 const pinoPretty = require("pino-pretty");
 const dayjs = require('dayjs');
@@ -133,24 +134,83 @@ const logInfoToFile = (message) => {
     fs.appendFileSync("log-info.txt", formattedMessage);
 };
 
+// Function to read existing progress from the file
+const readProgressFile = (filePath) => {
+    if (fs.existsSync(filePath)) {
+        const content = fs.readFileSync(filePath, "utf-8");
+        return content.split("\n").reduce((acc, line) => {
+            const match = line.match(/Progress for file "(.+?)": (\d+) out of (\d+) rows updated \((\d+)%\)\./);
+            if (match) {
+                acc[match[1]] = {
+                    updatedCount: parseInt(match[2], 10),
+                    totalCount: parseInt(match[3], 10),
+                    progress: parseInt(match[4], 10),
+                };
+            }
+            return acc;
+        }, {});
+    }
+    return {};
+};
+
+// Function to write updated progress to the file
+const writeProgressFile = (filePath, progressData) => {
+    const content = Object.keys(progressData).map((fileKey) => {
+        const { updatedCount, totalCount, progress } = progressData[fileKey];
+        return `[${getPSTDate()}] Progress for file "${fileKey}": ${updatedCount} out of ${totalCount} rows updated (${progress}%).`;
+    }).join("\n");
+    
+    fs.writeFileSync(filePath, content);
+};
+
+// Main function to log file progress
 const logFileProgress = async (fileKey) => {
     try {
-      // Get total rows in the CSV file from Redis
-      const totalRows = await redisClient.get(`total-rows:${fileKey}`);
-      const updatedProducts = await redisClient.get(`updated-products:${fileKey}`);
-  
-      const totalRowsCount = totalRows ? parseInt(totalRows, 10) : 0;
-      const updatedProductsCount = updatedProducts ? parseInt(updatedProducts, 10) : 0;
-  
-      // Calculate progress
-      const progress = totalRowsCount > 0 ? Math.round((updatedProductsCount / totalRowsCount) * 100) : 0;
-  
-      // Log the progress
-      logUpdatesToFile(`Progress for file "${fileKey}": ${updatedProductsCount} out of ${totalRowsCount} rows updated (${progress}%).`);
+        logUpdatesToFile(`[DEBUG] logFileProgress called for file: ${fileKey}`);
+        const progressFilePath = path.join(__dirname, "update-progress.txt");
+        logUpdatesToFile(`[DEBUG] Progress file path: ${progressFilePath}`);
+        const existingProgress = readProgressFile(progressFilePath);
+
+        // Get total rows in the CSV file from Redis
+        const totalRows = await redisClient.get(`total-rows:${fileKey}`);
+        const updatedProducts = await redisClient.get(`updated-products:${fileKey}`);
+        
+        const totalRowsCount = totalRows ? parseInt(totalRows, 10) : 0;
+        const updatedProductsCount = updatedProducts ? parseInt(updatedProducts, 10) : 0;
+
+        // Calculate progress
+        const progress = totalRowsCount > 0 ? Math.round((updatedProductsCount / totalRowsCount) * 100) : 0;
+
+        // Update the progress data
+        existingProgress[fileKey] = {
+            updatedCount: updatedProductsCount,
+            totalCount: totalRowsCount,
+            progress,
+        };
+
+        // Calculate overall progress
+        const totalOverallCount = Object.values(existingProgress).reduce((sum, file) => sum + file.totalCount, 0);
+        const totalUpdatedOverall = Object.values(existingProgress).reduce((sum, file) => sum + file.updatedCount, 0);
+        const overallProgress = totalOverallCount > 0 ? Math.round((totalUpdatedOverall / totalOverallCount) * 100) : 0;
+
+        // Add overall progress to the data
+        existingProgress["Overall"] = {
+            updatedCount: totalUpdatedOverall,
+            totalCount: totalOverallCount,
+            progress: overallProgress,
+        };
+
+        // Write updated progress to the file
+        writeProgressFile(progressFilePath, existingProgress);
+
+        // Log the progress to console
+        logUpdatesToFile(`[${getPSTDate()}] Progress for file "${fileKey}": ${updatedProductsCount} out of ${totalRowsCount} rows updated (${progress}%).`);
+        logUpdatesToFile(`[${getPSTDate()}] Overall progress: ${totalUpdatedOverall} out of ${totalOverallCount} rows updated (${overallProgress}%).`);
     } catch (error) {
-      logErrorToFile(`Error logging progress for file "${fileKey}": ${error.message}`);
+        logErrorToFile(`Error logging progress for file "${fileKey}": ${error.message}`);
     }
 };
+
 
 module.exports = {
     logger,

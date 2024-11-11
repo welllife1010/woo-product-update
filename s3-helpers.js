@@ -13,7 +13,7 @@ const s3Client = new S3Client({
   region: process.env.AWS_REGION_NAME,
   endpoint: "https://s3.us-west-1.amazonaws.com", // Use specific bucket's region
   forcePathStyle: true, // This helps when using custom endpoints
-  requestTimeout: 600000 // Set timeout to 10 minutes
+  requestTimeout: 100000 // Set timeout to 10 minutes
 });
 
 // Define the path to the checkpoint file
@@ -185,7 +185,7 @@ const readCSVAndProcess = async (bucketName, key, batchSize) => {
                       type: 'exponential', // Exponential backoff between retries
                       delay: 5000 // Initial delay of 5 seconds between retries
                     },
-                    timeout: 120000 // Set a custom timeout (e.g., 2 minutes)
+                    timeout: 150000 // Set a custom timeout (e.g., 2 minutes)
                   });
 
                   logInfoToFile(`Job successfully enqueued with ID: ${job.id} for rows up to ${lastProcessedRow} in file: ${key}`);
@@ -235,7 +235,7 @@ const readCSVAndProcess = async (bucketName, key, batchSize) => {
                 type: 'exponential', // Exponential backoff between retries
                 delay: 5000 // Initial delay of 5 seconds between retries
               },
-              timeout: 120000 // Set a custom timeout (e.g., 2 minutes)
+              timeout: 150000 // Set a custom timeout (e.g., 2 minutes)
             });
 
             logInfoToFile(`Enqueued final batch job for rows up to ${lastProcessedRow} in file: ${key}`);
@@ -279,7 +279,7 @@ const processAndCheckpoint = async (batch, lastProcessedRow, totalRows, key) => 
           type: 'exponential', // Exponential backoff between retries
           delay: 5000 // Initial delay of 5 seconds between retries
         },
-        timeout: 120000 // Set a custom timeout (e.g., 2 minutes) 
+        timeout: 150000 // Set a custom timeout (e.g., 2 minutes) 
       });
 
       // Save the checkpoint after the job is added successfully
