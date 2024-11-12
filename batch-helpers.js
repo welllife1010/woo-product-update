@@ -1,3 +1,5 @@
+const { performance } = require("perf_hooks"); // Import performance to track time
+
 const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile } = require("./logger");
 const { wooApi, getProductById, getProductByPartNumber, limiter } = require("./woo-helpers");
 const { redisClient } = require('./queue');
@@ -17,6 +19,19 @@ const normalizeText = (text) => {
     // Replace special characters; Normalize whitespace and line breaks
     return normalized.replace(/\u00ac\u00c6/g, "®").replace(/&deg;/g, "°").replace(/\s+/g, " ");
 };
+
+function isMetaKeyMissing(newMetaValue, currentMeta) {
+    return (!newMetaValue && !currentMeta) || (!newMetaValue && !currentMeta?.value);
+}
+
+function isCurrentMetaMissing(newMetaValue, currentMeta) {
+    return newMetaValue && !currentMeta;
+}
+
+function isMetaValueDifferent(newMeta, currentMeta) {
+    return normalizeText(currentMeta.value) !== normalizeText(newMeta.value);
+}
+
   
 // Function to check if product update is needed
 const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile, partNumber, fileName) => {
@@ -37,15 +52,21 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile,
             }
 
             newValue.forEach((newMeta) => {
+                const newMetaValue = newMeta.value;
                 const currentMeta = currentValue.find(meta => meta.key === newMeta.key);
 
-                if (!currentMeta) {
-                    logger.warn(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update. \n`);
+                if (isMetaKeyMissing(newMetaValue, currentMeta)) {
+                    logInfoToFile(`No update needed. No meta value for key '${newMeta.key}' for Part Number: ${partNumber} in file ${fileName}. \n`);
+                    return false;
+                }
+            
+                if (isCurrentMetaMissing(newMetaValue, currentMeta)) {
+                    logInfoToFile(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update. \n`);
                     fieldsToUpdate.push(`meta_data.${newMeta.key}`);
                     return true;
                 }
-
-                if (normalizeText(currentMeta.value) !== normalizeText(newMeta.value)) {
+            
+                if (isMetaValueDifferent(newMeta, currentMeta)) {
                     fieldsToUpdate.push(`meta_data.${newMeta.key}`);
                 }
             })
@@ -125,7 +146,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
     const MAX_RETRIES = 5;
     let attempts = 0;
 
-    logger.info(`Processing batch with startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}, fileKey: ${fileKey}`);
+    logInfoToFile(`Starting processBatch with startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}, fileKey: ${fileKey}`);
     //logger.debug(`Batch data: ${JSON.stringify(batch, null, 2)}`); // Log the full batch data for debugging
 
     if (!Array.isArray(batch)) {
@@ -135,9 +156,15 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
     // Array to collect products that need updating
     const productsToUpdate = await Promise.all(
         batch.map(async (item, index) => {
-            const currentIndex = startIndex + index + 1;
+            const currentIndex = startIndex + index;
 
-            logger.info(`Processing batch for file: ${fileKey}, startIndex (lastProcessedRow): ${startIndex}, totalProductsInFile: ${totalProductsInFile}`);
+            // Ensure we don't go beyond the totalProductsInFile
+            if (currentIndex >= totalProductsInFile) {
+                logger.info(`Reached the end of products: currentIndex ${currentIndex} exceeds totalProductsInFile ${totalProductsInFile}. Stopping batch processing.`);
+                return null;  // Skip any items beyond the total
+            }
+
+            //logInfoToFile(`Batch item: index in batch = ${index}, startIndex = ${startIndex}, calculated currentIndex = ${currentIndex}, totalProductsInFile = ${totalProductsInFile}`);
 
             // Check if 'part_number' exists in the item (CSV row)
             if (!item.hasOwnProperty('part_number') || !item.part_number) {
@@ -145,11 +172,13 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                 logErrorToFile(msg);
                 logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProductsInFile} in ${fileKey}: ${msg}`);
 
+                // Increment the skipped count
+                await redisClient.incr(`skipped-products:${fileKey}`);
                 return null;
             }
 
             const part_number = item.part_number;
-            logger.info(`Processing ${currentIndex} / ${totalProductsInFile} - Part Number: ${part_number}`);
+            logger.info(`Processing ${currentIndex + 1} / ${totalProductsInFile} - Part Number: ${part_number}`);
 
             try {
                 const productId = await getProductByPartNumber(part_number, currentIndex, totalProductsInFile, fileKey);
@@ -166,10 +195,16 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                         // Check if an update is needed
                         if (isUpdateNeeded(currentData, newData, currentIndex, totalProductsInFile, part_number, fileKey)) {
                             return { ...newData, currentIndex, totalProductsInFile }; 
-                        } 
+                        } else {
+                            // If no update is needed, increment the skipped count
+                            await redisClient.incr(`skipped-products:${fileKey}`);
+                            return null;
+                        }
                     }
                 } else {
                     logger.info(`Product ID not found for Part Number: ${part_number} at index ${currentIndex}`);
+                    // Increment the skipped count for products without a matching ID
+                    await redisClient.incr(`skipped-products:${fileKey}`);
                 }
             } catch (error) {
                 const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
@@ -186,6 +221,9 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
 
     if (filteredProducts.length > 0) {
         while (attempts < MAX_RETRIES) {
+            // Start time to track the whole process duration
+            const startTime = performance.now();
+
             try {
                 // Use WooCommerce Bulk API to update products
                 const response = await limiter.schedule(
@@ -193,8 +231,12 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                     () => wooApi.put("products/batch", { update: filteredProducts })
                 );
 
+                // Record completion message and elapsed time
+                const endTime = performance.now();
+                const duration = ((endTime - startTime) / 1000).toFixed(2);
+
                 // Log the response to verify successful updates
-                logger.info(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}"`);
+                logger.info(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}" in ${duration} seconds.`);
 
                 // Increment the count of updated products in Redis
                 await redisClient.incrBy(`updated-products:${fileKey}`, filteredProducts.length);
@@ -207,7 +249,11 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                 // Log all part numbers in the failed batch
                 const failedPartNumbers = filteredProducts.map(p => `[ Part Number: ${p.part_number}, ID: ${p.id} ]`).join("; ");
 
-                logErrorToFile(`Batch update attempt ${attempts} failed for file "${fileKey}" due to: ${error.message}, error`);
+                // Record completion message and elapsed time
+                const endTime = performance.now();
+                const duration = ((endTime - startTime) / 1000).toFixed(2);
+
+                logErrorToFile(`Batch update attempt ${attempts} failed for file "${fileKey}" due to: ${error.message} in ${duration} seconds.`, error.stack);
                 logErrorToFile(`Products in batch - ${failedPartNumbers}`);
                 
                 if (error.response && error.response.status === 524 && attempts < MAX_RETRIES) {

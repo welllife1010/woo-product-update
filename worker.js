@@ -2,8 +2,8 @@ require("dotenv").config();
 const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile, logFileProgress } = require("./logger");
 const { batchQueue, redisClient } = require('./queue'); // Importing batchQueue directly
 const { processBatch } = require('./batch-helpers'); 
+const { saveCheckpoint } = require('./checkpoint'); 
 
-logInfoToFile('Worker process is running and listening for jobs...');
 // Define the worker to process each job (batch)
 batchQueue.process( 5, async (job) => { // This will allow up to 5 concurrent job processes
     logger.info(`Worker received job ID: ${job.id}`);
@@ -30,7 +30,10 @@ batchQueue.process( 5, async (job) => { // This will allow up to 5 concurrent jo
 
         // Update the last processed row after batch processing
         updatedLastProcessedRow = lastProcessedRow + batch.length;
+
+        // Save checkpoint in Redis and local JSON file
         await redisClient.set(`lastProcessedRow:${fileKey}`, updatedLastProcessedRow);
+        await saveCheckpoint(fileKey, updatedLastProcessedRow, totalProductsInFile, batch);  // Save to local JSON checkpoint file
 
         // Log progress after processing the batch
         await logFileProgress(fileKey);
@@ -56,11 +59,11 @@ batchQueue.on('active', (job) => {
 });
 
 batchQueue.on('waiting', (jobId) => {
-    logUpdatesToFile(`Job waiting to be processed: ${jobId}`);
+    logInfoToFile(`Job waiting to be processed: ${jobId}`);
 });
 
 batchQueue.on('completed', (job, result) => {
-    logUpdatesToFile(`Job completed with ID ${job.id} | Result: ${result} | File: ${job.data.fileKey} | Last processed row: ${job.data.lastProcessedRow}`);
+    logInfoToFile(`Job completed with ID ${job.id} | Result: ${result} | File: ${job.data.fileKey} | Last processed row: ${job.data.lastProcessedRow}`);
 });
 
 batchQueue.on('failed', (job, err) => {

@@ -139,12 +139,13 @@ const readProgressFile = (filePath) => {
     if (fs.existsSync(filePath)) {
         const content = fs.readFileSync(filePath, "utf-8");
         return content.split("\n").reduce((acc, line) => {
-            const match = line.match(/Progress for file "(.+?)": (\d+) out of (\d+) rows updated \((\d+)%\)\./);
+            const match = line.match(/Progress for file "(.+?)": (\d+) updated, (\d+) skipped, out of (\d+) rows \((\d+)%\)\./);
             if (match) {
                 acc[match[1]] = {
                     updatedCount: parseInt(match[2], 10),
-                    totalCount: parseInt(match[3], 10),
-                    progress: parseInt(match[4], 10),
+                    skippedCount: parseInt(match[3], 10),
+                    totalCount: parseInt(match[4], 10),
+                    progress: parseInt(match[5], 10),
                 };
             }
             return acc;
@@ -156,60 +157,69 @@ const readProgressFile = (filePath) => {
 // Function to write updated progress to the file
 const writeProgressFile = (filePath, progressData) => {
     const content = Object.keys(progressData).map((fileKey) => {
-        const { updatedCount, totalCount, progress } = progressData[fileKey];
-        return `[${getPSTDate()}] Progress for file "${fileKey}": ${updatedCount} out of ${totalCount} rows updated (${progress}%).`;
+        const { updatedCount, skippedCount, totalCount, progress } = progressData[fileKey];
+        return `[${getPSTDate()}] Progress for file "${fileKey}": ${updatedCount} updated, ${skippedCount} skipped, out of ${totalCount} rows (${progress}%).`;
     }).join("\n");
     
     fs.writeFileSync(filePath, content);
 };
 
+
 // Main function to log file progress
 const logFileProgress = async (fileKey) => {
     try {
-        logUpdatesToFile(`[DEBUG] logFileProgress called for file: ${fileKey}`);
+        //logUpdatesToFile(`[DEBUG] logFileProgress called for file: ${fileKey}`);
         const progressFilePath = path.join(__dirname, "update-progress.txt");
-        logUpdatesToFile(`[DEBUG] Progress file path: ${progressFilePath}`);
+        
         const existingProgress = readProgressFile(progressFilePath);
 
-        // Get total rows in the CSV file from Redis
+        // Get total rows, updated products, and skipped products from Redis
         const totalRows = await redisClient.get(`total-rows:${fileKey}`);
         const updatedProducts = await redisClient.get(`updated-products:${fileKey}`);
+        const skippedProducts = await redisClient.get(`skipped-products:${fileKey}`);
         
         const totalRowsCount = totalRows ? parseInt(totalRows, 10) : 0;
         const updatedProductsCount = updatedProducts ? parseInt(updatedProducts, 10) : 0;
+        const skippedProductsCount = skippedProducts ? parseInt(skippedProducts, 10) : 0;
 
-        // Calculate progress
-        const progress = totalRowsCount > 0 ? Math.round((updatedProductsCount / totalRowsCount) * 100) : 0;
+        // Calculate processed count and progress percentage for the current file
+        const totalProcessedCount = updatedProductsCount + skippedProductsCount; // Include skipped products
+        const progress = totalRowsCount > 0 ? Math.round((totalProcessedCount / totalRowsCount) * 100) : 0;
 
-        // Update the progress data
+        // Update the current file's progress data
         existingProgress[fileKey] = {
             updatedCount: updatedProductsCount,
+            skippedCount: skippedProductsCount,
             totalCount: totalRowsCount,
             progress,
         };
 
-        // Calculate overall progress
+        // Calculate overall progress across all files
         const totalOverallCount = Object.values(existingProgress).reduce((sum, file) => sum + file.totalCount, 0);
         const totalUpdatedOverall = Object.values(existingProgress).reduce((sum, file) => sum + file.updatedCount, 0);
-        const overallProgress = totalOverallCount > 0 ? Math.round((totalUpdatedOverall / totalOverallCount) * 100) : 0;
+        const totalSkippedOverall = Object.values(existingProgress).reduce((sum, file) => sum + (file.skippedCount || 0), 0);
+        const totalProcessedOverall = totalUpdatedOverall + totalSkippedOverall;
+        const overallProgress = totalOverallCount > 0 ? Math.round((totalProcessedOverall / totalOverallCount) * 100) : 0;
 
-        // Add overall progress to the data
+        // Add overall progress data to the progress tracking
         existingProgress["Overall"] = {
             updatedCount: totalUpdatedOverall,
+            skippedCount: totalSkippedOverall,
             totalCount: totalOverallCount,
             progress: overallProgress,
         };
 
-        // Write updated progress to the file
+        // Write the updated progress data to the file
         writeProgressFile(progressFilePath, existingProgress);
 
-        // Log the progress to console
-        logUpdatesToFile(`[${getPSTDate()}] Progress for file "${fileKey}": ${updatedProductsCount} out of ${totalRowsCount} rows updated (${progress}%).`);
-        logUpdatesToFile(`[${getPSTDate()}] Overall progress: ${totalUpdatedOverall} out of ${totalOverallCount} rows updated (${overallProgress}%).`);
+        // Log the progress to the console
+        logUpdatesToFile(`[${getPSTDate()}] Progress for file "${fileKey}": ${totalProcessedCount} out of ${totalRowsCount} rows processed (${progress}%).`);
+        logUpdatesToFile(`[${getPSTDate()}] Overall progress: ${totalProcessedOverall} out of ${totalOverallCount} rows processed (${overallProgress}%).`);
     } catch (error) {
         logErrorToFile(`Error logging progress for file "${fileKey}": ${error.message}`);
     }
 };
+
 
 
 module.exports = {
