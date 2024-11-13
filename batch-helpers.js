@@ -28,8 +28,8 @@ function isCurrentMetaMissing(newMetaValue, currentMeta) {
     return newMetaValue && !currentMeta;
 }
 
-function isMetaValueDifferent(newMeta, currentMeta) {
-    return normalizeText(currentMeta.value) !== normalizeText(newMeta.value);
+function isMetaValueDifferent(newMetaValue, currentMetaValue) {
+    return normalizeText(currentMetaValue) !== normalizeText(newMetaValue);
 }
 
   
@@ -54,10 +54,10 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile,
             newValue.forEach((newMeta) => {
                 const newMetaValue = newMeta.value;
                 const currentMeta = currentValue.find(meta => meta.key === newMeta.key);
+                const currentMetaValue = currentMeta?.value;
 
                 if (isMetaKeyMissing(newMetaValue, currentMeta)) {
-                    logInfoToFile(`No update needed. No meta value for key '${newMeta.key}' for Part Number: ${partNumber} in file ${fileName}. \n`);
-                    return false;
+                    logInfoToFile(`No update needed for the key '${newMeta.key}'. No meta value for Part Number: ${partNumber} in file ${fileName}. \n`);
                 }
             
                 if (isCurrentMetaMissing(newMetaValue, currentMeta)) {
@@ -66,7 +66,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile,
                     return true;
                 }
             
-                if (isMetaValueDifferent(newMeta, currentMeta)) {
+                if (isMetaValueDifferent(newMetaValue, currentMetaValue)) {
                     fieldsToUpdate.push(`meta_data.${newMeta.key}`);
                 }
             })
@@ -96,7 +96,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile,
                 ? newData.meta_data?.find(meta => meta.key === field.split(".")[1])?.value 
                 : newData[field];
             
-            //logger.info(`DEBUG: Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
+            logInfoToFile(`Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
         });
         return true;
     } else {
@@ -146,7 +146,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
     const MAX_RETRIES = 5;
     let attempts = 0;
 
-    logInfoToFile(`Starting processBatch with startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}, fileKey: ${fileKey}`);
+    logInfoToFile(`Starting "processBatch" with startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}, fileKey: ${fileKey}`);
     //logger.debug(`Batch data: ${JSON.stringify(batch, null, 2)}`); // Log the full batch data for debugging
 
     if (!Array.isArray(batch)) {
@@ -178,7 +178,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
             }
 
             const part_number = item.part_number;
-            logger.info(`Processing ${currentIndex + 1} / ${totalProductsInFile} - Part Number: ${part_number}`);
+            logger.info(`Processing ${currentIndex + 1} / ${totalProductsInFile} - Part Number: ${part_number} in ${fileKey}`);
 
             try {
                 const productId = await getProductByPartNumber(part_number, currentIndex, totalProductsInFile, fileKey);

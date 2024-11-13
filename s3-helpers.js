@@ -3,8 +3,10 @@ const { promisify } = require("util");
 const { Readable, pipeline } = require("stream"); // Promisify the stream pipeline utility
 const streamPipeline = promisify(pipeline); // Use async pipeline with stream promises
 const csvParser = require("csv-parser");
-const { logger, logErrorToFile, logUpdatesToFile, logDetailedErrorToFile, logInfoToFile } = require("./logger");
+const { logErrorToFile, logUpdatesToFile, logDetailedErrorToFile, logInfoToFile } = require("./logger");
 const { batchQueue, redisClient } = require('./queue');
+
+const executionMode = process.env.EXECUTION_MODE || 'production';
 
 // AWS S3 setup (using AWS SDK v3)
 const s3Client = new S3Client({ 
@@ -14,7 +16,11 @@ const s3Client = new S3Client({
   requestTimeout: 180000 // Set timeout to 10 minutes
 });
 
-// Get the latest folder key by sorting folders by date
+const pattern = (executionMode === 'production')
+                ? /^\d{2}-\d{2}-\d{4}\/$/
+                : /^\d{2}-\d{2}-\d{4}-test\/$/;
+
+// Get the latest folder key (name) by sorting folders by date
 const getLatestFolderKey = async (bucketName) => {
   try {
     const listParams = { Bucket: bucketName, Delimiter: '/' }; // Delimit by "/" to get folders
@@ -23,7 +29,7 @@ const getLatestFolderKey = async (bucketName) => {
     // Filter for folders and sort by date, ensure CommonPrefixes is defined
     const folders = (listData.CommonPrefixes || [])
       .map(prefix => prefix.Prefix)
-      .filter(prefix => /^\d{2}-\d{2}-\d{4}\/$/.test(prefix)) // Match pattern like "10-31-2024/"
+      .filter(prefix => pattern.test(prefix)) // Match pattern like "10-31-2024/" for production mode or "10-31-2024-test/" for development mode
       .sort((a, b) => new Date(b.slice(0, 10)) - new Date(a.slice(0, 10))); // Sort by date descending
 
     if (folders.length === 0) {

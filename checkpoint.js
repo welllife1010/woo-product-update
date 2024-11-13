@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { redisClient } = require('./queue');
 
 // Define the path to the checkpoint file
 const checkpointFilePath = path.join(__dirname, "process_checkpoint.json");
@@ -30,8 +31,6 @@ const saveCheckpoint = async (fileKey, lastProcessedRow, totalProductsInFile, ba
         logErrorToFile(`Attempted to save a checkpoint with lastProcessedRow (${updatedLastProcessedRow}) exceeding totalProductsInFile (${totalProductsInFile}) for file: ${fileKey}`);
     }
 };
-
-
 
 // Get the last checkpoint for a given file
 const getCheckpoint = (fileKey) => {

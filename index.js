@@ -1,9 +1,9 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const { batchQueue, redisClient } = require('./queue');
+const { batchQueue } = require('./queue');
 const { processCSVFilesInLatestFolder } = require('./s3-helpers');
-const { logger, logErrorToFile,logUpdatesToFile } = require("./logger");
+const { logger, logErrorToFile,logUpdatesToFile, logInfoToFile } = require("./logger");
 const { performance } = require("perf_hooks"); // Import performance to track time
 const { BullAdapter } = require('@bull-board/api/bullAdapter');
 const { createBullBoard } = require('@bull-board/api');
@@ -27,10 +27,26 @@ createBullBoard({
 // Start time to track the whole process duration
 const startTime = performance.now();
 
+const executionMode = process.env.EXECUTION_MODE || 'production';
+
+if (executionMode === 'development') {
+  logInfoToFile("Running in development mode");
+  // Add any specific logic for development mode
+} else if (executionMode === 'stage') {
+  logInfoToFile("Running in staging mode");
+  // Add any specific logic for staging mode
+} else {
+  logInfoToFile("Running in production mode");
+  // Production-specific logic here
+}
+
 // Main process function to process CSV files
 const mainProcess = async () => {
   try {
-    const s3BucketName = process.env.S3_BUCKET_NAME;
+    const s3BucketName = (executionMode === 'development')
+                        ? process.env.S3_TEST_BUCKET_NAME 
+                        : process.env.S3_BUCKET_NAME;
+
     if (!s3BucketName) {
       logErrorToFile("Environment variable S3_BUCKET_NAME is not set.");
       return;

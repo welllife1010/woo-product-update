@@ -9,6 +9,7 @@ error-log.txt
 log-info.txt
 updated-products-*
 process_checkpoint.json
+update-progress.txt
 ecosystem.config.js
 
 # Logs

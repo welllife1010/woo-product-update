@@ -214,7 +214,7 @@ const logFileProgress = async (fileKey) => {
 
         // Log the progress to the console
         logUpdatesToFile(`[${getPSTDate()}] Progress for file "${fileKey}": ${totalProcessedCount} out of ${totalRowsCount} rows processed (${progress}%).`);
-        logUpdatesToFile(`[${getPSTDate()}] Overall progress: ${totalProcessedOverall} out of ${totalOverallCount} rows processed (${overallProgress}%).`);
+        //logUpdatesToFile(`[${getPSTDate()}] Overall progress: ${totalProcessedOverall} out of ${totalOverallCount} rows processed (${overallProgress}%).`);
     } catch (error) {
         logErrorToFile(`Error logging progress for file "${fileKey}": ${error.message}`);
     }
