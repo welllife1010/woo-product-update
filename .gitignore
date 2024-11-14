@@ -2,6 +2,8 @@
 reference/
 old/
 csvFiles/
+output-files/
+test/
 
 #files
 .DS_Store

@@ -8,6 +8,13 @@ const { batchQueue, redisClient } = require('./queue');
 
 const executionMode = process.env.EXECUTION_MODE || 'production';
 
+const initializeFileTracking = async (fileKey, totalRows) => {
+  await redisClient.set(`total-rows:${fileKey}`, totalRows);
+  await redisClient.set(`updated-products:${fileKey}`, 0);  // Initialize if missing
+  await redisClient.set(`skipped-products:${fileKey}`, 0);  // Initialize if missing
+  await redisClient.set(`failed-products:${fileKey}`, 0);   // Initialize if missing
+};
+
 // AWS S3 setup (using AWS SDK v3)
 const s3Client = new S3Client({ 
   region: process.env.AWS_REGION_NAME,
@@ -104,6 +111,14 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
     // Convert data.Body to a string or Buffer (adjust based on the SDK version)
     const bodyContent = await data.Body.transformToString(); // Or use 'await streamToString(data.Body)' if needed
 
+    const rows = bodyContent.split('\n'); // Split CSV content into rows
+    totalRows = rows.length - 1; // Subtract header row
+
+    // Initialize tracking in Redis for this file
+    await initializeFileTracking(key, totalRows);
+    await redisClient.set(`total-rows:${key}`, totalRows); // Store individual file's row count
+    await redisClient.incrBy('overall-total-rows', totalRows); // Increment the overall total row count
+
     // Create reusable data streams from the cached content
     const dataStream1 = Readable.from(bodyContent);
     const dataStream2 = Readable.from(bodyContent);
@@ -134,8 +149,6 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
           try {
             lastProcessedRow++;
 
-            //logInfoToFile(`Processing row ${lastProcessedRow} / ${totalRows} in file: ${key}`);
-
             // Process each row and normalize the data
             const normalizedData = Object.keys(chunk).reduce((acc, key) => {
               acc[key.trim().toLowerCase().replace(/\s+/g, "_")] = chunk[key];
@@ -158,7 +171,6 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
               };
 
               // Before adding a job, check jobData and add detailed logging
-              //console.log('Attempting to create a job with data:', jobData);
               try {
                 const job = await batchQueue.add(jobData, { 
                   jobId: `${key}-${lastProcessedRow}`,
@@ -169,9 +181,7 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
                   },
                   timeout: 180000 // Set a custom timeout (e.g., 3 minutes)
                 });
-
-                //logInfoToFile(`Job successfully enqueued with ID: ${job.id} for rows up to ${lastProcessedRow} in file: ${key}`);
-
+                
               } catch (error) {
                   logErrorToFile(`Failed to enqueue job for rows up to ${lastProcessedRow} in file: ${key}. Error: ${error.message}`, error.stack);
               }

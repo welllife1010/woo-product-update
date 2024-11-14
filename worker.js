@@ -4,8 +4,35 @@ const { batchQueue, redisClient } = require('./queue'); // Importing batchQueue 
 const { processBatch } = require('./batch-helpers'); 
 const { saveCheckpoint } = require('./checkpoint'); 
 
+// Define a function to check if all files have been processed
+const checkAllFilesProcessed = async () => {
+    const fileKeys = await redisClient.keys('total-rows:*'); // Get all file keys for processing
+
+    for (const key of fileKeys) {
+        const fileKey = key.split(":")[1];
+        const totalRows = parseInt(await redisClient.get(`total-rows:${fileKey}`), 10);
+        const successfulUpdates = parseInt(await redisClient.get(`updated-products:${fileKey}`) || 0, 10);
+        const failedUpdates = parseInt(await redisClient.get(`failed-products:${fileKey}`) || 0, 10);
+
+        if (successfulUpdates + failedUpdates < totalRows) {
+            return false; // Still processing rows in this file
+        }
+    }
+    return true; // All files fully processed
+};
+
+// Set up an interval to check for completion and shut down
+const shutdownCheckInterval = setInterval(async () => {
+    const allProcessed = await checkAllFilesProcessed();
+    if (allProcessed) {
+        clearInterval(shutdownCheckInterval); // Stop checking
+        console.log("All products across all files processed. Shutting down gracefully...");
+        process.exit(0); // Shut down the process
+    }
+}, 5000); // Check every 5 seconds
+
 // Define the worker to process each job (batch)
-batchQueue.process( 5, async (job) => { // This will allow up to 5 concurrent job processes
+batchQueue.process( 4, async (job) => { // This will allow up to 4 concurrent job processes
     logger.info(`Worker received job ID: ${job.id}`);
     const { batch, fileKey, totalProductsInFile, lastProcessedRow, batchSize } = job.data;
 
@@ -38,7 +65,7 @@ batchQueue.process( 5, async (job) => { // This will allow up to 5 concurrent jo
         // Log progress after processing the batch
         await logFileProgress(fileKey);
 
-        logger.info(`Successfully processed batch for job ID: ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile}`);
+        logInfoToFile(`Successfully processed batch for job ID: ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile}`);
     } catch (error) {
 
         // Check for timeout error and log details

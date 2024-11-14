@@ -56,9 +56,9 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile,
                 const currentMeta = currentValue.find(meta => meta.key === newMeta.key);
                 const currentMetaValue = currentMeta?.value;
 
-                if (isMetaKeyMissing(newMetaValue, currentMeta)) {
-                    logInfoToFile(`No update needed for the key '${newMeta.key}'. No meta value for Part Number: ${partNumber} in file ${fileName}. \n`);
-                }
+                // if (isMetaKeyMissing(newMetaValue, currentMeta)) {
+                //     logInfoToFile(`No update needed for the key '${newMeta.key}'. No meta value for Part Number: ${partNumber} in file ${fileName}. \n`);
+                // }
             
                 if (isCurrentMetaMissing(newMetaValue, currentMeta)) {
                     logInfoToFile(`DEBUG: Key '${newMeta.key}' missing in currentData meta_data for Part Number: ${partNumber} in file ${fileName}. Marking for update. \n`);
@@ -96,7 +96,7 @@ const isUpdateNeeded = (currentData, newData, currentIndex, totalProductsInFile,
                 ? newData.meta_data?.find(meta => meta.key === field.split(".")[1])?.value 
                 : newData[field];
             
-            logInfoToFile(`Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
+            //logInfoToFile(`Update needed for field '${field}' in Part Number: ${partNumber}. Current value: '${currentFieldValue}', New value: '${newFieldValue}'`);
         });
         return true;
     } else {
@@ -174,6 +174,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
 
                 // Increment the skipped count
                 await redisClient.incr(`skipped-products:${fileKey}`);
+                logInfoToFile((`Debug - Increment skipped-products for ${fileKey}`));
                 return null;
             }
 
@@ -182,6 +183,13 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
 
             try {
                 const productId = await getProductByPartNumber(part_number, currentIndex, totalProductsInFile, fileKey);
+
+                if (!productId) {
+                    // Track as a failed product if no productId was found
+                    await redisClient.incr(`failed-products:${fileKey}`);
+                    logInfoToFile((`Debug - Increment failed-products for ${fileKey}`));
+                    return null;
+                }
 
                 if (productId) {
                     // Fetch current product data
@@ -198,6 +206,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                         } else {
                             // If no update is needed, increment the skipped count
                             await redisClient.incr(`skipped-products:${fileKey}`);
+                            logInfoToFile((`Debug - Increment skipped-products for ${fileKey}, no update needed for Part Number: ${part_number}`));
                             return null;
                         }
                     }
@@ -205,6 +214,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                     logger.info(`Product ID not found for Part Number: ${part_number} at index ${currentIndex}`);
                     // Increment the skipped count for products without a matching ID
                     await redisClient.incr(`skipped-products:${fileKey}`);
+                    logInfoToFile((`Debug - Increment skipped-products for ${fileKey}, product ID not found for Part Number: ${part_number}`));
                 }
             } catch (error) {
                 const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
@@ -231,39 +241,46 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                     () => wooApi.put("products/batch", { update: filteredProducts })
                 );
 
+                //await redisClient.incr(`successfully-updated:${fileKey}`); // Track successful update
+                await redisClient.incrBy(`updated-products:${fileKey}`, filteredProducts.length); // Increment the count of updated products in Redis
+                
+                logInfoToFile((`Debug - Increment updated-products for ${fileKey}`));
+
                 // Record completion message and elapsed time
                 const endTime = performance.now();
                 const duration = ((endTime - startTime) / 1000).toFixed(2);
 
                 // Log the response to verify successful updates
-                logger.info(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}" in ${duration} seconds.`);
+                logInfoToFile(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}" in ${duration} seconds.`);
 
-                // Increment the count of updated products in Redis
-                await redisClient.incrBy(`updated-products:${fileKey}`, filteredProducts.length);
+                filteredProducts.forEach(product => 
+                    logUpdatesToFile(`Updated: ${product.currentIndex} / ${product.totalProductsInFile} | Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey} updated.\n`)
+                );
 
-                filteredProducts.forEach(product => logUpdatesToFile(`Updated: ${product.currentIndex} / ${product.totalProductsInFile} | Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey}\n`));
-                return;  // Exit the retry loop if successful
+                return response; // Exit the retry loop if successful 
             } catch (error) {
                 attempts++;
 
                 // Log all part numbers in the failed batch
                 const failedPartNumbers = filteredProducts.map(p => `[ Part Number: ${p.part_number}, ID: ${p.id} ]`).join("; ");
-
-                // Record completion message and elapsed time
                 const endTime = performance.now();
                 const duration = ((endTime - startTime) / 1000).toFixed(2);
 
-                logErrorToFile(`Batch update attempt ${attempts} failed for file "${fileKey}" due to: ${error.message} in ${duration} seconds.`, error.stack);
+                logErrorToFile(`Batch update attempt ${attempts} failed for file "${fileKey}" due to: ${error.message} in ${duration} seconds.`);
                 logErrorToFile(`Products in batch - ${failedPartNumbers}`);
                 
-                if (error.response && error.response.status === 524 && attempts < MAX_RETRIES) {
+                // Retry conditions: error status or attempts < MAX_RETRIES
+                if (attempts < MAX_RETRIES) {
                     const delay = Math.pow(2, attempts) * 1000; // Exponential backoff: 2, 4, 8 seconds, etc.
-                    logErrorToFile(`524 Timeout detected. Retrying after ${delay / 1000} seconds...`);
+                    logErrorToFile(`Timeout detected. Retrying after ${delay / 1000} seconds...`);
                     await new Promise(resolve => setTimeout(resolve, delay));
                 } else if (attempts >= MAX_RETRIES) {
+                    await redisClient.incr(`failed-products:${fileKey}`);
+                    logInfoToFile((`Debug - Increment failed-products for ${fileKey}`));
                     logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}"`);
                     throw new Error(`Batch update permanently failed for file "${fileKey}"`);
                 } else {
+                    logErrorToFile(`Unhandled error in processBatch: ${error.message}`);
                     throw error; // Exit and propagate any other errors
                 }
             }

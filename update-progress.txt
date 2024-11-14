@@ -1,3 +1,0 @@
-[11/12/2024, 04:02:27 PM] Progress for file "11-12-2024-test/20241104_Product Update - Crystals 01.csv": 60 updated, 40 skipped, out of 10000 rows (1%).
-[11/12/2024, 04:02:27 PM] Progress for file "Overall": 220 updated, 680 skipped, out of 160000 rows (1%).
-[11/12/2024, 04:02:27 PM] Progress for file "11-12-2024-test/20241104_Product Update - Crystals 02.csv": 20 updated, 60 skipped, out of 10000 rows (1%).
