@@ -34,7 +34,7 @@ limiter.on("failed", async (error, jobInfo) => {
     );
 
     // Add part number to retriedProducts if a retry occurs
-    if (partNumber) retriedProducts.add(partNumber);
+    if (part) retriedProducts.add(part);
 
     if (retryCount < 5 && /(ECONNRESET|socket hang up|502|504|429)/.test(error.message)) {
         const retryDelay = 1000 * Math.pow(2, jobInfo.retryCount); // Exponential backoff
@@ -57,7 +57,11 @@ const getProductById = async (productId, fileKey) => {
         const response = await limiter.schedule( 
             { 
                 id: jobId,
-                context: { file: "woo-helpers.js", function: "getProductById" }
+                context: { 
+                    file: "woo-helpers.js", 
+                    functionName: "getProductById", 
+                    part: `${productId}`
+                }
              }, 
             () => wooApi.get(`products/${productId}`)
         );
@@ -73,15 +77,19 @@ const getProductById = async (productId, fileKey) => {
     }
 };
   
-// Function to find product ID by custom field "part_number"
-const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, fileKey) => {
+// Find product ID by custom field "part_number"
+const getProductIdByPartNumber = async (partNumber, currentIndex, totalProducts, fileKey) => {
     try {
         // Schedule with a unique job ID and log details
-        const jobId = `getProductByPartNumber-${partNumber}-${fileKey}-${currentIndex}`;
+        const jobId = `getProductIdByPartNumber-${partNumber}-${fileKey}-${currentIndex}`;
         const response = await limiter.schedule(
             { 
                 id: jobId,
-                context: { file: "woo-helpers.js", function: "getProductByPartNumber", part: `${partNumber}`}
+                context: { 
+                    file: "woo-helpers.js", 
+                    function: "getProductIdByPartNumber", 
+                    part: `${partNumber}`
+                }
             }, 
             () =>
             wooApi.get("products", {
@@ -89,6 +97,7 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
                 per_page: 1,
             })
         );
+
         if (response.data.length) {
             logger.info(`${currentIndex} / ${totalProducts} - Product ID ${response.data[0].id} found for Part Number ${partNumber} in file "${fileKey}"`);
             return response.data[0].id;
@@ -105,7 +114,7 @@ const getProductByPartNumber = async (partNumber, currentIndex, totalProducts, f
 
   module.exports = {
     wooApi,
-    getProductByPartNumber,
+    getProductIdByPartNumber,
     getProductById,
     limiter,
     retriedProducts

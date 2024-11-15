@@ -4,7 +4,7 @@ const { batchQueue, redisClient } = require('./queue'); // Importing batchQueue 
 const { processBatch } = require('./batch-helpers'); 
 const { saveCheckpoint } = require('./checkpoint'); 
 
-// Define a function to check if all files have been processed
+// Check if all files have been processed
 const checkAllFilesProcessed = async () => {
     const fileKeys = await redisClient.keys('total-rows:*'); // Get all file keys for processing
 
@@ -13,15 +13,16 @@ const checkAllFilesProcessed = async () => {
         const totalRows = parseInt(await redisClient.get(`total-rows:${fileKey}`), 10);
         const successfulUpdates = parseInt(await redisClient.get(`updated-products:${fileKey}`) || 0, 10);
         const failedUpdates = parseInt(await redisClient.get(`failed-products:${fileKey}`) || 0, 10);
+        const skippedUpdates = parseInt(await redisClient.get(`skipped-products:${fileKey}`) || 0, 10);
 
-        if (successfulUpdates + failedUpdates < totalRows) {
+        // Check if the sum of successful, failed, and skipped updates matches total rows
+        if (successfulUpdates + failedUpdates + skippedUpdates < totalRows) {
             return false; // Still processing rows in this file
         }
     }
     return true; // All files fully processed
 };
 
-// Set up an interval to check for completion and shut down
 const shutdownCheckInterval = setInterval(async () => {
     const allProcessed = await checkAllFilesProcessed();
     if (allProcessed) {
@@ -29,9 +30,9 @@ const shutdownCheckInterval = setInterval(async () => {
         console.log("All products across all files processed. Shutting down gracefully...");
         process.exit(0); // Shut down the process
     }
-}, 5000); // Check every 5 seconds
+}, 5000); 
 
-// Define the worker to process each job (batch)
+// Define the worker (queue) to process each job (batch)
 batchQueue.process( 4, async (job) => { // This will allow up to 4 concurrent job processes
     logger.info(`Worker received job ID: ${job.id}`);
     const { batch, fileKey, totalProductsInFile, lastProcessedRow, batchSize } = job.data;
@@ -69,7 +70,7 @@ batchQueue.process( 4, async (job) => { // This will allow up to 4 concurrent jo
     } catch (error) {
 
         // Check for timeout error and log details
-        if (error.message.includes('Promise timed out')) {
+        if (error.message.includes('Promise timed out') || error.message.includes('timeout')) {
             logErrorToFile(`Timeout error for job ID ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile} | Error: ${error.message}`);
             // Optionally, you can throw the error to allow Bull to retry the job
             throw error;

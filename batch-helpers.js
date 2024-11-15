@@ -1,7 +1,7 @@
 const { performance } = require("perf_hooks"); // Import performance to track time
 
 const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile } = require("./logger");
-const { wooApi, getProductById, getProductByPartNumber, limiter } = require("./woo-helpers");
+const { wooApi, getProductById, getProductIdByPartNumber, limiter } = require("./woo-helpers");
 const { redisClient } = require('./queue');
 
 let stripHtml;
@@ -169,7 +169,6 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
             // Check if 'part_number' exists in the item (CSV row)
             if (!item.hasOwnProperty('part_number') || !item.part_number) {
                 const msg = `part_number key is missing in item at index ${currentIndex}, Skip this item.`;
-                logErrorToFile(msg);
                 logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProductsInFile} in ${fileKey}: ${msg}`);
 
                 // Increment the skipped count
@@ -182,40 +181,33 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
             logger.info(`Processing ${currentIndex + 1} / ${totalProductsInFile} - Part Number: ${part_number} in ${fileKey}`);
 
             try {
-                const productId = await getProductByPartNumber(part_number, currentIndex, totalProductsInFile, fileKey);
+                const productId = await getProductIdByPartNumber(part_number, currentIndex, totalProductsInFile, fileKey);
 
                 if (!productId) {
                     // Track as a failed product if no productId was found
                     await redisClient.incr(`failed-products:${fileKey}`);
-                    logInfoToFile((`Debug - Increment failed-products for ${fileKey}`));
+                    logInfoToFile((`Debug - Increment failed-products for ${fileKey}: no product found.`));
                     return null;
                 }
 
-                if (productId) {
-                    // Fetch current product data
-                    const product = await getProductById(productId, fileKey);
+                // Fetch current product data
+                const product = await getProductById(productId, fileKey);
 
-                    if (product) {
-                        // Prepare new data structure for comparison and potential update
-                        const newData = createNewData(item, productId, part_number);
-                        const currentData = filterCurrentData(product);
+                if (product) {
+                    // Prepare new data structure for comparison and potential update
+                    const newData = createNewData(item, productId, part_number);
+                    const currentData = filterCurrentData(product);
 
-                        // Check if an update is needed
-                        if (isUpdateNeeded(currentData, newData, currentIndex, totalProductsInFile, part_number, fileKey)) {
-                            return { ...newData, currentIndex, totalProductsInFile }; 
-                        } else {
-                            // If no update is needed, increment the skipped count
-                            await redisClient.incr(`skipped-products:${fileKey}`);
-                            logInfoToFile((`Debug - Increment skipped-products for ${fileKey}, no update needed for Part Number: ${part_number}`));
-                            return null;
-                        }
+                    if (isUpdateNeeded(currentData, newData, currentIndex, totalProductsInFile, part_number, fileKey)) {
+                        return { ...newData, currentIndex, totalProductsInFile }; 
+                    } else {
+                        // If no update is needed, increment the skipped count
+                        await redisClient.incr(`skipped-products:${fileKey}`);
+                        logInfoToFile((`Debug - Increment skipped-products for ${fileKey}, no update needed for Part Number: ${part_number}`));
+                        return null;
                     }
-                } else {
-                    logger.info(`Product ID not found for Part Number: ${part_number} at index ${currentIndex}`);
-                    // Increment the skipped count for products without a matching ID
-                    await redisClient.incr(`skipped-products:${fileKey}`);
-                    logInfoToFile((`Debug - Increment skipped-products for ${fileKey}, product ID not found for Part Number: ${part_number}`));
                 }
+
             } catch (error) {
                 const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
                 logErrorToFile(errorMsg, error);
@@ -227,21 +219,25 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
     // Filter out any null entries (products that don't need updates)
     const filteredProducts = productsToUpdate.filter(Boolean);
 
-    //logUpdatesToFile(`Sending update request for batch:`, JSON.stringify(filteredProducts, null, 2));
-
     if (filteredProducts.length > 0) {
         while (attempts < MAX_RETRIES) {
-            // Start time to track the whole process duration
+
             const startTime = performance.now();
 
             try {
                 // Use WooCommerce Bulk API to update products
                 const response = await limiter.schedule(
-                    { id: `batch-${fileKey}-processRow-${startIndex}`, context: { file: "batch-helpers.js", function: "processBatch"}},
+                    {   
+                        id: `batch-${fileKey}-processRow-${startIndex}`, 
+                        context: { 
+                            file: "batch-helpers.js", 
+                            functionName: "processBatch", 
+                            part: filteredProducts.map(p => p.part_number).join(", ")
+                        }
+                    },
                     () => wooApi.put("products/batch", { update: filteredProducts })
                 );
 
-                //await redisClient.incr(`successfully-updated:${fileKey}`); // Track successful update
                 await redisClient.incrBy(`updated-products:${fileKey}`, filteredProducts.length); // Increment the count of updated products in Redis
                 
                 logInfoToFile((`Debug - Increment updated-products for ${fileKey}`));

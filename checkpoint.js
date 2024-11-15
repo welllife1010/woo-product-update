@@ -43,4 +43,4 @@ const getCheckpoint = (fileKey) => {
 module.exports = {
     saveCheckpoint,
     getCheckpoint,
-  };
+};
