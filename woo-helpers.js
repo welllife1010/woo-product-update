@@ -7,16 +7,16 @@ const { logger, logErrorToFile } = require("./logger");
 
 // WooCommerce API credentials
 const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL_TEST,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
+    url: process.env.WOO_API_BASE_URL,
+    consumerKey: process.env.WOO_API_CONSUMER_KEY,
+    consumerSecret: process.env.WOO_API_CONSUMER_SECRET,
     version: "wc/v3",
     timeout: 300000, // Set a longer timeout (in milliseconds)
 });
   
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
-    maxConcurrent: 4, // Number of concurrent requests allowed - Limit to 5 concurrent 100-item requests at once
+    maxConcurrent: 2, // Number of concurrent requests allowed - Limit to 2 concurrent 100-item requests at once
     minTime: 1000, // Minimum time between requests (in milliseconds) - 500ms between each request
 });
 

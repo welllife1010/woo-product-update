@@ -145,9 +145,9 @@ const filterCurrentData = (product) => {
 const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => {
     const MAX_RETRIES = 5;
     let attempts = 0;
+    const batchStartTime = performance.now(); // Track overall batch time
 
     logInfoToFile(`Starting "processBatch" with startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}, fileKey: ${fileKey}`);
-    //logger.debug(`Batch data: ${JSON.stringify(batch, null, 2)}`); // Log the full batch data for debugging
 
     if (!Array.isArray(batch)) {
         throw new Error(`Expected batch to be an array, but got ${typeof batch}`);
@@ -159,60 +159,49 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
             const currentIndex = startIndex + index;
 
             // Ensure we don't go beyond the totalProductsInFile
-            if (currentIndex >= totalProductsInFile) {
-                logger.info(`Reached the end of products: currentIndex ${currentIndex} exceeds totalProductsInFile ${totalProductsInFile}. Stopping batch processing.`);
-                return null;  // Skip any items beyond the total
-            }
-
-            //logInfoToFile(`Batch item: index in batch = ${index}, startIndex = ${startIndex}, calculated currentIndex = ${currentIndex}, totalProductsInFile = ${totalProductsInFile}`);
-
-            // Check if 'part_number' exists in the item (CSV row)
-            if (!item.hasOwnProperty('part_number') || !item.part_number) {
-                const msg = `part_number key is missing in item at index ${currentIndex}, Skip this item.`;
-                logErrorToFile(`Skipped product at index ${currentIndex} / ${totalProductsInFile} in ${fileKey}: ${msg}`);
-
-                // Increment the skipped count
-                await redisClient.incr(`skipped-products:${fileKey}`);
-                logInfoToFile((`Debug - Increment skipped-products for ${fileKey}`));
-                return null;
-            }
+            if (currentIndex >= totalProductsInFile) return null;
 
             const part_number = item.part_number;
+            if (!part_number) return null;
+
             logger.info(`Processing ${currentIndex + 1} / ${totalProductsInFile} - Part Number: ${part_number} in ${fileKey}`);
 
             try {
+                // Measure time to fetch Product ID by Part Number
+                const productIdStart = performance.now();
+                logInfoToFile(`Requesting Product ID for Part Number: ${part_number}, currentIndex: ${currentIndex}`);
                 const productId = await getProductIdByPartNumber(part_number, currentIndex, totalProductsInFile, fileKey);
+                logInfoToFile(`Received Product ID for Part Number: ${part_number}: ${productId}`);
+                const productIdEnd = performance.now();
+                logInfoToFile(`Time to fetch product ID for Part Number ${part_number}: ${(productIdEnd - productIdStart).toFixed(2)} ms`);
 
                 if (!productId) {
-                    // Track as a failed product if no productId was found
                     await redisClient.incr(`failed-products:${fileKey}`);
-                    logInfoToFile((`Debug - Increment failed-products for ${fileKey}: no product found.`));
                     return null;
                 }
 
-                // Fetch current product data
+                // Measure time to fetch Product details by Product ID
+                const productFetchStart = performance.now();
                 const product = await getProductById(productId, fileKey);
+                const productFetchEnd = performance.now();
+                logInfoToFile(`Time to fetch product details for Product ID ${productId}: ${(productFetchEnd - productFetchStart).toFixed(2)} ms`);
 
-                if (product) {
-                    // Prepare new data structure for comparison and potential update
-                    const newData = createNewData(item, productId, part_number);
-                    const currentData = filterCurrentData(product);
+                // Prepare new data structure for comparison and potential update
+                const newData = createNewData(item, productId, part_number);
+                const currentData = filterCurrentData(product);
 
-                    if (isUpdateNeeded(currentData, newData, currentIndex, totalProductsInFile, part_number, fileKey)) {
-                        return { ...newData, currentIndex, totalProductsInFile }; 
-                    } else {
-                        // If no update is needed, increment the skipped count
-                        await redisClient.incr(`skipped-products:${fileKey}`);
-                        logInfoToFile((`Debug - Increment skipped-products for ${fileKey}, no update needed for Part Number: ${part_number}`));
-                        return null;
-                    }
+                if (product && isUpdateNeeded(currentData, newData, currentIndex, totalProductsInFile, part_number, fileKey)) {
+                    return { ...newData, currentIndex, totalProductsInFile }; 
                 }
 
+                await redisClient.incr(`skipped-products:${fileKey}`);
+                logInfoToFile((`No update needed for Part Number: ${part_number} in ${fileKey}`));
+                return null;
+                
             } catch (error) {
-                const errorMsg = `Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`;
-                logErrorToFile(errorMsg, error);
+                logErrorToFile(`Error processing Part Number ${part_number} at index ${currentIndex}: ${error.message}`, error.stack);
+                return null;
             }
-            return null; // Skip products that don't need updating or encountered an error
         })
     );
 
@@ -222,9 +211,10 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
     if (filteredProducts.length > 0) {
         while (attempts < MAX_RETRIES) {
 
-            const startTime = performance.now();
+            const retryStartTime = performance.now();
 
             try {
+                const apiCallStart = performance.now();
                 // Use WooCommerce Bulk API to update products
                 const response = await limiter.schedule(
                     {   
@@ -237,17 +227,14 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                     },
                     () => wooApi.put("products/batch", { update: filteredProducts })
                 );
+                const apiCallEnd = performance.now();
+                logInfoToFile(`Time for WooCommerce API batch update call: ${(apiCallEnd - apiCallStart).toFixed(2)} ms`);
 
                 await redisClient.incrBy(`updated-products:${fileKey}`, filteredProducts.length); // Increment the count of updated products in Redis
-                
-                logInfoToFile((`Debug - Increment updated-products for ${fileKey}`));
 
-                // Record completion message and elapsed time
-                const endTime = performance.now();
-                const duration = ((endTime - startTime) / 1000).toFixed(2);
-
-                // Log the response to verify successful updates
-                logInfoToFile(`Batch update successful for ${filteredProducts.length} products in file: "${fileKey}" in ${duration} seconds.`);
+                // Log completion time for the batch update
+                const retryEndTime = performance.now();
+                logInfoToFile(`Batch update attempt ${attempts + 1} successful in ${(retryEndTime - retryStartTime).toFixed(2)} ms`);
 
                 filteredProducts.forEach(product => 
                     logUpdatesToFile(`Updated: ${product.currentIndex} / ${product.totalProductsInFile} | Product ID ${product.id} | Part Number: ${product.part_number} | Source File: ${fileKey} updated.\n`)
@@ -257,33 +244,31 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
             } catch (error) {
                 attempts++;
 
+                const retryEndTime = performance.now();
+                logErrorToFile(`Batch update attempt ${attempts} failed. Time taken: ${(retryEndTime - retryStartTime).toFixed(2)} ms`);
+
                 // Log all part numbers in the failed batch
                 const failedPartNumbers = filteredProducts.map(p => `[ Part Number: ${p.part_number}, ID: ${p.id} ]`).join("; ");
-                const endTime = performance.now();
-                const duration = ((endTime - startTime) / 1000).toFixed(2);
-
-                logErrorToFile(`Batch update attempt ${attempts} failed for file "${fileKey}" due to: ${error.message} in ${duration} seconds.`);
                 logErrorToFile(`Products in batch - ${failedPartNumbers}`);
-                
-                // Retry conditions: error status or attempts < MAX_RETRIES
-                if (attempts < MAX_RETRIES) {
-                    const delay = Math.pow(2, attempts) * 1000; // Exponential backoff: 2, 4, 8 seconds, etc.
-                    logErrorToFile(`Timeout detected. Retrying after ${delay / 1000} seconds...`);
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                } else if (attempts >= MAX_RETRIES) {
+                    
+               if (attempts >= MAX_RETRIES) {
                     await redisClient.incr(`failed-products:${fileKey}`);
-                    logInfoToFile((`Debug - Increment failed-products for ${fileKey}`));
                     logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}"`);
-                    throw new Error(`Batch update permanently failed for file "${fileKey}"`);
-                } else {
-                    logErrorToFile(`Unhandled error in processBatch: ${error.message}`);
-                    throw error; // Exit and propagate any other errors
-                }
+                    throw new Error(`Batch update failed permanently after ${MAX_RETRIES} attempts.`);
+               }
+
+                const delay = Math.pow(2, attempts) * 1000; // Exponential backoff: 2, 4, 8 seconds, etc.
+                logErrorToFile(`Timeout detected. Retrying after ${delay / 1000} seconds...`);
+                await new Promise(resolve => setTimeout(resolve, delay));
+                
             }
         }
     } else {
-        logger.info(`No valid products to update in the batch for file: "${fileKey}"; filteredProducts.length: ${filteredProducts.length}`);
-    }  
+        logger.info(`No valid products to update in the batch for file: "${fileKey}"`);
+    }
+    
+    const batchEndTime = performance.now();
+    logInfoToFile(`Total time for processBatch (File: ${fileKey}, StartIndex: ${startIndex}): ${(batchEndTime - batchStartTime).toFixed(2)} ms`);
 };
 
 module.exports = {

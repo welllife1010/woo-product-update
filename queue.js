@@ -4,7 +4,7 @@ const { createClient } = require('redis'); // For 'redis' library
 // Queue configuration options
 const queueOptions = {
     redis: { port: 6379, host: '127.0.0.1' }, // Redis connection details
-    limiter: { max: 100, duration: 5000 }, // Rate limiting options
+    //limiter: { max: 100, duration: 5000 }, // Rate limiting options
     defaultJobOptions: {
         removeOnComplete: true,
         removeOnFail: false,

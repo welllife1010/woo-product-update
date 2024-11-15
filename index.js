@@ -55,7 +55,7 @@ const mainProcess = async () => {
     logger.info(`Starting process for S3 bucket: ${s3BucketName}`);
 
     // Process files in the latest folder, enqueuing each batch
-    await processCSVFilesInLatestFolder(s3BucketName, 15);
+    await processCSVFilesInLatestFolder(s3BucketName, 20);
 
     // Record completion message and elapsed time
     const endTime = performance.now();

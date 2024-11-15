@@ -1,8 +1,9 @@
 require("dotenv").config();
+const { performance } = require("perf_hooks");
 const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile, logFileProgress } = require("./logger");
 const { batchQueue, redisClient } = require('./queue'); // Importing batchQueue directly
 const { processBatch } = require('./batch-helpers'); 
-const { saveCheckpoint } = require('./checkpoint'); 
+const { saveCheckpoint, getCheckpoint } = require('./checkpoint'); 
 
 // Check if all files have been processed
 const checkAllFilesProcessed = async () => {
@@ -33,22 +34,26 @@ const shutdownCheckInterval = setInterval(async () => {
 }, 5000); 
 
 // Define the worker (queue) to process each job (batch)
-batchQueue.process( 4, async (job) => { // This will allow up to 4 concurrent job processes
-    logger.info(`Worker received job ID: ${job.id}`);
-    const { batch, fileKey, totalProductsInFile, lastProcessedRow, batchSize } = job.data;
+batchQueue.process( 2, async (job) => { // This will allow up to 2 concurrent job processes
+    const queueStartTime = performance.now();
+    logger.info(`Starting job ID ${job.id} for file ${job.data.fileKey}`);
 
-    if (!batch || !fileKey || !totalProductsInFile || !lastProcessedRow || !batchSize) {
+    const { batch, fileKey, totalProductsInFile, batchSize } = job.data;
+
+    if (!batch || !fileKey || !totalProductsInFile || !batchSize) {
         logErrorToFile(`Job data or batch is missing for job ID: ${job.id}.`);
-        logErrorToFile(`Job ID: ${job.id} | Total products in file: ${totalProductsInFile} | Last processed row: ${lastProcessedRow} | Batch size: ${batchSize}`);
+        logErrorToFile(`Job ID: ${job.id} | Total products in file: ${totalProductsInFile} | Batch size: ${batchSize}`);
         logErrorToFile(`Failed Data: ${JSON.stringify(job.data)}`);
         return;
     }
 
+     // Fetch the checkpoint or start from 0 if this is the first run
+     let lastProcessedRow = (await getCheckpoint(fileKey)) || 0; // Fallback to 0 if undefined
+     logInfoToFile(`Last processed row for file ${fileKey} is ${lastProcessedRow}. Starting job.`);
+
     logInfoToFile(`Processing job ID: ${job.id} for file: ${job.data.fileKey}`);
     logInfoToFile(`Total products in file: ${job.data.totalProductsInFile}`);
-    logInfoToFile(`Last processed row: ${job.data.lastProcessedRow}`);
-
-    let updatedLastProcessedRow;
+    logInfoToFile(`Last processed row: ${lastProcessedRow}`);
 
     try {
         logger.info(`Processing batch for job ID: ${job.id} | File: ${fileKey}`);
@@ -56,8 +61,12 @@ batchQueue.process( 4, async (job) => { // This will allow up to 4 concurrent jo
         // *** Process the batch ***
         await processBatch(batch, lastProcessedRow, totalProductsInFile, fileKey);
 
+        const queueEndTime = performance.now();
+        const queueDuration = ((queueEndTime - queueStartTime) / 1000).toFixed(2);
+        logInfoToFile(`Job ID ${job.id} completed in ${queueDuration} seconds`);
+
         // Update the last processed row after batch processing
-        updatedLastProcessedRow = lastProcessedRow + batch.length;
+        let updatedLastProcessedRow = lastProcessedRow + batch.length;
 
         // Save checkpoint in Redis and local JSON file
         await redisClient.set(`lastProcessedRow:${fileKey}`, updatedLastProcessedRow);

@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const { logErrorToFile, logInfoToFile } = require("./logger");
 //const { redisClient } = require('./queue');
 
 // Define the path to the checkpoint file
@@ -21,6 +22,7 @@ const saveCheckpoint = async (fileKey, lastProcessedRow, totalProductsInFile, ba
 
     // Save checkpoint only if within totalProductsInFile bounds
     if (updatedLastProcessedRow <= totalProductsInFile) {
+        logInfoToFile(`Saving checkpoint for ${fileKey}: lastProcessedRow = ${updatedLastProcessedRow}`);
         //await redisClient.set(`lastProcessedRow:${fileKey}`, updatedLastProcessedRow);
         checkpoints[fileKey] = {
             lastProcessedRow: updatedLastProcessedRow,
@@ -35,9 +37,14 @@ const saveCheckpoint = async (fileKey, lastProcessedRow, totalProductsInFile, ba
 
 // Get the last checkpoint for a given file
 const getCheckpoint = (fileKey) => {
-    if (!fs.existsSync(checkpointFilePath)) return 0;
+    if (!fs.existsSync(checkpointFilePath)) {
+        logInfoToFile(`Checkpoint file not found, returning 0 for ${fileKey}`);
+        return 0;
+    }
     const checkpoints = JSON.parse(fs.readFileSync(checkpointFilePath, "utf-8"));
-    return checkpoints[fileKey]?.lastProcessedRow || 0;
+    let checkpoint = checkpoints[fileKey]?.lastProcessedRow || 0;
+    logInfoToFile(`Retrieved last processed row for ${fileKey}: ${checkpoint}`);
+    return checkpoint;
 };
 
 module.exports = {
