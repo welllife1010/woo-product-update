@@ -8,7 +8,7 @@ const queueOptions = {
     defaultJobOptions: {
         removeOnComplete: true,
         removeOnFail: false,
-        timeout: 180000, // Job timeout (in milliseconds)
+        timeout: 300000, // Job timeout (in milliseconds)
         attempts: 3 // Number of retry attempts for failed jobs
     }
 };

@@ -283,8 +283,6 @@ const logOverallProgress = async () => {
     }
 };
 
-
-
 // Call this function periodically, e.g., every 2 minutes
 setInterval(logOverallProgress, 2 * 60 * 1000); // 2 minutes in milliseconds
 

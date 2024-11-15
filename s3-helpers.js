@@ -20,7 +20,7 @@ const s3Client = new S3Client({
   region: process.env.AWS_REGION_NAME,
   endpoint: "https://s3.us-west-1.amazonaws.com", // Use specific bucket's region
   forcePathStyle: true, // This helps when using custom endpoints
-  requestTimeout: 180000 // Set timeout to 10 minutes
+  requestTimeout: 300000 // Set timeout to 10 minutes
 });
 
 const pattern = (executionMode === 'production')
@@ -179,9 +179,9 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
                     type: 'exponential', // Exponential backoff between retries
                     delay: 5000 // Initial delay of 5 seconds between retries
                   },
-                  timeout: 180000 // Set a custom timeout (e.g., 3 minutes)
+                  timeout: 300000 // Set a custom timeout (e.g., 3 minutes)
                 });
-                
+
               } catch (error) {
                   logErrorToFile(`Failed to enqueue job for rows up to ${lastProcessedRow} in file: ${key}. Error: ${error.message}`, error.stack);
               }
@@ -225,7 +225,7 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
               type: 'exponential', // Exponential backoff between retries
               delay: 5000 // Initial delay of 5 seconds between retries
             },
-            timeout: 180000 // Set a custom timeout (e.g., 3 minutes)
+            timeout: 300000 // Set a custom timeout (e.g., 3 minutes)
           });
 
           logInfoToFile(`Enqueued final batch job for rows up to ${lastProcessedRow} in file: ${key}`);

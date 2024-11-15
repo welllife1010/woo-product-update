@@ -75,7 +75,7 @@ batchQueue.process( 4, async (job) => { // This will allow up to 4 concurrent jo
             // Optionally, you can throw the error to allow Bull to retry the job
             throw error;
         } else {
-            logErrorToFile(`Job failed with ID ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile} | Error: ${error.message}`, error.stack);
+            logErrorToFile(`Job failed with ID ${job.id} in "batchQueue" process | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile} | Error: ${error.message}`, error.stack);
             throw error; // Re-throw to trigger retry
         }
     }
@@ -94,8 +94,19 @@ batchQueue.on('completed', (job, result) => {
     logInfoToFile(`Job completed with ID ${job.id} | Result: ${result} | File: ${job.data.fileKey} | Last processed row: ${job.data.lastProcessedRow}`);
 });
 
-batchQueue.on('failed', (job, err) => {
-    logErrorToFile(`Job failed with ID ${job.id} | File: ${job.data.fileKey}: ${err.message}`, err.stack);
+// Event listener for failed jobs in batchQueue
+batchQueue.on("failed", (job, err) => {
+    const retryCount = job.attemptsMade; // attemptsMade counts the current attempt number
+    const maxRetries = job.opts.attempts || 3; // Get max retry attempts, defaulting to 3 if undefined
+
+    logErrorToFile(`Job failed with ID ${job.id} on attempt ${retryCount}/${maxRetries} | File: ${job.data.fileKey} | Error: ${err.message}`, err.stack);
+
+    // Check if job will retry or is permanently failed
+    if (retryCount < maxRetries) {
+        logInfoToFile(`Retrying job ${job.id} for file "${job.data.fileKey}". Next attempt: ${retryCount + 1}`);
+    } else {
+        logErrorToFile(`Job ${job.id} permanently failed after ${maxRetries} attempts.`);
+    }
 });
 
 batchQueue.on('error', (error) => {

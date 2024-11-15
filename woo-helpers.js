@@ -11,7 +11,7 @@ const wooApi = new WooCommerceRestApi({
     consumerKey: process.env.WOO_API_CONSUMER_KEY_TEST,
     consumerSecret: process.env.WOO_API_CONSUMER_SECRET_TEST,
     version: "wc/v3",
-    timeout: 180000, // Set a longer timeout (in milliseconds)
+    timeout: 300000, // Set a longer timeout (in milliseconds)
 });
   
 // Create a Bottleneck instance with appropriate settings
