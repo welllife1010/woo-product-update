@@ -14,13 +14,13 @@ if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir);
 }
 
-// Helper function to get a file path within the output-files directory
+// Get a file path within the output-files directory
 const getOutputFilePath = (filename) => path.join(outputDir, filename);
 
 // Generate the unique filename with date and increment version dynamically if file exists
 const date = new Date().toISOString().split("T")[0]; // YYYY-MM-DD format
 
-// Helper function to generate the current date and time in PST
+// Generate the current date and time in PST
 const getPSTDate = () => {
     return new Date().toLocaleString("en-US", {
         timeZone: "America/Los_Angeles",
@@ -51,7 +51,7 @@ const getFileSafePSTDate = () => {
     return date.replace(/[/, ]/g, "-").replace(/:/g, "-");
 };
 
-// Function to generate a unique file name by checking for existing files
+// Generate a unique file name by checking for existing files
 const generateFileName = (fileName = "log-info") => {
     const creationTimestamp = getFileSafePSTDate(); // Capture creation timestamp
     let version = 1;
@@ -79,7 +79,6 @@ const rotateLogFile = (currentFileName) => {
         updatedProductsFileName = getOutputFilePath(generateFileName(currentFileName.split('-')[0]));
     }
 };
-
 
 // Extend dayjs with UTC and timezone plugins
 dayjs.extend(utc);

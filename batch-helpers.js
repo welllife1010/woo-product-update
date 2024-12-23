@@ -245,7 +245,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                 attempts++;
 
                 const retryEndTime = performance.now();
-                logErrorToFile(`Batch update attempt ${attempts} failed. Time taken: ${(retryEndTime - retryStartTime).toFixed(2)} ms`);
+                logErrorToFile(`Batch update attempt ${attempts} failed. Time taken: ${(retryEndTime - retryStartTime).toFixed(2)} ms. Error: ${error.message}`, error.stack);
 
                 // Log all part numbers in the failed batch
                 const failedPartNumbers = filteredProducts.map(p => `[ Part Number: ${p.part_number}, ID: ${p.id} ]`).join("; ");
@@ -253,7 +253,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                     
                if (attempts >= MAX_RETRIES) {
                     await redisClient.incr(`failed-products:${fileKey}`);
-                    logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}"`);
+                    logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}". Error: ${error.message}`);
                     throw new Error(`Batch update failed permanently after ${MAX_RETRIES} attempts.`);
                }
 
