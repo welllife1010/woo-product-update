@@ -3,7 +3,7 @@ const { promisify } = require("util");
 const { Readable, pipeline } = require("stream"); // Promisify the stream pipeline utility
 const streamPipeline = promisify(pipeline); // Use async pipeline with stream promises
 const csvParser = require("csv-parser");
-const { logErrorToFile, logUpdatesToFile, logDetailedErrorToFile, logInfoToFile } = require("./logger");
+const { logErrorToFile, logUpdatesToFile, logInfoToFile } = require("./logger");
 const { batchQueue, redisClient } = require('./queue');
 
 const executionMode = process.env.EXECUTION_MODE || 'production';
@@ -197,7 +197,7 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
             } else if (error.name === 'CSVError') {  // Assuming csv-parser throws errors with name 'CSVError'
                 logErrorToFile(`CSV parsing error at row ${totalRows} in file "${key}": ${error.message}`, error.stack);
             } else {
-                logDetailedErrorToFile(error, `Error processing row ${totalRows} in file "${key}: ${error.message}"`);
+                logErrorToFile(`Error processing row ${totalRows} in file "${key}: ${error.message}"`, error.stack);
             }
 
             // Increment error count and check if max retries are reached

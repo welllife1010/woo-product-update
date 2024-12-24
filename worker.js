@@ -1,6 +1,6 @@
 require("dotenv").config();
 const { performance } = require("perf_hooks");
-const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile, logFileProgress } = require("./logger");
+const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile, logProgressToFile } = require("./logger");
 const { batchQueue, redisClient } = require('./queue'); // Importing batchQueue directly
 const { processBatch } = require('./batch-helpers'); 
 const { saveCheckpoint, getCheckpoint } = require('./checkpoint'); 
@@ -73,7 +73,7 @@ batchQueue.process( 2, async (job) => { // This will allow up to 2 concurrent jo
         await saveCheckpoint(fileKey, updatedLastProcessedRow, totalProductsInFile, batch);  // Save to local JSON checkpoint file
 
         // Log progress after processing the batch
-        await logFileProgress(fileKey);
+        await logProgressToFile(fileKey);
 
         logInfoToFile(`Successfully processed batch for job ID: ${job.id} | File: ${fileKey} | Last processed row: ${updatedLastProcessedRow} / ${totalProductsInFile}`);
     } catch (error) {
