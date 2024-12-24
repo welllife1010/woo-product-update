@@ -48,9 +48,12 @@ const writeToFile = (filePath, content) => {
   
   // Fetch progress from Redis and log to file
   const logProgressToFile = async () => {
+    if (process.env.DEBUG_LOGGING === "true") {
+        console.debug(`[DEBUG] Writing progress log for ${fileKey}`);
+    }
+
     try {
       const fileKeys = await redisClient.keys("total-rows:*");
-  
       if (fileKeys.length === 0) {
         console.log(`[${getPSTTimestamp()}] No progress to log.`);
         return;
@@ -80,8 +83,7 @@ const writeToFile = (filePath, content) => {
 
   // Error logging function
 const logErrorToFile = (message, error = null) => {
-    const timestamp = getPSTTimestamp();
-    let errorContent = `[${timestamp}] ${message}\n`;
+    let errorContent = `[${getPSTTimestamp()}] ${message}\n`;
     if (error) errorContent += `Error: ${error.stack || error.message}\n`;
     writeToFile(errorFilePath, errorContent);
 };
