@@ -5,15 +5,25 @@ const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
 const Bottleneck = require("bottleneck");
 const { logger, logErrorToFile } = require("./logger");
 
-// WooCommerce API credentials
-const wooApi = new WooCommerceRestApi({
-    url: process.env.WOO_API_BASE_URL,
-    consumerKey: process.env.WOO_API_CONSUMER_KEY,
-    consumerSecret: process.env.WOO_API_CONSUMER_SECRET,
-    version: "wc/v3",
-    timeout: 300000, // Set a longer timeout (in milliseconds)
-});
-  
+// Function to get WooCommerce API credentials based on execution mode
+const getWooCommerceApiCredentials = (executionMode) => {
+    return (executionMode === 'development') ? {
+        url: process.env.WOO_API_BASE_URL_DEV,
+        consumerKey: process.env.WOO_API_CONSUMER_KEY_DEV,
+        consumerSecret: process.env.WOO_API_CONSUMER_SECRET_DEV,
+        version: "wc/v3",
+        timeout: 300000 // Set a longer timeout (in milliseconds)
+    } : {
+        url: process.env.WOO_API_BASE_URL,
+        consumerKey: process.env.WOO_API_CONSUMER_KEY,
+        consumerSecret: process.env.WOO_API_CONSUMER_SECRET,
+        version: "wc/v3",
+        timeout: 300000
+    };
+};
+
+const wooApi = new WooCommerceRestApi(getWooCommerceApiCredentials(process.env.EXECUTION_MODE));
+
 // Create a Bottleneck instance with appropriate settings
 const limiter = new Bottleneck({
     maxConcurrent: 2, // Number of concurrent requests allowed - Limit to 2 concurrent 100-item requests at once

@@ -1,19 +1,13 @@
 const dotenv = require("dotenv");
 dotenv.config();
 
-const { batchQueue, redisClient } = require('./queue');
+const { batchQueue } = require('./queue');
 const { processCSVFilesInLatestFolder } = require('./s3-helpers');
 const { logger, logErrorToFile,logUpdatesToFile, logInfoToFile } = require("./logger");
 const { performance } = require("perf_hooks"); // Import performance to track time
 const { BullAdapter } = require('@bull-board/api/bullAdapter');
 const { createBullBoard } = require('@bull-board/api');
 const { ExpressAdapter } = require('@bull-board/express');
-
-// Initialize Redis or any necessary setup
-(async () => {
-  await redisClient.connect();
-  console.log('Redis connected successfully.');
-})();
 
 const express = require('express');
 const app = express();

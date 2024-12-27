@@ -19,9 +19,12 @@ const batchQueue = new Bull('batchQueue', queueOptions);
 // Create a new Redis client
 const redisClient = createClient({ url: 'redis://127.0.0.1:6379' });
 
+// Initialize Redis or any necessary setup
 (async () => {
     await redisClient.connect(); // Ensure the client is connected before using
+    console.log('Redis connected successfully.');
 })();
+  
 
 module.exports = {
     batchQueue,
