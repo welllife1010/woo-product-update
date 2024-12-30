@@ -51,10 +51,6 @@ const writeToFile = (filePath, content) => {
 
     try {
       const fileKeys = await redisClient.keys("total-rows:*");
-
-      if (process.env.DEBUG_LOGGING === "true") {
-        console.debug(`[DEBUG] Writing progress log for ${fileKey}`);
-    }
     
       if (fileKeys.length === 0) {
         console.log(`[${getPSTTimestamp()}] No progress to log.`);
