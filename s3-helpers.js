@@ -166,7 +166,7 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
                 batch,
                 fileKey: key,
                 totalProductsInFile: totalRows,
-                //lastProcessedRow,
+                lastProcessedRow,
                 batchSize: batch.length
               };
 

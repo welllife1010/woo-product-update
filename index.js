@@ -3,7 +3,7 @@ dotenv.config();
 
 const { batchQueue } = require('./queue');
 const { processCSVFilesInLatestFolder } = require('./s3-helpers');
-const { logger, logErrorToFile,logUpdatesToFile, logInfoToFile } = require("./logger");
+const { logger, logErrorToFile,logUpdatesToFile, logInfoToFile, logProgressToFile } = require("./logger");
 const { performance } = require("perf_hooks"); // Import performance to track time
 const { BullAdapter } = require('@bull-board/api/bullAdapter');
 const { createBullBoard } = require('@bull-board/api');
