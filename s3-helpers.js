@@ -5,6 +5,7 @@ const streamPipeline = promisify(pipeline); // Use async pipeline with stream pr
 const csvParser = require("csv-parser");
 const { logErrorToFile, logUpdatesToFile, logInfoToFile } = require("./logger");
 const { batchQueue, redisClient } = require('./queue');
+const { addBatchJob } = require('./job-manager');
 
 const executionMode = process.env.EXECUTION_MODE || 'production';
 
@@ -23,9 +24,7 @@ const s3Client = new S3Client({
   requestTimeout: 300000 // Set timeout to 10 minutes
 });
 
-const pattern = (executionMode === 'production')
-                ? /^\d{2}-\d{2}-\d{4}\/$/
-                : /^\d{2}-\d{2}-\d{4}-test\/$/;
+const pattern = (executionMode === 'production') ? /^\d{2}-\d{2}-\d{4}\/$/ : /^\d{2}-\d{2}-\d{4}-test\/$/;
 
 // Get the latest folder key (name) by sorting folders by date
 const getLatestFolderKey = async (bucketName) => {
@@ -170,18 +169,13 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
                 batchSize: batch.length
               };
 
+              // Generate a unique job ID
+              const jobId = `readCSVAndEnqueueJobs_${key}_${lastProcessedRow}`;
+
               // Before adding a job, check jobData and add detailed logging
               try {
-                const job = await batchQueue.add(jobData, { 
-                  jobId: `${key}-${lastProcessedRow}`,
-                  attempts: 5, // Number of retry attempts
-                  backoff: {
-                    type: 'exponential', // Exponential backoff between retries
-                    delay: 5000 // Initial delay of 5 seconds between retries
-                  },
-                  timeout: 300000 // Set a custom timeout (e.g., 3 minutes)
-                });
-
+                const job = await addBatchJob(jobData, jobId);;
+                logInfoToFile(`Successfully enqueued job with ID: ${job.id} for rows up to ${lastProcessedRow} in file: ${key}`);
               } catch (error) {
                   logErrorToFile(`Failed to enqueue job for rows up to ${lastProcessedRow} in file: ${key}. Error: ${error.message}`, error.stack);
               }
@@ -218,18 +212,19 @@ const readCSVAndEnqueueJobs = async (bucketName, key, batchSize) => {
             lastProcessedRow,
             batchSize: batch.length
           };
-          const job = await batchQueue.add(jobData, { 
-            jobId: `${key}-${lastProcessedRow}`,
-            attempts: 5, // Number of retry attempts
-            backoff: {
-              type: 'exponential', // Exponential backoff between retries
-              delay: 5000 // Initial delay of 5 seconds between retries
-            },
-            timeout: 300000 // Set a custom timeout (e.g., 3 minutes)
-          });
 
-          logInfoToFile(`Enqueued final batch job for rows up to ${lastProcessedRow} in file: ${key}`);
-          logInfoToFile(`DEBUG: Enqueued batch job with ID: ${job.id} for rows up to ${lastProcessedRow} in file: ${key}`);
+          // Generate a unique job ID
+          const jobId = `readCSVAndEnqueueJobs_${key}_${lastProcessedRow}`;
+
+          try {
+            // Use the centralized function to add the batch job
+            const job = await addBatchJob(jobData, jobId);
+    
+            logInfoToFile(`Enqueued final batch job for rows up to ${lastProcessedRow} in file: ${key}`);
+            logInfoToFile(`DEBUG: Enqueued batch job with ID: ${job.id} for rows up to ${lastProcessedRow} in file: ${key}`);
+          } catch (error) {
+              logErrorToFile(`Failed to enqueue final batch job for rows up to ${lastProcessedRow} in file: ${key}. Error: ${error.message}`, error.stack);
+          }
         }
       }
     );

@@ -107,6 +107,9 @@ batchQueue.process( concurrency, async (job) => { // This will allow up to '2' c
     let lastProcessedRow = (await getCheckpoint(fileKey)) || 0; // Fallback to 0 if undefined
     logInfoToFile(`Last processed row for file ${fileKey} is ${lastProcessedRow}. Starting job.`);
 
+    // Initialize successfulUpdates count
+    let successfulUpdates = 0;
+
     // Update the last processed row after batch processing
     let updatedLastProcessedRow = lastProcessedRow;
 

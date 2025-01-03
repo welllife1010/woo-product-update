@@ -4,6 +4,8 @@ dotenv.config();
 const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
 const Bottleneck = require("bottleneck");
 const { logger, logErrorToFile } = require("./logger");
+const { scheduleApiRequest } = require('./job-manager');
+const { createUniqueJobId } = require('./utils');
 
 // Function to get WooCommerce API credentials based on execution mode
 const getWooCommerceApiCredentials = (executionMode) => {
@@ -40,7 +42,7 @@ limiter.on("failed", async (error, jobInfo) => {
     const retryCount = jobInfo.retryCount || 0;
 
     logErrorToFile(
-        `Retrying job ${jobId} due to ${error.message}. File: ${file}, Function: ${functionName}. Retry count: ${retryCount + 1}`
+        `Retrying job "${jobId}" due to ${error.message}. | File: ${file} | Function: ${functionName} | Retry count: ${retryCount + 1}`
     );
 
     // Add part number to retriedProducts if a retry occurs
@@ -54,17 +56,25 @@ limiter.on("failed", async (error, jobInfo) => {
     }
 
     if (retryCount >= 5) {
-        logErrorToFile(`Job ${jobId} failed permanently for part ${part} after maximum retries due to ${error.message}.`);
+        logErrorToFile(`Job "${jobId}" failed permanently for part "${part}" after maximum retries due to ${error.message}.`);
     }
 
 });
 
-// Function to get product details by product ID
-const getProductById = async (productId, fileKey) => {
-    try {
-        // Schedule with a unique job ID and log details
-        const jobId = `getProductById-${productId}-${fileKey}`;
-        const response = await limiter.schedule( 
+// Get product details by product ID
+const getProductById = async (productId, fileKey, currentIndex) => {
+    let attempts = 0;
+    const action = 'getProductById';
+
+    while (attempts < 5) {
+        // Create a unique job ID
+        const jobId = createUniqueJobId(fileKey, action, currentIndex, attempts);
+
+        try {
+
+            // Use the centralized job scheduling function
+        const response = await scheduleApiRequest(
+            () => wooApi.get(`products/${productId}`), // Task function for API call
             { 
                 id: jobId,
                 context: { 
@@ -72,52 +82,73 @@ const getProductById = async (productId, fileKey) => {
                     functionName: "getProductById", 
                     part: `${productId}`
                 }
-             }, 
-            () => wooApi.get(`products/${productId}`)
+            }
         );
-        //logger.debug(`Fetched Product Data for ID ${productId}: ${JSON.stringify(response.data)} in file "${fileKey}"`);
-        return response.data;
-    } catch (error) {
-        logger.error(
-            `Error fetching product with ID ${productId} in file "${fileKey}": ${
-            error.response ?? error.message
-            }`
-        );
-        return null;
+        
+        return response.data; // Return product details on success
+
+        } catch (error) {
+            attempts++;
+            logErrorToFile(`Retry attempt ${attempts} failed for job ID: ${jobId}. Error: ${error.message}`);
+
+            if (attempts >= 5) {
+                logErrorToFile(`getProductById function failed permanently after ${attempts} attempts for job ID: ${jobId} \n Error fetching product with ID ${productId}: ${error.response ?? error.message }`);
+                return null;
+            }
+
+            const delay = Math.pow(2, attempts) * 1000;
+            logInfoToFile(`Retrying job ID: ${jobId} after ${delay / 1000}s...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
+        }
     }
 };
   
 // Find product ID by custom field "part_number"
 const getProductIdByPartNumber = async (partNumber, currentIndex, totalProducts, fileKey) => {
-    try {
-        // Schedule with a unique job ID and log details
-        const jobId = `getProductIdByPartNumber-${partNumber}-${fileKey}-${currentIndex}`;
-        const response = await limiter.schedule(
-            { 
-                id: jobId,
-                context: { 
-                    file: "woo-helpers.js", 
-                    function: "getProductIdByPartNumber", 
-                    part: `${partNumber}`
-                }
-            }, 
-            () =>
-            wooApi.get("products", {
-                search: partNumber,
-                per_page: 1,
-            })
-        );
+    let attempts = 0;
+    const action = 'getProductIdByPartNumber';
 
-        if (response.data.length) {
-            logger.info(`${currentIndex} / ${totalProducts} - Product ID ${response.data[0].id} found for Part Number ${partNumber} in file "${fileKey}"`);
-            return response.data[0].id;
-        } else {
-            logErrorToFile(`${currentIndex} / ${totalProducts} - No product found for Part Number ${partNumber} in file "${fileKey}"`)
-            return null;
+    while (attempts < 5) {
+        // Create a unique job ID
+        const jobId = createUniqueJobId(fileKey, action, currentIndex, attempts);
+
+        try {
+
+            // Use the centralized job scheduling function
+            const response = await scheduleApiRequest(
+                () => wooApi.get("products", { search: partNumber, per_page: 1 }), // Task function for API call
+                { 
+                    id: jobId,
+                    context: { 
+                        file: "woo-helpers.js", 
+                        functionName: "getProductIdByPartNumber", 
+                        part: `${partNumber}`
+                    }
+                }
+            );
+
+            // Check if the product was found
+            if (response.data.length) {
+                logger.info(`${currentIndex} / ${totalProducts} - Product ID ${response.data[0].id} found for Part Number ${partNumber} in file "${fileKey}"`);
+                return response.data[0].id;
+            } else {
+                logErrorToFile(`${currentIndex} / ${totalProducts} - No product found for Part Number ${partNumber} in file "${fileKey}"`)
+                return null;
+            }
+
+        } catch (error) {
+            attempts++;
+            logErrorToFile(`Attempt ${attempts} failed for job ID: ${jobId}. Error: ${error.message}`);
+
+            if (attempts >= 5) {
+                logErrorToFile(`Failed permanently after ${attempts} attempts for job ID: ${jobId}`);
+                return null;
+            }
+
+            const delay = Math.pow(2, attempts) * 1000;
+            logInfoToFile(`Retrying job ID: ${jobId} after ${delay / 1000}s...`);
+            await new Promise(resolve => setTimeout(resolve, delay));
         }
-    } catch (error) {
-        logErrorToFile(`Error fetching product with Part Number ${partNumber} in file "${fileKey}": ${error.message}`, error.stack);
-        return null;
     }
 };
 

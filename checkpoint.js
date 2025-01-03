@@ -7,7 +7,7 @@ const { logErrorToFile, logInfoToFile } = require("./logger");
 const checkpointFilePath = path.join(__dirname, "process_checkpoint.json");
 
 // Save progress to the checkpoint file
-const saveCheckpoint = async (fileKey, lastProcessedRow, totalProductsInFile, batch) => {
+const saveCheckpoint = async (fileKey, lastProcessedRow, totalProductsInFile, batch, successfulUpdates) => {
     if (!batch || batch.length === 0) {
         logErrorToFile(`Invalid batch provided for checkpoint saving. File: ${fileKey}, Last Processed Row: ${lastProcessedRow}`);
         return;
@@ -18,11 +18,11 @@ const saveCheckpoint = async (fileKey, lastProcessedRow, totalProductsInFile, ba
         : {};
 
     // Calculate the updated last processed row but limit it to totalProductsInFile
-    const updatedLastProcessedRow = Math.min(lastProcessedRow + batch.length, totalProductsInFile);
+    const updatedLastProcessedRow = Math.min(lastProcessedRow + successfulUpdates, totalProductsInFile);
 
     // Save checkpoint only if within totalProductsInFile bounds
     if (updatedLastProcessedRow <= totalProductsInFile) {
-        logInfoToFile(`Saving checkpoint for ${fileKey}: lastProcessedRow = ${updatedLastProcessedRow}`);
+        logInfoToFile(`Saving checkpoint for the file "${fileKey}": lastProcessedRow = ${updatedLastProcessedRow}`);
         //await redisClient.set(`lastProcessedRow:${fileKey}`, updatedLastProcessedRow);
         checkpoints[fileKey] = {
             lastProcessedRow: updatedLastProcessedRow,

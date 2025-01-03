@@ -4,6 +4,7 @@ dotenv.config();
 const { batchQueue } = require('./queue');
 const { processCSVFilesInLatestFolder } = require('./s3-helpers');
 const { logger, logErrorToFile,logUpdatesToFile, logInfoToFile, logProgressToFile } = require("./logger");
+const { addBatchJob } = require('./job-manager');
 const { performance } = require("perf_hooks"); // Import performance to track time
 const { BullAdapter } = require('@bull-board/api/bullAdapter');
 const { createBullBoard } = require('@bull-board/api');
@@ -95,7 +96,13 @@ mainProcess().catch(error => handleProcessError(error, "Critical error in main")
 app.post('/api/start-batch', async (req, res) => {
   try {
     const batchData = req.body.batchData; // Assuming batch data is passed in the request body
-    const job = await batchQueue.add({ batch: batchData });
+
+    // Generate a unique job ID for this batch job
+    const jobId = `manual-batch-${Date.now()}`;
+
+    // Use the centralized function to add the batch job
+    const job = await addBatchJob({ batch: batchData }, jobId);
+
     logger.info(`Enqueued batch job with ID: ${job.id}`);
     res.json({ jobId: job.id });
   } catch (error) {

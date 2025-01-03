@@ -3,6 +3,8 @@ const { performance } = require("perf_hooks"); // Import performance to track ti
 const { logger, logErrorToFile, logUpdatesToFile, logInfoToFile } = require("./logger");
 const { wooApi, getProductById, getProductIdByPartNumber, limiter } = require("./woo-helpers");
 const { redisClient } = require('./queue');
+const { scheduleApiRequest } = require('./job-manager');
+const { createUniqueJobId } = require('./utils');
 
 let stripHtml;
 (async () => {
@@ -141,13 +143,15 @@ const filterCurrentData = (product) => {
     };
 };
 
-// Function to process a batch of products using WooCommerce Bulk API
+// Process a batch of products using WooCommerce Bulk API
 const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => {
     const MAX_RETRIES = 5;
     let attempts = 0;
-    const batchStartTime = performance.now(); // Track overall batch time
+    const action = 'processBatch';
+    const lastProcessedRow = startIndex + batch.length; // Calculate the last processed row for logging
 
-    logInfoToFile(`Starting "processBatch" with startIndex: ${startIndex}, totalProductsInFile: ${totalProductsInFile}, fileKey: ${fileKey}`);
+    const batchStartTime = performance.now(); // Track overall batch time
+    logInfoToFile(`Starting "processBatch" with startIndex: ${startIndex} | totalProductsInFile: ${totalProductsInFile} | fileKey: ${fileKey}`);
 
     if (!Array.isArray(batch)) {
         throw new Error(`Expected batch to be an array, but got ${typeof batch}`);
@@ -182,7 +186,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
 
                 // Measure time to fetch Product details by Product ID
                 const productFetchStart = performance.now();
-                const product = await getProductById(productId, fileKey);
+                const product = await getProductById(productId, fileKey, currentIndex);
                 const productFetchEnd = performance.now();
                 logInfoToFile(`Time to fetch product details for Product ID ${productId}: ${(productFetchEnd - productFetchStart).toFixed(2)} ms`);
 
@@ -212,21 +216,24 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
         while (attempts < MAX_RETRIES) {
 
             const retryStartTime = performance.now();
+            const jobId = createUniqueJobId(fileKey, action, startIndex, attempts);  
 
             try {
                 const apiCallStart = performance.now();
-                // Use WooCommerce Bulk API to update products
-                const response = await limiter.schedule(
+
+                // Use centralized job scheduling for WooCommerce API batch update
+                const response = await scheduleApiRequest(
+                    () => wooApi.put("products/batch", { update: filteredProducts }),
                     {   
-                        id: `batch-${fileKey}-processRow-${startIndex}`, 
+                        id: jobId,
                         context: { 
                             file: "batch-helpers.js", 
                             functionName: "processBatch", 
                             part: filteredProducts.map(p => p.part_number).join(", ")
                         }
-                    },
-                    () => wooApi.put("products/batch", { update: filteredProducts })
+                    }
                 );
+
                 const apiCallEnd = performance.now();
                 logInfoToFile(`Time for WooCommerce API batch update call: ${(apiCallEnd - apiCallStart).toFixed(2)} ms`);
 
@@ -253,7 +260,7 @@ const processBatch = async (batch, startIndex, totalProductsInFile, fileKey) => 
                     
                if (attempts >= MAX_RETRIES) {
                     await redisClient.incr(`failed-products:${fileKey}`);
-                    logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}". Error: ${error.message}`);
+                    logErrorToFile(`Batch update failed permanently after ${MAX_RETRIES} attempts for file "${fileKey}" | Failed Part Numbers: ${failedPartNumbers} | Error: ${error.message}`);
                     throw new Error(`Batch update failed permanently after ${MAX_RETRIES} attempts.`);
                }
 
