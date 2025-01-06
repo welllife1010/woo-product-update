@@ -35,7 +35,7 @@ const rotateLogFile = (filePath) => {
     }
   };
 
-// Function to write content to log files with rotation
+// Write content to log files with rotation
 const writeToFile = (filePath, content) => {
     rotateLogFile(filePath);
     fs.appendFileSync(filePath, content, "utf-8");

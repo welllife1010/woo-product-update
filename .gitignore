@@ -4,6 +4,8 @@ old/
 csvFiles/
 output-files/
 test/
+input-json/
+output-csv/
 
 #files
 .DS_Store

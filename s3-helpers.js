@@ -4,7 +4,7 @@ const { Readable, pipeline } = require("stream"); // Promisify the stream pipeli
 const streamPipeline = promisify(pipeline); // Use async pipeline with stream promises
 const csvParser = require("csv-parser");
 const { logErrorToFile, logUpdatesToFile, logInfoToFile } = require("./logger");
-const { batchQueue, redisClient } = require('./queue');
+const { redisClient } = require('./queue');
 const { addBatchJob } = require('./job-manager');
 
 const executionMode = process.env.EXECUTION_MODE || 'production';
@@ -19,7 +19,7 @@ const initializeFileTracking = async (fileKey, totalRows) => {
 // AWS S3 setup (using AWS SDK v3)
 const s3Client = new S3Client({ 
   region: process.env.AWS_REGION_NAME,
-  endpoint: "https://s3.us-west-1.amazonaws.com", // Use specific bucket's region
+  endpoint: process.env.AWS_ENDPOINT_URL, // Use specific bucket's region
   forcePathStyle: true, // This helps when using custom endpoints
   requestTimeout: 300000 // Set timeout to 10 minutes
 });
