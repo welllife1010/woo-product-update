@@ -3,7 +3,7 @@ dotenv.config();
 
 const WooCommerceRestApi = require("woocommerce-rest-ts-api").default;
 const Bottleneck = require("bottleneck");
-const { logger, logErrorToFile } = require("./logger");
+const { logger, logErrorToFile, logInfoToFile } = require("./logger");
 const { scheduleApiRequest } = require('./job-manager');
 const { createUniqueJobId } = require('./utils');
 

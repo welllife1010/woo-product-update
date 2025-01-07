@@ -21,6 +21,10 @@ const addBatchJob = async (jobData, jobId) => {
 
 // Schedule an API request using Bottleneck
 const scheduleApiRequest = async (task, options) => {
+    if (!limiter) {
+        throw new Error('Limiter is not initialized');
+    }
+
     try {
         const response = await limiter.schedule(options, task);
         logInfoToFile(`Successfully scheduled API request: ${options.id}`);
